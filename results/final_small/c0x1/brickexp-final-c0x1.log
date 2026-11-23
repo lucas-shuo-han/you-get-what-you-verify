@@ -1,0 +1,255 @@
+[{"stream_name":"stderr","time":7.186174236,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.186226636,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":8.171929262999999,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.171953747,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.171958417,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.171962071,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.773173532,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.773209066,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.77321456,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.773223272,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":9.90462448,"data":"=== [   0.0 min] pip\n"}
+,{"stream_name":"stdout","time":288.259181421,"data":"0 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stdout","time":288.25921976,"data":"bigframes 2.51.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stdout","time":288.259238337,"data":"ydata-profiling 4.18.4 requires numba\u003c0.63,\u003e=0.60, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":288.259244063,"data":"litellm 1.109.1 requires huggingface-hub\u003c2.0,\u003e=0.34.0, but you have huggingface-hub 2.4.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":288.259249693,"data":"numba-cuda 0.28.2 requires cuda-core\u003c1.0.0,\u003e=0.5.1, but you have cuda-core 1.3.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":288.259255081,"data":"cuml-cu13 26.6.0 requires numba\u003c0.65.0,\u003e=0.60.0, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":288.259260112,"data":"cudf-cu13 26.6.0 requires numba\u003c0.65.0,\u003e=0.60.0, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":288.259264548,"data":"cudf-cu13 26.6.0 requires pyarrow\u003c24,\u003e=19.0.0, but you have pyarrow 26.0.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":288.259269093,"data":"gradio 6.30.0 requires pillow\u003c13.0,\u003e=8.0, but you have pillow 13.0.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":288.259273506,"data":"google-adk 2.7.1 requires opentelemetry-api\u003c=1.42.1,\u003e=1.39, but you have opentelemetry-api 1.45.2 which is incompatible.\n"}
+,{"stream_name":"stdout","time":288.259278147,"data":"google-adk 2.7.1 requires opentelemetry-sdk\u003c=1.42.1,\u003e=1.39, but you have opentelemetry-sdk 1.45.2 which is incompatible.\n"}
+,{"stream_name":"stdout","time":288.259282691,"data":"\n"}
+,{"stream_name":"stdout","time":291.054796878,"data":"peft                                     0.21.2\n"}
+,{"stream_name":"stdout","time":291.054835943,"data":"torch                                    2.14.0\n"}
+,{"stream_name":"stdout","time":291.054841428,"data":"transformers                             5.20.2\n"}
+,{"stream_name":"stdout","time":291.054844766,"data":"vllm                                     0.34.0\n"}
+,{"stream_name":"stdout","time":291.054848136,"data":"\n"}
+,{"stream_name":"stdout","time":323.627351323,"data":"{'A': 4000, 'B': 4852, 'C': 4852, 'human': 4000, 'ai': {'opus': 187, 'deepseek': 65, 'opus_newcat': 32}, 'upsample': 3, 'newcat_test': 28, 'seed_human': 2026}\n"}
+,{"stream_name":"stdout","time":323.627380311,"data":"A 4000 B 4852 optimizer steps per group: 304\n"}
+,{"stream_name":"stdout","time":323.647339078,"data":"=== [   5.2 min] train_C_s0_x1_probe\n"}
+,{"stream_name":"stdout","time":462.459679698,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":462.459726753,"data":"dropped 262/4852 examples longer than 3072 tok\n"}
+,{"stream_name":"stdout","time":462.459732719,"data":"4590 examples, mean len 1360 tok\n"}
+,{"stream_name":"stdout","time":462.45973747,"data":"\n"}
+,{"stream_name":"stdout","time":462.459741984,"data":"Loading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":462.45974833,"data":"Loading weights:   0%|          | 1/338 [00:00\u003c02:58,  1.89it/s]\n"}
+,{"stream_name":"stdout","time":462.459753642,"data":"Loading weights:  35%|███▌      | 119/338 [00:00\u003c00:00, 251.36it/s]\n"}
+,{"stream_name":"stdout","time":462.459759568,"data":"Loading weights:  56%|█████▌    | 188/338 [00:00\u003c00:00, 276.22it/s]\n"}
+,{"stream_name":"stdout","time":462.459764089,"data":"Loading weights:  71%|███████   | 240/338 [00:01\u003c00:00, 292.40it/s]\n"}
+,{"stream_name":"stdout","time":462.459768782,"data":"Loading weights:  84%|████████▍ | 285/338 [00:01\u003c00:00, 296.71it/s]\n"}
+,{"stream_name":"stdout","time":462.459773531,"data":"Loading weights:  96%|█████████▌| 325/338 [00:01\u003c00:00, 310.00it/s]\n"}
+,{"stream_name":"stdout","time":462.459778047,"data":"Loading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 261.91it/s]\n"}
+,{"stream_name":"stdout","time":462.459782845,"data":"loaded Qwen2ForCausalLM\n"}
+,{"stream_name":"stdout","time":462.459787012,"data":"trainable params: 18,464,768 || all params: 1,562,179,072 || trainable%: 1.1820\n"}
+,{"stream_name":"stdout","time":462.459791837,"data":"TrainingArguments: dropping unsupported ['group_by_length']\n"}
+,{"stream_name":"stdout","time":462.459796811,"data":"\n"}
+,{"stream_name":"stdout","time":462.459801194,"data":"  0%|          | 0/3 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":462.45980609,"data":" 33%|███▎      | 1/3 [00:21\u003c00:43, 21.70s/it]\n"}
+,{"stream_name":"stdout","time":462.459810727,"data":" 67%|██████▋   | 2/3 [00:41\u003c00:20, 20.32s/it]\n"}
+,{"stream_name":"stdout","time":462.459815423,"data":"100%|██████████| 3/3 [01:08\u003c00:00, 23.51s/it]\n"}
+,{"stream_name":"stdout","time":462.459820367,"data":"                                             \n"}
+,{"stream_name":"stdout","time":462.459825001,"data":"\n"}
+,{"stream_name":"stdout","time":462.459829347,"data":"100%|██████████| 3/3 [01:08\u003c00:00, 23.51s/it]\n"}
+,{"stream_name":"stdout","time":462.459834202,"data":"100%|██████████| 3/3 [01:08\u003c00:00, 22.80s/it]\n"}
+,{"stream_name":"stdout","time":462.459838912,"data":"{'train_runtime': '68.4', 'train_samples_per_second': '0.702', 'train_steps_per_second': '0.044', 'train_loss': '0.4856', 'epoch': '0.01046'}\n"}
+,{"stream_name":"stdout","time":462.459852192,"data":"PEAK_MEM_GB 5.00\n"}
+,{"stream_name":"stdout","time":462.45985584,"data":"probe done: 3 steps in 1.8 min\n"}
+,{"stream_name":"stdout","time":462.459859648,"data":"\n"}
+,{"stream_name":"stdout","time":462.459863137,"data":"=== [   7.5 min] train_C_s0_x1\n"}
+,{"stream_name":"stdout","time":9305.637129324,"data":"', 'epoch': '0.1394'}\n"}
+,{"stream_name":"stdout","time":9305.6371862,"data":"{'loss': '0.3336', 'grad_norm': '0.1551', 'learning_rate': '0.0001911', 'epoch': '0.1743'}\n"}
+,{"stream_name":"stdout","time":9305.637193934,"data":"{'loss': '0.3132', 'grad_norm': '0.1132', 'learning_rate': '0.0001862', 'epoch': '0.2092'}\n"}
+,{"stream_name":"stdout","time":9305.637199939,"data":"{'loss': '0.3063', 'grad_norm': '0.1507', 'learning_rate': '0.0001803', 'epoch': '0.244'}\n"}
+,{"stream_name":"stdout","time":9305.637205775,"data":"{'loss': '0.3162', 'grad_norm': '0.1639', 'learning_rate': '0.0001735', 'epoch': '0.2789'}\n"}
+,{"stream_name":"stdout","time":9305.637211692,"data":"{'loss': '0.3029', 'grad_norm': '0.1606', 'learning_rate': '0.0001659', 'epoch': '0.3137'}\n"}
+,{"stream_name":"stdout","time":9305.637217069,"data":"{'loss': '0.3087', 'grad_norm': '0.1347', 'learning_rate': '0.0001575', 'epoch': '0.3486'}\n"}
+,{"stream_name":"stdout","time":9305.637222816,"data":"{'loss': '0.287', 'grad_norm': '0.2333', 'learning_rate': '0.0001485', 'epoch': '0.3834'}\n"}
+,{"stream_name":"stdout","time":9305.637228655,"data":"{'loss': '0.2994', 'grad_norm': '0.1554', 'learning_rate': '0.0001389', 'epoch': '0.4183'}\n"}
+,{"stream_name":"stdout","time":9305.637234577,"data":"{'loss': '0.291', 'grad_norm': '0.1827', 'learning_rate': '0.0001289', 'epoch': '0.4532'}\n"}
+,{"stream_name":"stdout","time":9305.6372399,"data":"{'loss': '0.2736', 'grad_norm': '0.2006', 'learning_rate': '0.0001185', 'epoch': '0.488'}\n"}
+,{"stream_name":"stdout","time":9305.637245433,"data":"{'loss': '0.2733', 'grad_norm': '0.1886', 'learning_rate': '0.000108', 'epoch': '0.5229'}\n"}
+,{"stream_name":"stdout","time":9305.637250524,"data":"{'loss': '0.2729', 'grad_norm': '0.1665', 'learning_rate': '9.734e-05', 'epoch': '0.5577'}\n"}
+,{"stream_name":"stdout","time":9305.637256232,"data":"{'loss': '0.272', 'grad_norm': '0.1809', 'learning_rate': '8.673e-05', 'epoch': '0.5926'}\n"}
+,{"stream_name":"stdout","time":9305.637261841,"data":"{'loss': '0.2699', 'grad_norm': '0.1846', 'learning_rate': '7.627e-05', 'epoch': '0.6275'}\n"}
+,{"stream_name":"stdout","time":9305.637267401,"data":"{'loss': '0.2643', 'grad_norm': '0.2411', 'learning_rate': '6.608e-05', 'epoch': '0.6623'}\n"}
+,{"stream_name":"stdout","time":9305.637272871,"data":"{'loss': '0.2502', 'grad_norm': '0.1759', 'learning_rate': '5.627e-05', 'epoch': '0.6972'}\n"}
+,{"stream_name":"stdout","time":9305.637278956,"data":"{'loss': '0.2652', 'grad_norm': '0.1849', 'learning_rate': '4.696e-05', 'epoch': '0.732'}\n"}
+,{"stream_name":"stdout","time":9305.637285429,"data":"{'loss': '0.2709', 'grad_norm': '0.2062', 'learning_rate': '3.825e-05', 'epoch': '0.7669'}\n"}
+,{"stream_name":"stdout","time":9305.637290857,"data":"{'loss': '0.2597', 'grad_norm': '0.1954', 'learning_rate': '3.024e-05', 'epoch': '0.8017'}\n"}
+,{"stream_name":"stdout","time":9305.637296903,"data":"{'loss': '0.2684', 'grad_norm': '0.1647', 'learning_rate': '2.302e-05', 'epoch': '0.8366'}\n"}
+,{"stream_name":"stdout","time":9305.637302909,"data":"{'loss': '0.2576', 'grad_norm': '0.2124', 'learning_rate': '1.667e-05', 'epoch': '0.8715'}\n"}
+,{"stream_name":"stdout","time":9305.637309199,"data":"{'loss': '0.2592', 'grad_norm': '0.1782', 'learning_rate': '1.126e-05', 'epoch': '0.9063'}\n"}
+,{"stream_name":"stdout","time":9305.637328115,"data":"{'loss': '0.257', 'grad_norm': '0.2152', 'learning_rate': '6.866e-06', 'epoch': '0.9412'}\n"}
+,{"stream_name":"stdout","time":9305.637333058,"data":"{'loss': '0.2594', 'grad_norm': '0.1855', 'learning_rate': '3.523e-06', 'epoch': '0.976'}\n"}
+,{"stream_name":"stdout","time":9305.637337701,"data":"\n"}
+,{"stream_name":"stdout","time":9305.637342419,"data":" 95%|█████████▍| 288/304 [2:19:10\u003c07:26, 27.89s/it]\n"}
+,{"stream_name":"stdout","time":9305.637348723,"data":" 95%|█████████▌| 289/304 [2:19:40\u003c07:10, 28.68s/it]\n"}
+,{"stream_name":"stdout","time":9305.637353634,"data":" 95%|█████████▌| 290/304 [2:20:07\u003c06:31, 27.97s/it]\n"}
+,{"stream_name":"stdout","time":9305.637358698,"data":"                                                   \n"}
+,{"stream_name":"stdout","time":9305.637363577,"data":"\n"}
+,{"stream_name":"stdout","time":9305.637368044,"data":" 95%|█████████▌| 290/304 [2:20:07\u003c06:31, 27.97s/it]\n"}
+,{"stream_name":"stdout","time":9305.637373057,"data":" 96%|█████████▌| 291/304 [2:20:37\u003c06:10, 28.52s/it]\n"}
+,{"stream_name":"stdout","time":9305.637388985,"data":" 96%|█████████▌| 292/304 [2:21:05\u003c05:42, 28.53s/it]\n"}
+,{"stream_name":"stdout","time":9305.637393519,"data":" 96%|█████████▋| 293/304 [2:21:32\u003c05:09, 28.15s/it]\n"}
+,{"stream_name":"stdout","time":9305.637397679,"data":" 97%|█████████▋| 294/304 [2:22:06\u003c04:59, 29.91s/it]\n"}
+,{"stream_name":"stdout","time":9305.637402063,"data":" 97%|█████████▋| 295/304 [2:22:33\u003c04:20, 28.91s/it]\n"}
+,{"stream_name":"stdout","time":9305.637406635,"data":" 97%|█████████▋| 296/304 [2:23:03\u003c03:54, 29.29s/it]\n"}
+,{"stream_name":"stdout","time":9305.637411212,"data":" 98%|█████████▊| 297/304 [2:23:30\u003c03:19, 28.50s/it]\n"}
+,{"stream_name":"stdout","time":9305.637415756,"data":" 98%|█████████▊| 298/304 [2:24:02\u003c02:57, 29.60s/it]\n"}
+,{"stream_name":"stdout","time":9305.637420658,"data":" 98%|█████████▊| 299/304 [2:24:32\u003c02:28, 29.78s/it]\n"}
+,{"stream_name":"stdout","time":9305.637424532,"data":" 99%|█████████▊| 300/304 [2:25:01\u003c01:57, 29.38s/it]\n"}
+,{"stream_name":"stdout","time":9305.637428614,"data":"                                                   \n"}
+,{"stream_name":"stdout","time":9305.637432857,"data":"\n"}
+,{"stream_name":"stdout","time":9305.637436481,"data":" 99%|█████████▊| 300/304 [2:25:01\u003c01:57, 29.38s/it]\n"}
+,{"stream_name":"stdout","time":9305.637441365,"data":" 99%|█████████▉| 301/304 [2:25:30\u003c01:28, 29.40s/it]\n"}
+,{"stream_name":"stdout","time":9305.637445625,"data":" 99%|█████████▉| 302/304 [2:25:52\u003c00:54, 27.02s/it]\n"}
+,{"stream_name":"stdout","time":9305.637449711,"data":"100%|█████████▉| 303/304 [2:26:18\u003c00:26, 26.90s/it]\n"}
+,{"stream_name":"stdout","time":9305.637453574,"data":"100%|██████████| 304/304 [2:26:43\u003c00:00, 26.30s/it]\n"}
+,{"stream_name":"stdout","time":9305.637457578,"data":"                                                   \n"}
+,{"stream_name":"stdout","time":9305.637461569,"data":"\n"}
+,{"stream_name":"stdout","time":9305.637465248,"data":"100%|██████████| 304/304 [2:26:44\u003c00:00, 26.30s/it]\n"}
+,{"stream_name":"stdout","time":9305.637469631,"data":"100%|██████████| 304/304 [2:26:44\u003c00:00, 28.96s/it]\n"}
+,{"stream_name":"stdout","time":9305.637478946,"data":"{'loss': '0.2501', 'grad_norm': '0.1972', 'learning_rate': '1.273e-06', 'epoch': '1.01'}\n"}
+,{"stream_name":"stdout","time":9305.637483598,"data":"{'loss': '0.2566', 'grad_norm': '0.1986', 'learning_rate': '1.417e-07', 'epoch': '1.045'}\n"}
+,{"stream_name":"stdout","time":9305.637488324,"data":"{'train_runtime': '8805', 'train_samples_per_second': '0.552', 'train_steps_per_second': '0.035', 'train_loss': '0.2924', 'epoch': '1.059'}\n"}
+,{"stream_name":"stdout","time":9305.637492488,"data":"PEAK_MEM_GB 5.21\n"}
+,{"stream_name":"stdout","time":9305.637496389,"data":"\n"}
+,{"stream_name":"stdout","time":9305.637499495,"data":"Writing model shards:   0%|          | 0/1 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":9305.63750278,"data":"Writing model shards: 100%|██████████| 1/1 [00:04\u003c00:00,  4.18s/it]\n"}
+,{"stream_name":"stdout","time":9305.637509483,"data":"Writing model shards: 100%|██████████| 1/1 [00:04\u003c00:00,  4.18s/it]\n"}
+,{"stream_name":"stdout","time":9305.637528778,"data":"done in 147.2 min\n"}
+,{"stream_name":"stdout","time":9305.637532811,"data":"\n"}
+,{"stream_name":"stdout","time":9305.637536445,"data":"loss: [(210, 0.2652), (220, 0.2709), (230, 0.2597), (240, 0.2684), (250, 0.2576), (260, 0.2592), (270, 0.257), (280, 0.2594), (290, 0.2501), (300, 0.2566)]\n"}
+,{"stream_name":"stdout","time":9305.637540303,"data":"=== [ 154.9 min] eval_C_s0_x1_90\n"}
+,{"stream_name":"stdout","time":9692.212763643,"data":"8 caps this instance at 11.65 GiB, keeping 1.76 GiB of free device memory out of the KV cache. The extensible KV cache is sized from the memory measured after warmup and CUDA graph capture, so vLLM's own use needs no headroom below 1.0. Leave gpu_memory_utilization unset unless it leaves room for memory vLLM does not measure: other processes sharing the GPU (including ones that allocate on it later), the CPU on a unified-memory device, weight transfer buffers for weight updates, or a KV connector's own device buffers.\n"}
+,{"stream_name":"stdout","time":9692.212807506,"data":"(EngineCore pid=270) INFO 11-23 04:33:41 [extensible_kv_cache.py:693] Memory after warmup: 10.72 GiB free, 0.05 GiB committed to the KV cache, 0.94 GiB kept for transient activations (0.48 GiB allocated at peak, 0.94 GiB of torch reservation growth); 4128 KV cache blocks (7.05 GiB) fit within the requested 11.65 GiB. Torch may reserve up to 6.51 GiB.\n"}
+,{"stream_name":"stdout","time":9692.212814388,"data":"(EngineCore pid=270) INFO 11-23 04:33:41 [kv_cache_utils.py:1168] GPU KV cache size: 264,192 tokens, Maximum concurrency for 16,384 tokens per request: 16.12x\n"}
+,{"stream_name":"stdout","time":9692.212819164,"data":"(EngineCore pid=270) INFO 11-23 04:33:41 [extensible_kv_cache.py:536] Extended KV cache to 4128 blocks (7.05 GiB).\n"}
+,{"stream_name":"stdout","time":9692.212823629,"data":"(EngineCore pid=270) INFO 11-23 04:33:41 [core.py:451] init engine (profile, create kv cache, warmup model) took 71.39 s (compilation: 18.51 s)\n"}
+,{"stream_name":"stdout","time":9692.212828239,"data":"(EngineCore pid=270) INFO 11-23 04:33:41 [kernel.py:517] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native'])\n"}
+,{"stream_name":"stdout","time":9692.212832983,"data":"(MainProcess pid=216) INFO 11-23 04:33:42 [hf.py:743] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n"}
+,{"stream_name":"stdout","time":9692.212837737,"data":"(EngineCore pid=270) WARNING 11-23 04:33:43 [jit_monitor.py:143] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9692.212858114,"data":"(EngineCore pid=270) WARNING 11-23 04:33:43 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_stats_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9692.212861634,"data":"(EngineCore pid=270) WARNING 11-23 04:33:44 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_step_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9692.212864211,"data":"(EngineCore pid=270) WARNING 11-23 04:33:45 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_mask_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9692.212866708,"data":"(EngineCore pid=270) WARNING 11-23 04:33:52 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topk_topp_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9692.21286922,"data":"[attempt 0] solved 21/90  round 262.7s mean_out_chars 2164  elapsed 262.7s\n"}
+,{"stream_name":"stdout","time":9692.212872489,"data":"{\n"}
+,{"stream_name":"stdout","time":9692.212889454,"data":" \"tag\": \"C_s0_x1_90\",\n"}
+,{"stream_name":"stdout","time":9692.212893771,"data":" \"model\": \"/kaggle/working/sft_C_s0_x1/merged\",\n"}
+,{"stream_name":"stdout","time":9692.212897969,"data":" \"adapter\": null,\n"}
+,{"stream_name":"stdout","time":9692.212901876,"data":" \"n\": 90,\n"}
+,{"stream_name":"stdout","time":9692.212905716,"data":" \"checker\": \"connectivity\",\n"}
+,{"stream_name":"stdout","time":9692.212909381,"data":" \"checker_methods_seen\": [\n"}
+,{"stream_name":"stdout","time":9692.212912681,"data":"  \"connectivity\"\n"}
+,{"stream_name":"stdout","time":9692.212915954,"data":" ],\n"}
+,{"stream_name":"stdout","time":9692.212919019,"data":" \"max_budget\": 0,\n"}
+,{"stream_name":"stdout","time":9692.212922341,"data":" \"max_budget_reached\": 0,\n"}
+,{"stream_name":"stdout","time":9692.212925701,"data":" \"solved_k0\": 21,\n"}
+,{"stream_name":"stdout","time":9692.212928961,"data":" \"solved_kmax\": 21,\n"}
+,{"stream_name":"stdout","time":9692.212932136,"data":" \"curve\": {\n"}
+,{"stream_name":"stdout","time":9692.212935701,"data":"  \"small\": {\n"}
+,{"stream_name":"stdout","time":9692.212938958,"data":"   \"0\": 0.13333333333333333\n"}
+,{"stream_name":"stdout","time":9692.212942266,"data":"  },\n"}
+,{"stream_name":"stdout","time":9692.212945368,"data":"  \"all\": {\n"}
+,{"stream_name":"stdout","time":9692.212948581,"data":"   \"0\": 0.23333333333333334\n"}
+,{"stream_name":"stdout","time":9692.212951803,"data":"  },\n"}
+,{"stream_name":"stdout","time":9692.212954955,"data":"  \"medium\": {\n"}
+,{"stream_name":"stdout","time":9692.212958219,"data":"   \"0\": 0.23333333333333334\n"}
+,{"stream_name":"stdout","time":9692.212963259,"data":"  },\n"}
+,{"stream_name":"stdout","time":9692.212970399,"data":"  \"large\": {\n"}
+,{"stream_name":"stdout","time":9692.21298914,"data":"   \"0\": 0.3333333333333333\n"}
+,{"stream_name":"stdout","time":9692.212993593,"data":"  }\n"}
+,{"stream_name":"stdout","time":9692.212997279,"data":" },\n"}
+,{"stream_name":"stdout","time":9692.213000653,"data":" \"failures\": {\n"}
+,{"stream_name":"stdout","time":9692.213004578,"data":"  \"unstable\": 6,\n"}
+,{"stream_name":"stdout","time":9692.213008327,"data":"  \"floating\": 8,\n"}
+,{"stream_name":"stdout","time":9692.213011614,"data":"  \"collision\": 55,\n"}
+,{"stream_name":"stdout","time":9692.213014867,"data":"  \"ok\": 21\n"}
+,{"stream_name":"stdout","time":9692.213022698,"data":" },\n"}
+,{"stream_name":"stdout","time":9692.213025836,"data":" \"seconds\": 262.673401594162\n"}
+,{"stream_name":"stdout","time":9692.21302917,"data":"}\n"}
+,{"stream_name":"stdout","time":9692.213032285,"data":"(MainProcess pid=216) INFO 11-23 04:38:04 [utils.py:628] [shutdown] Process manager: send sigterm to process EngineCore\n"}
+,{"stream_name":"stdout","time":9692.213035903,"data":"(EngineCore pid=270) INFO 11-23 04:38:04 [core.py:1698] [shutdown] EngineCore: trigger received signal=SIGTERM\n"}
+,{"stream_name":"stdout","time":9692.213039397,"data":"(EngineCore pid=270) INFO 11-23 04:38:04 [core.py:1889] [shutdown] EngineCore: start mode=abort timeout=0s\n"}
+,{"stream_name":"stdout","time":9692.213042996,"data":"(EngineCore pid=270) INFO 11-23 04:38:04 [core.py:1920] [shutdown] EngineCore: request processing complete; starting resource teardown\n"}
+,{"stream_name":"stdout","time":9692.213046518,"data":"(EngineCore pid=270) INFO 11-23 04:38:04 [core.py:1746] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":9692.213049963,"data":"\n"}
+,{"stream_name":"stdout","time":9692.213053091,"data":"=== [ 161.4 min] eval_C_s0_x1_newcat\n"}
+,{"stream_name":"stdout","time":9914.810819774,"data":"7.96 GiB.\n"}
+,{"stream_name":"stdout","time":9914.810853738,"data":"(EngineCore pid=437) INFO 11-23 04:39:27 [jit_monitor.py:87] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.\n"}
+,{"stream_name":"stdout","time":9914.810861867,"data":"(EngineCore pid=437) WARNING 11-23 04:39:28 [extensible_kv_cache.py:662] gpu_memory_utilization=0.8 caps this instance at 11.65 GiB, keeping 1.76 GiB of free device memory out of the KV cache. The extensible KV cache is sized from the memory measured after warmup and CUDA graph capture, so vLLM's own use needs no headroom below 1.0. Leave gpu_memory_utilization unset unless it leaves room for memory vLLM does not measure: other processes sharing the GPU (including ones that allocate on it later), the CPU on a unified-memory device, weight transfer buffers for weight updates, or a KV connector's own device buffers.\n"}
+,{"stream_name":"stdout","time":9914.81087135,"data":"(EngineCore pid=437) INFO 11-23 04:39:28 [extensible_kv_cache.py:693] Memory after warmup: 10.72 GiB free, 0.05 GiB committed to the KV cache, 0.94 GiB kept for transient activations (0.48 GiB allocated at peak, 0.94 GiB of torch reservation growth); 4128 KV cache blocks (7.05 GiB) fit within the requested 11.65 GiB. Torch may reserve up to 6.51 GiB.\n"}
+,{"stream_name":"stdout","time":9914.810876678,"data":"(EngineCore pid=437) INFO 11-23 04:39:28 [kv_cache_utils.py:1168] GPU KV cache size: 264,192 tokens, Maximum concurrency for 16,384 tokens per request: 16.12x\n"}
+,{"stream_name":"stdout","time":9914.810881203,"data":"(EngineCore pid=437) INFO 11-23 04:39:28 [extensible_kv_cache.py:536] Extended KV cache to 4128 blocks (7.05 GiB).\n"}
+,{"stream_name":"stdout","time":9914.810885722,"data":"(EngineCore pid=437) INFO 11-23 04:39:28 [core.py:451] init engine (profile, create kv cache, warmup model) took 51.49 s (compilation: 0.23 s)\n"}
+,{"stream_name":"stdout","time":9914.810890195,"data":"(EngineCore pid=437) INFO 11-23 04:39:28 [kernel.py:517] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native'])\n"}
+,{"stream_name":"stdout","time":9914.810894995,"data":"(MainProcess pid=406) INFO 11-23 04:39:29 [hf.py:743] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n"}
+,{"stream_name":"stdout","time":9914.810901159,"data":"(EngineCore pid=437) WARNING 11-23 04:39:30 [jit_monitor.py:143] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9914.810917882,"data":"(EngineCore pid=437) WARNING 11-23 04:39:30 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_stats_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9914.810920907,"data":"(EngineCore pid=437) WARNING 11-23 04:39:31 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_step_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9914.810923522,"data":"(EngineCore pid=437) WARNING 11-23 04:39:32 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_mask_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9914.810926071,"data":"[attempt 0] solved 4/28  round 138.5s mean_out_chars 2503  elapsed 138.5s\n"}
+,{"stream_name":"stdout","time":9914.810928879,"data":"{\n"}
+,{"stream_name":"stdout","time":9914.810941616,"data":" \"tag\": \"C_s0_x1_newcat\",\n"}
+,{"stream_name":"stdout","time":9914.810946366,"data":" \"model\": \"/kaggle/working/sft_C_s0_x1/merged\",\n"}
+,{"stream_name":"stdout","time":9914.81095042,"data":" \"adapter\": null,\n"}
+,{"stream_name":"stdout","time":9914.810954522,"data":" \"n\": 28,\n"}
+,{"stream_name":"stdout","time":9914.810958307,"data":" \"checker\": \"connectivity\",\n"}
+,{"stream_name":"stdout","time":9914.810961756,"data":" \"checker_methods_seen\": [\n"}
+,{"stream_name":"stdout","time":9914.810965129,"data":"  \"connectivity\"\n"}
+,{"stream_name":"stdout","time":9914.810968422,"data":" ],\n"}
+,{"stream_name":"stdout","time":9914.810971524,"data":" \"max_budget\": 0,\n"}
+,{"stream_name":"stdout","time":9914.810974842,"data":" \"max_budget_reached\": 0,\n"}
+,{"stream_name":"stdout","time":9914.810978077,"data":" \"solved_k0\": 4,\n"}
+,{"stream_name":"stdout","time":9914.810981359,"data":" \"solved_kmax\": 4,\n"}
+,{"stream_name":"stdout","time":9914.810984563,"data":" \"curve\": {\n"}
+,{"stream_name":"stdout","time":9914.810987905,"data":"  \"large\": {\n"}
+,{"stream_name":"stdout","time":9914.810991119,"data":"   \"0\": 0.3\n"}
+,{"stream_name":"stdout","time":9914.810994355,"data":"  },\n"}
+,{"stream_name":"stdout","time":9914.810997501,"data":"  \"all\": {\n"}
+,{"stream_name":"stdout","time":9914.811000732,"data":"   \"0\": 0.14285714285714285\n"}
+,{"stream_name":"stdout","time":9914.811004576,"data":"  },\n"}
+,{"stream_name":"stdout","time":9914.811007711,"data":"  \"medium\": {\n"}
+,{"stream_name":"stdout","time":9914.811017511,"data":"   \"0\": 0.14285714285714285\n"}
+,{"stream_name":"stdout","time":9914.811020355,"data":"  },\n"}
+,{"stream_name":"stdout","time":9914.811022608,"data":"  \"small\": {\n"}
+,{"stream_name":"stdout","time":9914.811033425,"data":"   \"0\": 0.0\n"}
+,{"stream_name":"stdout","time":9914.811037344,"data":"  }\n"}
+,{"stream_name":"stdout","time":9914.811041076,"data":" },\n"}
+,{"stream_name":"stdout","time":9914.811044718,"data":" \"failures\": {\n"}
+,{"stream_name":"stdout","time":9914.811048835,"data":"  \"collision\": 22,\n"}
+,{"stream_name":"stdout","time":9914.811052674,"data":"  \"ok\": 4,\n"}
+,{"stream_name":"stdout","time":9914.811055968,"data":"  \"floating\": 2\n"}
+,{"stream_name":"stdout","time":9914.811059181,"data":" },\n"}
+,{"stream_name":"stdout","time":9914.811062319,"data":" \"seconds\": 138.5297429561615\n"}
+,{"stream_name":"stdout","time":9914.811065557,"data":"}\n"}
+,{"stream_name":"stdout","time":9914.811073107,"data":"(MainProcess pid=406) INFO 11-23 04:41:47 [utils.py:628] [shutdown] Process manager: send sigterm to process EngineCore\n"}
+,{"stream_name":"stdout","time":9914.811076722,"data":"(EngineCore pid=437) INFO 11-23 04:41:47 [core.py:1698] [shutdown] EngineCore: trigger received signal=SIGTERM\n"}
+,{"stream_name":"stdout","time":9914.811080179,"data":"(EngineCore pid=437) INFO 11-23 04:41:47 [core.py:1889] [shutdown] EngineCore: start mode=abort timeout=0s\n"}
+,{"stream_name":"stdout","time":9914.81108368,"data":"(EngineCore pid=437) INFO 11-23 04:41:47 [core.py:1920] [shutdown] EngineCore: request processing complete; starting resource teardown\n"}
+,{"stream_name":"stdout","time":9914.811087264,"data":"(EngineCore pid=437) INFO 11-23 04:41:47 [core.py:1746] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":9914.811090703,"data":"\n"}
+,{"stream_name":"stdout","time":9914.820077115,"data":"=== [ 165.1 min] table\n"}
+,{"stream_name":"stdout","time":9914.938318735,"data":"| model | one-shot k=0 | feedback \u003c= 0 rounds | checker |\n"}
+,{"stream_name":"stdout","time":9914.938342844,"data":"|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":9914.938347997,"data":"| C_s0_x1_90 (/kaggle/working/sft_C_s0_x1/merged) | 21/90 (23%) | 21/90 (23%) | connectivity |\n"}
+,{"stream_name":"stdout","time":9914.938351812,"data":"| C_s0_x1_newcat (/kaggle/working/sft_C_s0_x1/merged) | 4/28 (14%) | 4/28 (14%) | connectivity |\n"}
+,{"stream_name":"stdout","time":9914.938355397,"data":"\n"}
+,{"stream_name":"stdout","time":9914.938358522,"data":"| model | one-shot k=0 | feedback \u003c= 0 rounds | checker |\n"}
+,{"stream_name":"stdout","time":9914.938362337,"data":"|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":9914.938365564,"data":"| C_s0_x1_90 (/kaggle/working/sft_C_s0_x1/merged) | 21/90 (23%) | 21/90 (23%) | connectivity |\n"}
+,{"stream_name":"stdout","time":9914.938369022,"data":"| C_s0_x1_newcat (/kaggle/working/sft_C_s0_x1/merged) | 4/28 (14%) | 4/28 (14%) | connectivity |\n"}
+,{"stream_name":"stdout","time":9914.938372484,"data":"\n"}
+,{"stream_name":"stdout","time":9914.938375577,"data":"=== [ 165.1 min] done\n"}
+,{"stream_name":"stderr","time":9917.598115695,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":9917.598143333,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":9917.745286929,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":9917.745313843,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":9918.673117195,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":9918.750722755,"data":"[NbConvertApp] Writing 28534 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":9921.600369651,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":9922.185615549,"data":"[NbConvertApp] Writing 321094 bytes to __results__.html\n"}
+]

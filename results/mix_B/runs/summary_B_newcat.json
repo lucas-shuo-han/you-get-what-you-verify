@@ -1,0 +1,35 @@
+{
+ "tag": "B_newcat",
+ "model": "/kaggle/working/sft_B/merged",
+ "adapter": null,
+ "n": 28,
+ "checker": "connectivity",
+ "checker_methods_seen": [
+  "connectivity"
+ ],
+ "max_budget": 0,
+ "max_budget_reached": 0,
+ "solved_k0": 1,
+ "solved_kmax": 1,
+ "curve": {
+  "large": {
+   "0": 0.1
+  },
+  "all": {
+   "0": 0.03571428571428571
+  },
+  "medium": {
+   "0": 0.0
+  },
+  "small": {
+   "0": 0.0
+  }
+ },
+ "failures": {
+  "collision": 23,
+  "ok": 1,
+  "out_of_bounds": 3,
+  "format": 1
+ },
+ "seconds": 132.731942653656
+}

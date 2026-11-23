@@ -1,0 +1,28 @@
+{"newcat": "airplane", "caption": "Glider with very long thin wings and a slim body.", "id": "airplane_08", "bucket": "large"}
+{"newcat": "airplane", "caption": "Passenger jet with long swept wings and a narrow body.", "id": "airplane_01", "bucket": "medium"}
+{"newcat": "airplane", "caption": "A small airplane with straight wings and a tail fin.", "id": "airplane_00", "bucket": "small"}
+{"newcat": "airplane", "caption": "Seaplane with floats under its wings.", "id": "airplane_10", "bucket": "medium"}
+{"newcat": "airplane", "caption": "Biplane with two stacked wings and a small tail.", "id": "airplane_06", "bucket": "small"}
+{"newcat": "airplane", "caption": "Propeller plane with a short fuselage and high wings.", "id": "airplane_02", "bucket": "large"}
+{"newcat": "airplane", "caption": "Cargo plane with a wide body and wings mounted on top.", "id": "airplane_05", "bucket": "large"}
+{"newcat": "house", "caption": "Modern box house with a large glass front.", "id": "house_13", "bucket": "medium"}
+{"newcat": "house", "caption": "L-shaped house with a gabled roof.", "id": "house_08", "bucket": "large"}
+{"newcat": "house", "caption": "House with a hip roof and windows on all sides.", "id": "house_12", "bucket": "small"}
+{"newcat": "house", "caption": "Simple cube house with a flat roof.", "id": "house_03", "bucket": "small"}
+{"newcat": "house", "caption": "Two-story house with windows on each floor.", "id": "house_01", "bucket": "medium"}
+{"newcat": "house", "caption": "House on short stilts with stairs to the door.", "id": "house_14", "bucket": "large"}
+{"newcat": "house", "caption": "Cabin with a low roof and a single window.", "id": "house_06", "bucket": "small"}
+{"newcat": "tree", "caption": "Tree with a square, blocky canopy on a tall trunk.", "id": "tree_08", "bucket": "large"}
+{"newcat": "tree", "caption": "Tree with a mushroom-shaped crown.", "id": "tree_11", "bucket": "large"}
+{"newcat": "tree", "caption": "Palm tree with a slender trunk and spreading leaves at the top.", "id": "tree_03", "bucket": "small"}
+{"newcat": "tree", "caption": "A tall tree with a straight trunk and round canopy.", "id": "tree_00", "bucket": "small"}
+{"newcat": "tree", "caption": "Wide oak tree with a broad, flat canopy.", "id": "tree_06", "bucket": "small"}
+{"newcat": "tree", "caption": "Tall tree with three layers of foliage.", "id": "tree_14", "bucket": "large"}
+{"newcat": "tree", "caption": "Willow-like tree with drooping sides.", "id": "tree_09", "bucket": "small"}
+{"newcat": "lamp", "caption": "Lantern-shaped lamp with a square frame.", "id": "lamp_03", "bucket": "small"}
+{"newcat": "lamp", "caption": "Mushroom lamp with a dome-shaped top.", "id": "lamp_09", "bucket": "small"}
+{"newcat": "lamp", "caption": "Tall floor lamp with a thin pole and a shade on top.", "id": "lamp_01", "bucket": "medium"}
+{"newcat": "lamp", "caption": "Desk lamp with an angled arm and a small head.", "id": "lamp_02", "bucket": "large"}
+{"newcat": "lamp", "caption": "Floor lamp with a curved arm hanging over.", "id": "lamp_10", "bucket": "medium"}
+{"newcat": "lamp", "caption": "Torch-style lamp with a wide top.", "id": "lamp_13", "bucket": "medium"}
+{"newcat": "lamp", "caption": "Pendant-style lamp shape with a wide shade.", "id": "lamp_08", "bucket": "large"}

@@ -1,0 +1,7 @@
+{"event": "start", "balance_cny": 0.92}
+{"event": "call", "idx": "d9ca0e04-e1c7-4050-8a98-f85e329c65e4", "attempt": 0, "prompt_tokens": 271, "completion_tokens": 650, "cache_hit": 0, "finish": "stop", "sec": 2.5}
+{"event": "call", "idx": "6d8d90f1-aa82-46d3-b140-26362481c9f7", "attempt": 0, "prompt_tokens": 271, "completion_tokens": 690, "cache_hit": 0, "finish": "stop", "sec": 2.7}
+{"event": "call", "idx": "47193a58-549d-4706-87a5-895291a9a8c3", "attempt": 0, "prompt_tokens": 272, "completion_tokens": 1800, "cache_hit": 0, "finish": "stop", "sec": 5.3}
+{"event": "call", "idx": "d9ca0e04-e1c7-4050-8a98-f85e329c65e4", "attempt": 1, "prompt_tokens": 970, "completion_tokens": 600, "cache_hit": 768, "finish": "stop", "sec": 2.3}
+{"event": "end", "spent_cny": 0.0, "calls": 4, "prompt_tokens": 1784, "completion_tokens": 3740, "truncated": 0}
+{"event": "summary", "curve": {"small": {"0": 0.0, "1": 1.0, "2": 1.0, "3": 1.0}, "all": {"0": 0.6666666666666666, "1": 1.0, "2": 1.0, "3": 1.0}, "medium": {"0": 1.0, "1": 1.0, "2": 1.0, "3": 1.0}, "large": {"0": 1.0, "1": 1.0, "2": 1.0, "3": 1.0}}, "failures": {"collision": 1, "ok": 3}}

@@ -1,0 +1,43 @@
+{
+ "args": {
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "out": "/content/drive/MyDrive/brickexp_distill/sft",
+  "n_train": 4000,
+  "data_jsonl": "data/distill/sft_distill.jsonl",
+  "seed": 0,
+  "epochs": 2.0,
+  "max_steps": -1,
+  "lr": 0.0002,
+  "rank": 16,
+  "probe_steps": 0,
+  "ce_chunk": 512,
+  "bs": 2,
+  "grad_accum": 8,
+  "max_len": 3072,
+  "logging_steps": 10,
+  "no_merge": false,
+  "cpu": false
+ },
+ "n_examples": 96,
+ "n_dropped_too_long": 0,
+ "peak_mem_gb": 5.125357151031494,
+ "train_seconds": 142.47894549369812,
+ "log_history": [
+  {
+   "loss": 0.2269747018814087,
+   "grad_norm": 0.11296587437391281,
+   "learning_rate": 3.45139266054715e-05,
+   "epoch": 1.6666666666666665,
+   "step": 10
+  },
+  {
+   "train_runtime": 135.8337,
+   "train_samples_per_second": 1.413,
+   "train_steps_per_second": 0.088,
+   "total_flos": 1247174204141568.0,
+   "train_loss": 0.22549929469823837,
+   "epoch": 2.0,
+   "step": 12
+  }
+ ]
+}

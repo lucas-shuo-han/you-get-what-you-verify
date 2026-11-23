@@ -1,0 +1,74 @@
+[
+ {
+  "blind_id": "img_145792",
+  "group": "B_s1",
+  "structure_id": "house_03",
+  "label": "house"
+ },
+ {
+  "blind_id": "img_741594",
+  "group": "B_s1",
+  "structure_id": "tree_09",
+  "label": "tree"
+ },
+ {
+  "blind_id": "img_577301",
+  "group": "A_s0",
+  "structure_id": "lamp_01",
+  "label": "lamp"
+ },
+ {
+  "blind_id": "img_377992",
+  "group": "C_s0",
+  "structure_id": "lamp_10",
+  "label": "lamp"
+ },
+ {
+  "blind_id": "img_869872",
+  "group": "C_s0",
+  "structure_id": "house_14",
+  "label": "house"
+ },
+ {
+  "blind_id": "img_730340",
+  "group": "A_s0",
+  "structure_id": "tree_03",
+  "label": "tree"
+ },
+ {
+  "blind_id": "img_952232",
+  "group": "C_s0",
+  "structure_id": "lamp_08",
+  "label": "lamp"
+ },
+ {
+  "blind_id": "img_649695",
+  "group": "B_s0",
+  "structure_id": "airplane_05",
+  "label": "airplane"
+ },
+ {
+  "blind_id": "img_592713",
+  "group": "C_s0",
+  "structure_id": "airplane_05",
+  "label": "airplane"
+ },
+ {
+  "blind_id": "img_896073",
+  "group": "A_s0",
+  "structure_id": "house_06",
+  "label": "house"
+ },
+ {
+  "blind_id": "img_299160",
+  "group": "B_s1",
+  "structure_id": "airplane_01",
+  "label": "airplane"
+ },
+ {
+  "blind_id": "img_874451",
+  "group": "B_s1",
+  "structure_id": "airplane_05",
+  "label": "airplane"
+ }
+]

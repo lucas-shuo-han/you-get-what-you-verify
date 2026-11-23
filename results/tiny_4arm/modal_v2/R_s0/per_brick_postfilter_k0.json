@@ -1,0 +1,25 @@
+[
+ {
+  "file": "/out/R_s0/eval.jsonl",
+  "k": 0,
+  "mode": "post_filter:mixed",
+  "n_prompts": 420,
+  "n_empty": 0,
+  "floating_frac": 0.18163407379279792,
+  "floating_frac_ci95": [
+   0.1714227475741551,
+   0.19147385567624423
+  ],
+  "first_error": 19.261904761904763,
+  "first_error_ci95": [
+   18.130892857142857,
+   20.454821428571428
+  ],
+  "mean_bricks": 112.86428571428571,
+  "filtered_out_frac": 0.17968019935624546,
+  "filtered_out_frac_ci95": [
+   0.17432572606046695,
+   0.1849883707597174
+  ]
+ }
+]

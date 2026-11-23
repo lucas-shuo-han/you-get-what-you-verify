@@ -1,0 +1,52 @@
+{
+ "A_s0_pool90": {
+  "passing": 15,
+  "recognized_top1": 0,
+  "recognized_top2": 0,
+  "labels_of_recognized": []
+ },
+ "B_s0_pool90": {
+  "passing": 26,
+  "recognized_top1": 0,
+  "recognized_top2": 0,
+  "labels_of_recognized": []
+ },
+ "B_s1_pool90": {
+  "passing": 20,
+  "recognized_top1": 0,
+  "recognized_top2": 0,
+  "labels_of_recognized": []
+ },
+ "C_s0_pool90": {
+  "passing": 21,
+  "recognized_top1": 0,
+  "recognized_top2": 1,
+  "labels_of_recognized": []
+ },
+ "A_s0_poolnew": {
+  "passing": 3,
+  "recognized_top1": 0,
+  "recognized_top2": 1,
+  "labels_of_recognized": []
+ },
+ "B_s0_poolnew": {
+  "passing": 1,
+  "recognized_top1": 0,
+  "recognized_top2": 0,
+  "labels_of_recognized": []
+ },
+ "B_s1_poolnew": {
+  "passing": 4,
+  "recognized_top1": 0,
+  "recognized_top2": 1,
+  "labels_of_recognized": []
+ },
+ "C_s0_poolnew": {
+  "passing": 4,
+  "recognized_top1": 1,
+  "recognized_top2": 1,
+  "labels_of_recognized": [
+   "lamp"
+  ]
+ }
+}

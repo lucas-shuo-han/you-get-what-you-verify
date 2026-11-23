@@ -1,0 +1,1262 @@
+[
+ {
+  "blind_id": "img_479886",
+  "group": "human",
+  "structure_id": "c244f6a3-c655-44ac-bf37-d25668c00d71",
+  "label": "car",
+  "render": "renders\\human\\car_c244f6a3.png",
+  "caption": "Compact car with rounded edges and blocky build.",
+  "pred": [
+   "car",
+   "bus"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_961346",
+  "group": "human",
+  "structure_id": "6183244e-484b-4000-8e34-33f3108a8cfa",
+  "label": "table",
+  "render": "renders\\human\\table_6183244e.png",
+  "caption": "Simple rectangular table with four legs.",
+  "pred": [
+   "table",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_851340",
+  "group": "ds_A",
+  "structure_id": "88ae8881-fac6-4b48-9650-30ac3778bfbb",
+  "label": "table",
+  "render": "renders\\ds_A\\table_88ae8881.png",
+  "caption": "A small rectangular table with a solid, blocky form.",
+  "pred": [
+   "bench",
+   "table"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_103152",
+  "group": "ds_B",
+  "structure_id": "88ae8881-fac6-4b48-9650-30ac3778bfbb",
+  "label": "table",
+  "render": "renders\\ds_B\\table_88ae8881.png",
+  "caption": "A small rectangular table with a solid, blocky form.",
+  "pred": [
+   "bench",
+   "table"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_459749",
+  "group": "ds_distill",
+  "structure_id": "c29aac73-7f22-4760-952e-06a411157ab7",
+  "label": "bench",
+  "render": "renders\\ds_distill\\bench_c29aac73.png",
+  "caption": "Small bench made with interlocking components.",
+  "pred": [
+   "bench",
+   "table"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_722818",
+  "group": "ds_distill",
+  "structure_id": "72215142-b786-4b67-bef8-920fca98eea1",
+  "label": "sofa",
+  "render": "renders\\ds_distill\\sofa_72215142.png",
+  "caption": "Corner sofa with raised backrest and extended seating area.",
+  "pred": [
+   "sofa",
+   "table"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_751324",
+  "group": "ds_A",
+  "structure_id": "3f6b3d88-a0f5-4576-a20f-73c071b996ca",
+  "label": "train",
+  "render": "renders\\ds_A\\train_3f6b3d88.png",
+  "caption": "Train with a rectangular body and tiered roof structure.",
+  "pred": [
+   "car",
+   "bus"
+  ],
+  "top1_ok": false,
+  "top2_ok": false
+ },
+ {
+  "blind_id": "img_823220",
+  "group": "ds_B",
+  "structure_id": "9252da4b-1cba-4807-9f7e-ac2e13eb9cb7",
+  "label": "bottle",
+  "render": "renders\\ds_B\\bottle_9252da4b.png",
+  "caption": "Bottle with a tall neck and square base.",
+  "pred": [
+   "bottle",
+   "tower"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_540198",
+  "group": "ds_A",
+  "structure_id": "bc7d1523-cf90-4bc8-8aff-ec90befcde77",
+  "label": "bench",
+  "render": "renders\\ds_A\\bench_bc7d1523.png",
+  "caption": "Bench with slatted seat and backrest, supported by legs.",
+  "pred": [
+   "bench",
+   "chair"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_271404",
+  "group": "human",
+  "structure_id": "097acefe-0df2-45e2-a965-8ae5b1ed7961",
+  "label": "sofa",
+  "render": "renders\\human\\sofa_097acefe.png",
+  "caption": "Compact sofa with backrest and seat structure.",
+  "pred": [
+   "bench",
+   "sofa"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_474921",
+  "group": "ds_B",
+  "structure_id": "9aab1e7b-aa11-4fd2-85c1-16e1c1049786",
+  "label": "chair",
+  "render": "renders\\ds_B\\chair_9aab1e7b.png",
+  "caption": "Chair with simple backrest and squared seat.",
+  "pred": [
+   "chair",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_966756",
+  "group": "human",
+  "structure_id": "a81e405d-4cfc-4f87-80e8-04548a3dbf82",
+  "label": "bed",
+  "render": "renders\\human\\bed_a81e405d.png",
+  "caption": "Bed with upper frame and lower platform.",
+  "pred": [
+   "chair",
+   "table"
+  ],
+  "top1_ok": false,
+  "top2_ok": false
+ },
+ {
+  "blind_id": "img_191940",
+  "group": "ds_B",
+  "structure_id": "c59ff7bc-e189-4971-8a9e-82764348ed65",
+  "label": "guitar",
+  "render": "renders\\ds_B\\guitar_c59ff7bc.png",
+  "caption": "Guitar with an elongated neck and compact body.",
+  "pred": [
+   "guitar",
+   "table"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_446459",
+  "group": "opus",
+  "structure_id": "0e0664ab-fb57-4cd6-8a2c-48a97f53ef02",
+  "label": "bus",
+  "render": "renders\\opus\\bus_0e0664ab.png",
+  "caption": "Bus-like shape with a rectangular and elongated form.",
+  "pred": [
+   "bus",
+   "train"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_883362",
+  "group": "opus",
+  "structure_id": "bc7d1523-cf90-4bc8-8aff-ec90befcde77",
+  "label": "bench",
+  "render": "renders\\opus\\bench_bc7d1523.png",
+  "caption": "Bench with slatted seat and backrest, supported by legs.",
+  "pred": [
+   "bench",
+   "chair"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_763336",
+  "group": "ds_distill",
+  "structure_id": "45eeacf6-1a50-447b-84a3-225bc1956f95",
+  "label": "jar",
+  "render": "renders\\ds_distill\\jar_45eeacf6.png",
+  "caption": "A tall, segmented jar with an irregular surface.",
+  "pred": [
+   "mug",
+   "jar"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_502421",
+  "group": "human",
+  "structure_id": "6ffea266-0048-44df-ac3c-34ba315f73a0",
+  "label": "sofa",
+  "render": "renders\\human\\sofa_6ffea266.png",
+  "caption": "Corner sofa with extended seats and raised backrest.",
+  "pred": [
+   "sofa",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_985805",
+  "group": "opus",
+  "structure_id": "3f6b3d88-a0f5-4576-a20f-73c071b996ca",
+  "label": "train",
+  "render": "renders\\opus\\train_3f6b3d88.png",
+  "caption": "Train with a rectangular body and tiered roof structure.",
+  "pred": [
+   "piano",
+   "bench"
+  ],
+  "top1_ok": false,
+  "top2_ok": false
+ },
+ {
+  "blind_id": "img_067418",
+  "group": "ds_distill",
+  "structure_id": "84383db4-656b-416d-b14e-158d77c76e86",
+  "label": "sofa",
+  "render": "renders\\ds_distill\\sofa_84383db4.png",
+  "caption": "Compact sofa with straight backrest and armrests.",
+  "pred": [
+   "sofa",
+   "bus"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_680052",
+  "group": "ds_distill",
+  "structure_id": "39dc0fee-bbbc-42e5-8871-569746705900",
+  "label": "vessel",
+  "render": "renders\\ds_distill\\vessel_39dc0fee.png",
+  "caption": "Rectangular vessel with layered brick-like construction.",
+  "pred": [
+   "basket",
+   "pot"
+  ],
+  "top1_ok": false,
+  "top2_ok": false
+ },
+ {
+  "blind_id": "img_279409",
+  "group": "ds_A",
+  "structure_id": "c59ff7bc-e189-4971-8a9e-82764348ed65",
+  "label": "guitar",
+  "render": "renders\\ds_A\\guitar_c59ff7bc.png",
+  "caption": "Guitar with an elongated neck and compact body.",
+  "pred": [
+   "guitar",
+   "train"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_947140",
+  "group": "human",
+  "structure_id": "24960c28-3914-4155-9d14-4cbbbd56b7d3",
+  "label": "vessel",
+  "render": "renders\\human\\vessel_24960c28.png",
+  "caption": "Vessel with elevated sections and elongated body.",
+  "pred": [
+   "vessel",
+   "train"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_522632",
+  "group": "ds_distill",
+  "structure_id": "a4ebc9cc-c325-4851-9ff4-0e16565da26f",
+  "label": "chair",
+  "render": "renders\\ds_distill\\chair_a4ebc9cc.png",
+  "caption": "Simple chair with a backrest and square cutout.",
+  "pred": [
+   "chair",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_388108",
+  "group": "human",
+  "structure_id": "217995d2-0066-4661-bfa7-e8f3a8438527",
+  "label": "car",
+  "render": "renders\\human\\car_217995d2.png",
+  "caption": "Car with angular build and layered structure.",
+  "pred": [
+   "car",
+   "vessel"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_101358",
+  "group": "ds_B",
+  "structure_id": "f854ff0b-6ce7-4bb9-8f89-4ff3c9e6642f",
+  "label": "camera",
+  "render": "renders\\ds_B\\camera_f854ff0b.png",
+  "caption": "Rectangular camera with a blocky lens protrusion.",
+  "pred": [
+   "car",
+   "bus"
+  ],
+  "top1_ok": false,
+  "top2_ok": false
+ },
+ {
+  "blind_id": "img_204038",
+  "group": "ds_A",
+  "structure_id": "b4c694e8-8186-4d17-b6aa-ca40d002977b",
+  "label": "bus",
+  "render": "renders\\ds_A\\bus_b4c694e8.png",
+  "caption": "Bus with a rectangular form and block-like structure.",
+  "pred": [
+   "bus",
+   "train"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_783864",
+  "group": "ds_A",
+  "structure_id": "82f902e6-e32f-4c49-ae16-f683812c64d7",
+  "label": "bookshelf",
+  "render": "renders\\ds_A\\bookshelf_82f902e6.png",
+  "caption": "Rectangular bookshelf with uniform vertical and horizontal alignment.",
+  "pred": [
+   "bookshelf",
+   "bus"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_898249",
+  "group": "human",
+  "structure_id": "0e678ace-4289-4eda-9f3c-1678160655b5",
+  "label": "table",
+  "render": "renders\\human\\table_0e678ace.png",
+  "caption": "A rectangular table with a solid top and dual supports.",
+  "pred": [
+   "table",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_431290",
+  "group": "human",
+  "structure_id": "7218259a-cba3-4de7-a196-d565d78f118e",
+  "label": "table",
+  "render": "renders\\human\\table_7218259a.png",
+  "caption": "Small rectangular table with open sides.",
+  "pred": [
+   "table",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_153468",
+  "group": "ds_A",
+  "structure_id": "ea150399-a728-464e-948c-354f922ac43d",
+  "label": "car",
+  "render": "renders\\ds_A\\car_ea150399.png",
+  "caption": "Compact car with a boxy shape and block-like features.",
+  "pred": [
+   "car",
+   "bus"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_471224",
+  "group": "opus",
+  "structure_id": "9252da4b-1cba-4807-9f7e-ac2e13eb9cb7",
+  "label": "bottle",
+  "render": "renders\\opus\\bottle_9252da4b.png",
+  "caption": "Bottle with a tall neck and square base.",
+  "pred": [
+   "bottle",
+   "jar"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_960999",
+  "group": "ds_A",
+  "structure_id": "b9f8fe18-e375-40ba-acc3-b117d8aa307b",
+  "label": "vessel",
+  "render": "renders\\ds_A\\vessel_b9f8fe18.png",
+  "caption": "Vessel with a long, blocky shape and tiered sections.",
+  "pred": [
+   "vessel",
+   "car"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_014714",
+  "group": "ds_distill",
+  "structure_id": "a6345ed8-d468-4b83-b130-e537cba02daf",
+  "label": "table",
+  "render": "renders\\ds_distill\\table_a6345ed8.png",
+  "caption": "Simple, rectangular table with sturdy legs.",
+  "pred": [
+   "table",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_096645",
+  "group": "human",
+  "structure_id": "aa74d850-3895-4ce7-aa49-931d9f74c2a1",
+  "label": "bus",
+  "render": "renders\\human\\bus_aa74d850.png",
+  "caption": "Bus with flat roof and rectangular body.",
+  "pred": [
+   "bus",
+   "train"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_000224",
+  "group": "ds_B",
+  "structure_id": "bc7d1523-cf90-4bc8-8aff-ec90befcde77",
+  "label": "bench",
+  "render": "renders\\ds_B\\bench_bc7d1523.png",
+  "caption": "Bench with slatted seat and backrest, supported by legs.",
+  "pred": [
+   "bench",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_473149",
+  "group": "ds_B",
+  "structure_id": "9751a363-9f68-4673-a7ff-632d801957e4",
+  "label": "pot",
+  "render": "renders\\ds_B\\pot_9751a363.png",
+  "caption": "Tall pot with stacked geometric elements.",
+  "pred": [
+   "pot",
+   "basket"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_608845",
+  "group": "human",
+  "structure_id": "d0ae545b-696e-4217-80b5-f72fbca137e2",
+  "label": "chair",
+  "render": "renders\\human\\chair_d0ae545b.png",
+  "caption": "Armchair with distinctive geometric shapes and layered forms.",
+  "pred": [
+   "chair",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_573141",
+  "group": "ds_A",
+  "structure_id": "9751a363-9f68-4673-a7ff-632d801957e4",
+  "label": "pot",
+  "render": "renders\\ds_A\\pot_9751a363.png",
+  "caption": "Tall pot with stacked geometric elements.",
+  "pred": [
+   "tower",
+   "bottle"
+  ],
+  "top1_ok": false,
+  "top2_ok": false
+ },
+ {
+  "blind_id": "img_977459",
+  "group": "opus",
+  "structure_id": "b9f8fe18-e375-40ba-acc3-b117d8aa307b",
+  "label": "vessel",
+  "render": "renders\\opus\\vessel_b9f8fe18.png",
+  "caption": "Vessel with a long, blocky shape and tiered sections.",
+  "pred": [
+   "vessel",
+   "car"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_876981",
+  "group": "ds_B",
+  "structure_id": "ea150399-a728-464e-948c-354f922ac43d",
+  "label": "car",
+  "render": "renders\\ds_B\\car_ea150399.png",
+  "caption": "Compact car with a boxy shape and block-like features.",
+  "pred": [
+   "car",
+   "bus"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_087100",
+  "group": "ds_A",
+  "structure_id": "9aab1e7b-aa11-4fd2-85c1-16e1c1049786",
+  "label": "chair",
+  "render": "renders\\ds_A\\chair_9aab1e7b.png",
+  "caption": "Chair with simple backrest and squared seat.",
+  "pred": [
+   "chair",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_639771",
+  "group": "human",
+  "structure_id": "1a01c64f-bb39-43ad-a9e7-fae219efbf6e",
+  "label": "train",
+  "render": "renders\\human\\train_1a01c64f.png",
+  "caption": "Train with a tiered structure, featuring three distinct levels.",
+  "pred": [
+   "train",
+   "guitar"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_832328",
+  "group": "ds_B",
+  "structure_id": "82f902e6-e32f-4c49-ae16-f683812c64d7",
+  "label": "bookshelf",
+  "render": "renders\\ds_B\\bookshelf_82f902e6.png",
+  "caption": "Rectangular bookshelf with uniform vertical and horizontal alignment.",
+  "pred": [
+   "bookshelf",
+   "bus"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_208448",
+  "group": "ds_A",
+  "structure_id": "7db62f6a-3620-4fae-b56a-f35bf912a1c0",
+  "label": "table",
+  "render": "renders\\ds_A\\table_7db62f6a.png",
+  "caption": "Round table with interlocking components and tiered base.",
+  "pred": [
+   "table",
+   "piano"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_259876",
+  "group": "human",
+  "structure_id": "112368a6-5846-4606-bc08-723e6f68e1b9",
+  "label": "table",
+  "render": "renders\\human\\table_112368a6.png",
+  "caption": "Simple table with a flat, rectangular surface and four legs.",
+  "pred": [
+   "table",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_126687",
+  "group": "ds_A",
+  "structure_id": "9252da4b-1cba-4807-9f7e-ac2e13eb9cb7",
+  "label": "bottle",
+  "render": "renders\\ds_A\\bottle_9252da4b.png",
+  "caption": "Bottle with a tall neck and square base.",
+  "pred": [
+   "tower",
+   "bottle"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_651243",
+  "group": "ds_B",
+  "structure_id": "3f6b3d88-a0f5-4576-a20f-73c071b996ca",
+  "label": "train",
+  "render": "renders\\ds_B\\train_3f6b3d88.png",
+  "caption": "Train with a rectangular body and tiered roof structure.",
+  "pred": [
+   "vessel",
+   "birdhouse"
+  ],
+  "top1_ok": false,
+  "top2_ok": false
+ },
+ {
+  "blind_id": "img_046828",
+  "group": "opus",
+  "structure_id": "c59ff7bc-e189-4971-8a9e-82764348ed65",
+  "label": "guitar",
+  "render": "renders\\opus\\guitar_c59ff7bc.png",
+  "caption": "Guitar with an elongated neck and compact body.",
+  "pred": [
+   "guitar",
+   "vessel"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_788377",
+  "group": "ds_distill",
+  "structure_id": "17c0bfce-5f6e-4436-af3d-53287883381f",
+  "label": "car",
+  "render": "renders\\ds_distill\\car_17c0bfce.png",
+  "caption": "Compact car with angular roof and protruding front grille.",
+  "pred": [
+   "vessel",
+   "car"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_572992",
+  "group": "human",
+  "structure_id": "125a22d9-4f06-476f-9516-3bb15515a528",
+  "label": "chair",
+  "render": "renders\\human\\chair_125a22d9.png",
+  "caption": "Armchair with square form, layered panels, and straight legs.",
+  "pred": [
+   "chair",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_281580",
+  "group": "ds_A",
+  "structure_id": "54cd3985-6d44-416d-ba84-444e9a29d783",
+  "label": "pot",
+  "render": "renders\\ds_A\\pot_54cd3985.png",
+  "caption": "Pot with a round body and detailed surface patterns.",
+  "pred": [
+   "birdhouse",
+   "vessel"
+  ],
+  "top1_ok": false,
+  "top2_ok": false
+ },
+ {
+  "blind_id": "img_700949",
+  "group": "opus",
+  "structure_id": "9751a363-9f68-4673-a7ff-632d801957e4",
+  "label": "pot",
+  "render": "renders\\opus\\pot_9751a363.png",
+  "caption": "Tall pot with stacked geometric elements.",
+  "pred": [
+   "pot",
+   "vessel"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_794465",
+  "group": "ds_B",
+  "structure_id": "b4c694e8-8186-4d17-b6aa-ca40d002977b",
+  "label": "bus",
+  "render": "renders\\ds_B\\bus_b4c694e8.png",
+  "caption": "Bus with a rectangular form and block-like structure.",
+  "pred": [
+   "bus",
+   "train"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_666274",
+  "group": "ds_distill",
+  "structure_id": "a64147c0-6bf0-43a1-a785-9905f4480b6a",
+  "label": "chair",
+  "render": "renders\\ds_distill\\chair_a64147c0.png",
+  "caption": "Unique chair with an abstract geometric form.",
+  "pred": [
+   "chair",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_374604",
+  "group": "ds_A",
+  "structure_id": "7670a083-ba67-4d05-abce-cb68a46345f8",
+  "label": "chair",
+  "render": "renders\\ds_A\\chair_7670a083.png",
+  "caption": "Chair with angled backrest and geometric support.",
+  "pred": [
+   "chair",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_162278",
+  "group": "human",
+  "structure_id": "a507510d-115c-4b3b-b3e0-786966cb3c0c",
+  "label": "vessel",
+  "render": "renders\\human\\vessel_a507510d.png",
+  "caption": "An elongated vessel with rectangular and stepped contours.",
+  "pred": [
+   "train",
+   "vessel"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_005380",
+  "group": "ds_B",
+  "structure_id": "7db62f6a-3620-4fae-b56a-f35bf912a1c0",
+  "label": "table",
+  "render": "renders\\ds_B\\table_7db62f6a.png",
+  "caption": "Round table with interlocking components and tiered base.",
+  "pred": [
+   "table",
+   "pot"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_328668",
+  "group": "ds_distill",
+  "structure_id": "2d0444bf-aab5-4cd1-b16d-a0521d2b7e36",
+  "label": "vessel",
+  "render": "renders\\ds_distill\\vessel_2d0444bf.png",
+  "caption": "A vessel with a series of vertical extensions.",
+  "pred": [
+   "table",
+   "piano"
+  ],
+  "top1_ok": false,
+  "top2_ok": false
+ },
+ {
+  "blind_id": "img_696864",
+  "group": "opus",
+  "structure_id": "ea150399-a728-464e-948c-354f922ac43d",
+  "label": "car",
+  "render": "renders\\opus\\car_ea150399.png",
+  "caption": "Compact car with a boxy shape and block-like features.",
+  "pred": [
+   "car",
+   "bus"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_611388",
+  "group": "human",
+  "structure_id": "760ec642-0881-40e5-822f-84a0ac706da4",
+  "label": "guitar",
+  "render": "renders\\human\\guitar_760ec642.png",
+  "caption": "Guitar with a linear neck and rectangular body.",
+  "pred": [
+   "guitar",
+   "bottle"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_602179",
+  "group": "opus",
+  "structure_id": "88ae8881-fac6-4b48-9650-30ac3778bfbb",
+  "label": "table",
+  "render": "renders\\opus\\table_88ae8881.png",
+  "caption": "A small rectangular table with a solid, blocky form.",
+  "pred": [
+   "table",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_806908",
+  "group": "ds_distill",
+  "structure_id": "395e8eec-ed0b-4735-983a-0008bdd4494d",
+  "label": "guitar",
+  "render": "renders\\ds_distill\\guitar_395e8eec.png",
+  "caption": "Guitar with rectangular body and elongated neck.",
+  "pred": [
+   "guitar",
+   "table"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_971194",
+  "group": "ds_A",
+  "structure_id": "0e0664ab-fb57-4cd6-8a2c-48a97f53ef02",
+  "label": "bus",
+  "render": "renders\\ds_A\\bus_0e0664ab.png",
+  "caption": "Bus-like shape with a rectangular and elongated form.",
+  "pred": [
+   "bus",
+   "train"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_996079",
+  "group": "ds_distill",
+  "structure_id": "a56934a8-eaba-4558-b447-489621b799ab",
+  "label": "vessel",
+  "render": "renders\\ds_distill\\vessel_a56934a8.png",
+  "caption": "Long rectangular vessel with elevated ends.",
+  "pred": [
+   "bed",
+   "vessel"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_902509",
+  "group": "ds_B",
+  "structure_id": "7670a083-ba67-4d05-abce-cb68a46345f8",
+  "label": "chair",
+  "render": "renders\\ds_B\\chair_7670a083.png",
+  "caption": "Chair with angled backrest and geometric support.",
+  "pred": [
+   "chair",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_515887",
+  "group": "ds_B",
+  "structure_id": "0e0664ab-fb57-4cd6-8a2c-48a97f53ef02",
+  "label": "bus",
+  "render": "renders\\ds_B\\bus_0e0664ab.png",
+  "caption": "Bus-like shape with a rectangular and elongated form.",
+  "pred": [
+   "bookshelf",
+   "bus"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_723262",
+  "group": "ds_A",
+  "structure_id": "98f39709-c9c0-4d0d-b0c8-c6724a5ffa2a",
+  "label": "guitar",
+  "render": "renders\\ds_A\\guitar_98f39709.png",
+  "caption": "Guitar with a tall neck and rounded body.",
+  "pred": [
+   "guitar",
+   "vessel"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_755470",
+  "group": "ds_distill",
+  "structure_id": "15f2d38a-cd65-4da0-add7-4d1b77035ce7",
+  "label": "car",
+  "render": "renders\\ds_distill\\car_15f2d38a.png",
+  "caption": "Compact car-shaped structure with distinct angular shapes and layers.",
+  "pred": [
+   "car",
+   "bus"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_983054",
+  "group": "ds_distill",
+  "structure_id": "5cfefe5d-8edd-4cb7-8981-13f1960c1f11",
+  "label": "chair",
+  "render": "renders\\ds_distill\\chair_5cfefe5d.png",
+  "caption": "Unique chair with dual backrests and parallel seating.",
+  "pred": [
+   "chair",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_141415",
+  "group": "ds_distill",
+  "structure_id": "73f4bd73-6ffb-4fd9-aae6-b6f5342dfa7a",
+  "label": "chair",
+  "render": "renders\\ds_distill\\chair_73f4bd73.png",
+  "caption": "Chair with high backrest, square seat, and simple legs.",
+  "pred": [
+   "chair",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_572316",
+  "group": "human",
+  "structure_id": "058a52fe-016f-451b-8c56-372ba41d7d4d",
+  "label": "table",
+  "render": "renders\\human\\table_058a52fe.png",
+  "caption": "Rectangular table with inset legs.",
+  "pred": [
+   "table",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_233756",
+  "group": "ds_distill",
+  "structure_id": "b6b7530e-0112-4af4-b6f6-fb5952132734",
+  "label": "vessel",
+  "render": "renders\\ds_distill\\vessel_b6b7530e.png",
+  "caption": "Elongated vessel with a layered exterior.",
+  "pred": [
+   "pot",
+   "basket"
+  ],
+  "top1_ok": false,
+  "top2_ok": false
+ },
+ {
+  "blind_id": "img_495959",
+  "group": "ds_distill",
+  "structure_id": "9e5d30e4-ffc3-4596-a934-0195c8f7949b",
+  "label": "sofa",
+  "render": "renders\\ds_distill\\sofa_9e5d30e4.png",
+  "caption": "Compact, angular sofa with distinctive geometric structure.",
+  "pred": [
+   "sofa",
+   "bed"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_616494",
+  "group": "ds_B",
+  "structure_id": "98f39709-c9c0-4d0d-b0c8-c6724a5ffa2a",
+  "label": "guitar",
+  "render": "renders\\ds_B\\guitar_98f39709.png",
+  "caption": "Guitar with a tall neck and rounded body.",
+  "pred": [
+   "guitar",
+   "table"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_137590",
+  "group": "opus",
+  "structure_id": "4c39a999-ad70-46a6-b0c1-7969a4e00d03",
+  "label": "chair",
+  "render": "renders\\opus\\chair_4c39a999.png",
+  "caption": "Chair with a geometric, blocky design and angled backrest.",
+  "pred": [
+   "chair",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_627191",
+  "group": "ds_A",
+  "structure_id": "f854ff0b-6ce7-4bb9-8f89-4ff3c9e6642f",
+  "label": "camera",
+  "render": "renders\\ds_A\\camera_f854ff0b.png",
+  "caption": "Rectangular camera with a blocky lens protrusion.",
+  "pred": [
+   "car",
+   "bus"
+  ],
+  "top1_ok": false,
+  "top2_ok": false
+ },
+ {
+  "blind_id": "img_918546",
+  "group": "ds_B",
+  "structure_id": "40285b94-b7ad-4b36-8a79-37a2eef61115",
+  "label": "chair",
+  "render": "renders\\ds_B\\chair_40285b94.png",
+  "caption": "Single-piece chair featuring a structured backrest and seat.",
+  "pred": [
+   "chair",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_726187",
+  "group": "ds_A",
+  "structure_id": "7bad6a6b-ac10-404b-bdc7-6bf389ac91bd",
+  "label": "car",
+  "render": "renders\\ds_A\\car_7bad6a6b.png",
+  "caption": "Compact car with blocky, angular shape and distinct sections.",
+  "pred": [
+   "car",
+   "train"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_529238",
+  "group": "ds_B",
+  "structure_id": "7bad6a6b-ac10-404b-bdc7-6bf389ac91bd",
+  "label": "car",
+  "render": "renders\\ds_B\\car_7bad6a6b.png",
+  "caption": "Compact car with blocky, angular shape and distinct sections.",
+  "pred": [
+   "car",
+   "train"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_304800",
+  "group": "human",
+  "structure_id": "27cf6434-9eb3-4d9a-a054-b2a4be694c2c",
+  "label": "table",
+  "render": "renders\\human\\table_27cf6434.png",
+  "caption": "A rectangular table with a flat surface and sturdy base.",
+  "pred": [
+   "table",
+   "bench"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_088534",
+  "group": "ds_B",
+  "structure_id": "b9f8fe18-e375-40ba-acc3-b117d8aa307b",
+  "label": "vessel",
+  "render": "renders\\ds_B\\vessel_b9f8fe18.png",
+  "caption": "Vessel with a long, blocky shape and tiered sections.",
+  "pred": [
+   "vessel",
+   "car"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_438072",
+  "group": "ds_distill",
+  "structure_id": "70f0ba2b-1f07-4fec-838c-6fb9015b50f8",
+  "label": "pot",
+  "render": "renders\\ds_distill\\pot_70f0ba2b.png",
+  "caption": "Tall cylindrical vessel with structured exterior.",
+  "pred": [
+   "basket",
+   "pot"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_701030",
+  "group": "human",
+  "structure_id": "7926b4b5-3f13-4713-a1a0-a62817838ca4",
+  "label": "vessel",
+  "render": "renders\\human\\vessel_7926b4b5.png",
+  "caption": "Ship with blocky contours and a flat hull.",
+  "pred": [
+   "car",
+   "vessel"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_167899",
+  "group": "ds_A",
+  "structure_id": "40285b94-b7ad-4b36-8a79-37a2eef61115",
+  "label": "chair",
+  "render": "renders\\ds_A\\chair_40285b94.png",
+  "caption": "Single-piece chair featuring a structured backrest and seat.",
+  "pred": [
+   "chair",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_980477",
+  "group": "ds_A",
+  "structure_id": "4c39a999-ad70-46a6-b0c1-7969a4e00d03",
+  "label": "chair",
+  "render": "renders\\ds_A\\chair_4c39a999.png",
+  "caption": "Chair with a geometric, blocky design and angled backrest.",
+  "pred": [
+   "chair",
+   "sofa"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_141920",
+  "group": "ds_B",
+  "structure_id": "4c39a999-ad70-46a6-b0c1-7969a4e00d03",
+  "label": "chair",
+  "render": "renders\\ds_B\\chair_4c39a999.png",
+  "caption": "Chair with a geometric, blocky design and angled backrest.",
+  "pred": [
+   "bench",
+   "chair"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_821494",
+  "group": "ds_distill",
+  "structure_id": "356cad59-8eae-42e2-978b-278c550e52e2",
+  "label": "sofa",
+  "render": "renders\\ds_distill\\sofa_356cad59.png",
+  "caption": "Compact settee with an angular frame and defined edges.",
+  "pred": [
+   "sofa",
+   "bus"
+  ],
+  "top1_ok": true,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_820417",
+  "group": "ds_distill",
+  "structure_id": "c325e2e6-3ebb-4c91-89e5-f37216acb23f",
+  "label": "chair",
+  "render": "renders\\ds_distill\\chair_c325e2e6.png",
+  "caption": "Chair with a rectangular shape and elevated armrests.",
+  "pred": [
+   "sofa",
+   "chair"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_959463",
+  "group": "human",
+  "structure_id": "cde99cb0-3f0f-45a9-bf0a-aa8470944b55",
+  "label": "table",
+  "render": "renders\\human\\table_cde99cb0.png",
+  "caption": "Rectangular table with a solid top and open center.",
+  "pred": [
+   "bed",
+   "table"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ },
+ {
+  "blind_id": "img_614496",
+  "group": "ds_B",
+  "structure_id": "54cd3985-6d44-416d-ba84-444e9a29d783",
+  "label": "pot",
+  "render": "renders\\ds_B\\pot_54cd3985.png",
+  "caption": "Pot with a round body and detailed surface patterns.",
+  "pred": [
+   "basket",
+   "pot"
+  ],
+  "top1_ok": false,
+  "top2_ok": true
+ }
+]

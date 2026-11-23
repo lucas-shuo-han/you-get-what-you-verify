@@ -1,0 +1,15 @@
+{"event": "start", "balance_cny": 10.62}
+{"event": "call", "idx": "c59ff7bc-e189-4971-8a9e-82764348ed65", "attempt": 0, "prompt_tokens": 306, "completion_tokens": 2000, "cache_hit": 0, "finish": "stop", "sec": 7.3}
+{"event": "call", "idx": "0aa3529a-8c91-4592-853e-1c2347c3cc3a", "attempt": 0, "prompt_tokens": 302, "completion_tokens": 2048, "cache_hit": 0, "finish": "length", "sec": 8.0}
+{"event": "call", "idx": "87221975-9f14-4312-bb12-ee009edbf4af", "attempt": 0, "prompt_tokens": 304, "completion_tokens": 280, "cache_hit": 0, "finish": "stop", "sec": 2.9}
+{"event": "call", "idx": "c59ff7bc-e189-4971-8a9e-82764348ed65", "attempt": 1, "prompt_tokens": 2360, "completion_tokens": 2000, "cache_hit": 2176, "finish": "stop", "sec": 6.3}
+{"event": "call", "idx": "0aa3529a-8c91-4592-853e-1c2347c3cc3a", "attempt": 1, "prompt_tokens": 2396, "completion_tokens": 2048, "cache_hit": 2176, "finish": "length", "sec": 6.2}
+{"event": "call", "idx": "87221975-9f14-4312-bb12-ee009edbf4af", "attempt": 1, "prompt_tokens": 671, "completion_tokens": 600, "cache_hit": 512, "finish": "stop", "sec": 2.9}
+{"event": "call", "idx": "c59ff7bc-e189-4971-8a9e-82764348ed65", "attempt": 2, "prompt_tokens": 4414, "completion_tokens": 2000, "cache_hit": 4224, "finish": "stop", "sec": 6.4}
+{"event": "call", "idx": "0aa3529a-8c91-4592-853e-1c2347c3cc3a", "attempt": 2, "prompt_tokens": 4490, "completion_tokens": 2048, "cache_hit": 4352, "finish": "length", "sec": 6.6}
+{"event": "call", "idx": "87221975-9f14-4312-bb12-ee009edbf4af", "attempt": 2, "prompt_tokens": 1320, "completion_tokens": 560, "cache_hit": 1152, "finish": "stop", "sec": 2.5}
+{"event": "call", "idx": "c59ff7bc-e189-4971-8a9e-82764348ed65", "attempt": 3, "prompt_tokens": 4414, "completion_tokens": 200, "cache_hit": 2432, "finish": "stop", "sec": 1.8}
+{"event": "call", "idx": "0aa3529a-8c91-4592-853e-1c2347c3cc3a", "attempt": 3, "prompt_tokens": 4485, "completion_tokens": 2020, "cache_hit": 2304, "finish": "stop", "sec": 6.7}
+{"event": "call", "idx": "87221975-9f14-4312-bb12-ee009edbf4af", "attempt": 3, "prompt_tokens": 1565, "completion_tokens": 280, "cache_hit": 512, "finish": "stop", "sec": 1.9}
+{"event": "end", "spent_cny": 0.0, "calls": 12, "prompt_tokens": 27027, "completion_tokens": 16084, "truncated": 3}
+{"event": "summary", "curve": {"small": {"0": 0.0, "1": 0.0, "2": 0.0, "3": 0.0}, "all": {"0": 0.0, "1": 0.0, "2": 0.0, "3": 0.0}, "medium": {"0": 0.0, "1": 0.0, "2": 0.0, "3": 0.0}, "large": {"0": 0.0, "1": 0.0, "2": 0.0, "3": 0.0}}, "failures": {"out_of_bounds": 5, "quality": 3, "collision": 3, "floating": 1}}

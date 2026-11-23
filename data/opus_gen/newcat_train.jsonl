@@ -1,0 +1,32 @@
+{"newcat": "airplane", "caption": "Simple airplane with a cross-shaped silhouette.", "id": "airplane_03", "bucket": "small"}
+{"newcat": "airplane", "caption": "Airplane with a T-shaped tail and straight wings.", "id": "airplane_12", "bucket": "small"}
+{"newcat": "airplane", "caption": "Long airliner with a raised cockpit at the front.", "id": "airplane_14", "bucket": "large"}
+{"newcat": "airplane", "caption": "Toy airplane with blocky wings and a tall vertical stabilizer.", "id": "airplane_07", "bucket": "medium"}
+{"newcat": "airplane", "caption": "Small jet with engines under each wing.", "id": "airplane_11", "bucket": "large"}
+{"newcat": "airplane", "caption": "Fighter jet with delta wings and a pointed nose.", "id": "airplane_04", "bucket": "medium"}
+{"newcat": "airplane", "caption": "Stubby cartoon airplane with short wings.", "id": "airplane_13", "bucket": "medium"}
+{"newcat": "airplane", "caption": "Airplane parked on the ground with landing gear.", "id": "airplane_09", "bucket": "small"}
+{"newcat": "house", "caption": "Barn-style house with a large front door.", "id": "house_11", "bucket": "large"}
+{"newcat": "house", "caption": "Narrow tall townhouse with a stepped roof.", "id": "house_05", "bucket": "large"}
+{"newcat": "house", "caption": "Cottage with a chimney and a sloped roof.", "id": "house_02", "bucket": "large"}
+{"newcat": "house", "caption": "House with a balcony on the second floor.", "id": "house_10", "bucket": "medium"}
+{"newcat": "house", "caption": "House with an attached garage on one side.", "id": "house_07", "bucket": "medium"}
+{"newcat": "house", "caption": "House with a front porch and a triangular roof.", "id": "house_04", "bucket": "medium"}
+{"newcat": "house", "caption": "Tiny hut with a door and a pointed roof.", "id": "house_09", "bucket": "small"}
+{"newcat": "house", "caption": "A small house with a pitched roof and a door.", "id": "house_00", "bucket": "small"}
+{"newcat": "tree", "caption": "Small sapling with a thin trunk and few leaves.", "id": "tree_05", "bucket": "large"}
+{"newcat": "tree", "caption": "Tree with two main branches splitting from the trunk.", "id": "tree_04", "bucket": "medium"}
+{"newcat": "tree", "caption": "Bonsai tree with a short trunk and flat canopy.", "id": "tree_12", "bucket": "small"}
+{"newcat": "tree", "caption": "Tree growing from a small square planter.", "id": "tree_13", "bucket": "medium"}
+{"newcat": "tree", "caption": "Pine tree with a conical, layered shape.", "id": "tree_01", "bucket": "medium"}
+{"newcat": "tree", "caption": "Cypress tree that is tall and narrow.", "id": "tree_10", "bucket": "medium"}
+{"newcat": "tree", "caption": "Christmas tree with stacked tiers getting smaller upward.", "id": "tree_07", "bucket": "medium"}
+{"newcat": "tree", "caption": "Short bushy tree with a thick trunk.", "id": "tree_02", "bucket": "large"}
+{"newcat": "lamp", "caption": "Small lamp with a cube shade.", "id": "lamp_12", "bucket": "small"}
+{"newcat": "lamp", "caption": "Twin-headed lamp with two shades on one base.", "id": "lamp_14", "bucket": "large"}
+{"newcat": "lamp", "caption": "Lamp with a stacked, stepped base.", "id": "lamp_11", "bucket": "large"}
+{"newcat": "lamp", "caption": "Lamp with a heavy square base and a straight neck.", "id": "lamp_07", "bucket": "medium"}
+{"newcat": "lamp", "caption": "Bedside lamp with a cylindrical body.", "id": "lamp_06", "bucket": "small"}
+{"newcat": "lamp", "caption": "Lamp with a wide conical shade and short stem.", "id": "lamp_04", "bucket": "medium"}
+{"newcat": "lamp", "caption": "A table lamp with a round base and a lampshade.", "id": "lamp_00", "bucket": "small"}
+{"newcat": "lamp", "caption": "Street lamp with a tall post and a light at the top.", "id": "lamp_05", "bucket": "large"}

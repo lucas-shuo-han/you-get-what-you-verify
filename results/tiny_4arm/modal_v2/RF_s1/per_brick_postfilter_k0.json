@@ -1,0 +1,25 @@
+[
+ {
+  "file": "/out/RF_s1/eval.jsonl",
+  "k": 0,
+  "mode": "post_filter:mixed",
+  "n_prompts": 420,
+  "n_empty": 0,
+  "floating_frac": 0.19247437573089357,
+  "floating_frac_ci95": [
+   0.18169531661533067,
+   0.20269776296882122
+  ],
+  "first_error": 18.68095238095238,
+  "first_error_ci95": [
+   17.518988095238097,
+   19.87857142857143
+  ],
+  "mean_bricks": 103.83571428571429,
+  "filtered_out_frac": 0.20638011355364683,
+  "filtered_out_frac_ci95": [
+   0.197414622817101,
+   0.21584613763244262
+  ]
+ }
+]

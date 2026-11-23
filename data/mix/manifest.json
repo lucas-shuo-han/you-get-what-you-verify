@@ -1,0 +1,14 @@
+{
+ "A": 4000,
+ "B": 4852,
+ "C": 4852,
+ "human": 4000,
+ "ai": {
+  "opus": 187,
+  "deepseek": 65,
+  "opus_newcat": 32
+ },
+ "upsample": 3,
+ "newcat_test": 28,
+ "seed_human": 2026
+}

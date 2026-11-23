@@ -1,0 +1,30 @@
+{
+ "spent_cny_total": 1.95,
+ "random_human_pair_iou_ref": 0.151,
+ "arms": {
+  "A": {
+   "n": 20,
+   "pass": 20,
+   "diversity_ok": 9,
+   "iou_aligned_mean_passed": 0.1552674101665616,
+   "n_iou": 20,
+   "mean_rounds": 1.5,
+   "calls": 30,
+   "prompt_tokens": 13935,
+   "completion_tokens": 137725,
+   "truncated": 1
+  },
+  "B": {
+   "n": 20,
+   "pass": 20,
+   "diversity_ok": 12,
+   "iou_aligned_mean_passed": 0.13986872509121895,
+   "n_iou": 20,
+   "mean_rounds": 3.55,
+   "calls": 71,
+   "prompt_tokens": 55085,
+   "completion_tokens": 420350,
+   "truncated": 5
+  }
+ }
+}

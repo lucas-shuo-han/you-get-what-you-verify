@@ -1,0 +1,36 @@
+{
+ "tag": "base",
+ "model": "Qwen/Qwen2.5-1.5B-Instruct",
+ "adapter": null,
+ "n": 90,
+ "checker": "connectivity",
+ "checker_methods_seen": [],
+ "max_budget": 3,
+ "max_budget_reached": 3,
+ "solved_k0": 0,
+ "solved_kmax": 0,
+ "curve": {
+  "small": {
+   "0": 0.0,
+   "3": 0.0
+  },
+  "all": {
+   "0": 0.0,
+   "3": 0.0
+  },
+  "medium": {
+   "0": 0.0,
+   "3": 0.0
+  },
+  "large": {
+   "0": 0.0,
+   "3": 0.0
+  }
+ },
+ "failures": {
+  "out_of_bounds": 338,
+  "collision": 18,
+  "floating": 4
+ },
+ "seconds": 4551.88157248497
+}

@@ -1,0 +1,110 @@
+{
+ "eval_A_90": {
+  "n": 90,
+  "gurobi_ok": 14,
+  "fails": {
+   "collision": 70,
+   "checker_error": 1,
+   "floating": 2,
+   "unstable": 3
+  },
+  "ok_ids": [
+   "d9ca0e04-e1c7-4050-8a98-f85e329c65e4",
+   "74a532df-32ed-474f-b28d-f0f9e774fb23",
+   "45ede9a4-ae49-472c-8b47-2b8f779233dc",
+   "81338663-6255-4a70-b167-2cf8994fd281",
+   "41096037-6583-4287-a666-1751cf2cbf0c",
+   "71c3bcd9-3666-43d6-90e3-f8711c87c825",
+   "53cc3c3a-e9c6-4484-bf54-a2092199643a",
+   "3521812d-7ba2-457e-85f8-2ab435a343a7",
+   "b564f3a1-1eae-49bc-a922-1ffdd6776c78",
+   "27d22b14-3482-4915-b55a-81743178437c",
+   "cb809780-43a1-4f85-a46b-6dcaed5b9d75",
+   "c9137405-27ef-4ef5-b779-00a5778bb85a",
+   "dfc85fc3-9d6d-4281-a5e5-eda97faebdb5",
+   "cb0f14e5-48cd-4e46-871d-434231271ba6"
+  ]
+ },
+ "eval_A_newcat": {
+  "n": 28,
+  "gurobi_ok": 3,
+  "fails": {
+   "collision": 23,
+   "unstable": 2
+  },
+  "ok_ids": [
+   "house_06",
+   "tree_03",
+   "lamp_01"
+  ]
+ },
+ "eval_B_90": {
+  "n": 90,
+  "gurobi_ok": 26,
+  "fails": {
+   "collision": 53,
+   "unstable": 6,
+   "floating": 2,
+   "out_of_bounds": 3
+  },
+  "ok_ids": [
+   "0a884bde-dd93-41c4-921c-611020168ab1",
+   "8a87c5b7-2da2-4d5c-bf7f-bb78d520ac31",
+   "837dfd98-a08e-4327-8c92-b3db88876e94",
+   "ef5f8016-66c1-422d-b3f0-7fd230f4db6b",
+   "ebb89bd2-f850-4506-960c-e28a1720f45c",
+   "6d8d90f1-aa82-46d3-b140-26362481c9f7",
+   "41096037-6583-4287-a666-1751cf2cbf0c",
+   "20c1cbf7-82a6-4dba-afcd-d69918ab8d56",
+   "9a300780-219a-435a-9d50-fa04499e37b7",
+   "f15659aa-1842-44d7-b135-ae1ceced1376",
+   "c1c2d9df-fc8a-4b33-9ded-d72c7f1531ec",
+   "1b9dff07-d590-44e7-a212-1eb8b1556427",
+   "aeb65e20-1374-4218-a842-99a76eed05ad",
+   "d8022c20-3357-4d46-aca0-257207bd0240",
+   "8ca3a029-bf45-4c2e-9712-9aceabf2da0e",
+   "d1edda1f-6b63-44ef-8cec-3b8bd8278436",
+   "c9cb7de5-1de9-4795-b5f4-16e14459ee6c",
+   "769f3ad2-3cc7-4e53-9d79-2373d0dd7e85",
+   "b564f3a1-1eae-49bc-a922-1ffdd6776c78",
+   "6ecea2c7-0c0c-414d-a34c-db1a804a3294",
+   "2e67889d-4447-4121-8a49-73104bc4bd9e",
+   "cb809780-43a1-4f85-a46b-6dcaed5b9d75",
+   "4c4f00df-84d1-4152-a77f-fd55af58aa65",
+   "dfc85fc3-9d6d-4281-a5e5-eda97faebdb5",
+   "dac80abd-2a77-478d-982b-ae1930af2eb5",
+   "ddd9effe-5170-47be-ae65-7be1a2b29d0a"
+  ]
+ },
+ "eval_B_newcat": {
+  "n": 28,
+  "gurobi_ok": 1,
+  "fails": {
+   "collision": 23,
+   "out_of_bounds": 3,
+   "format": 1
+  },
+  "ok_ids": [
+   "airplane_05"
+  ]
+ },
+ "eval_base_90": {
+  "n": 90,
+  "gurobi_ok": 0,
+  "fails": {
+   "out_of_bounds": 85,
+   "collision": 4,
+   "floating": 1
+  },
+  "ok_ids": []
+ },
+ "eval_base_newcat": {
+  "n": 28,
+  "gurobi_ok": 0,
+  "fails": {
+   "out_of_bounds": 27,
+   "collision": 1
+  },
+  "ok_ids": []
+ }
+}

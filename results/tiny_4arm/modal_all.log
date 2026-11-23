@@ -1,0 +1,27 @@
+✓ Initialized. View run at 
+<modal-app-url-redacted>
+✓ Created objects.
+├── ✓ Uploaded 
+│   <repo>\tools\modal_tiny_v2.py
+├── ✓ Uploaded 
+│   <repo>\data\tiny\n4000_s0
+├── ✓ Uploaded 
+│   <repo>\vendor\BrickGPT\src\brickgp
+│   t
+├── ✓ Uploaded <repo>\brickexp
+└── ✓ Created Function run_job.
+SKIP CHECK_OK RF_s0 attempts=4570 curve={'0': 0.002380952380952381, '1': 0.007142857142857143, '10': 0.01904761904761905} floating=0.1868
+CHECK_OK RFs_s0 attempts=4588 curve={'0': 0.004761904761904762, '1': 0.004761904761904762, '10': 0.016666666666666666} floating=0.1883
+CHECK_OK R_s0 attempts=4535 curve={'0': 0.011904761904761904, '1': 0.011904761904761904, '10': 0.02857142857142857} floating=0.1816
+CHECK_OK S_s0 attempts=4527 curve={'0': 0.009523809523809525, '1': 0.01904761904761905, '10': 0.030952380952380953} floating=0.1790
+CHECK_OK RF_s1 attempts=4589 curve={'0': 0.002380952380952381, '1': 0.002380952380952381, '10': 0.014285714285714285} floating=0.1925
+CHECK_OK RFs_s1 attempts=4566 curve={'0': 0.002380952380952381, '1': 0.007142857142857143, '10': 0.023809523809523808} floating=0.1885
+CHECK_OK R_s1 attempts=4569 curve={'0': 0.004761904761904762, '1': 0.007142857142857143, '10': 0.01904761904761905} floating=0.1715
+CHECK_OK S_s1 attempts=4421 curve={'0': 0.014285714285714285, '1': 0.02857142857142857, '10': 0.06666666666666667} floating=0.1683
+CHECK_OK RF_s2 attempts=4542 curve={'0': 0.007142857142857143, '1': 0.009523809523809525, '10': 0.03333333333333333} floating=0.1832
+CHECK_OK RFs_s2 attempts=4563 curve={'0': 0.007142857142857143, '1': 0.009523809523809525, '10': 0.023809523809523808} floating=0.1953
+CHECK_OK R_s2 attempts=4571 curve={'0': 0.009523809523809525, '1': 0.011904761904761904, '10': 0.011904761904761904} floating=0.1760
+CHECK_OK S_s2 attempts=4468 curve={'0': 0.016666666666666666, '1': 0.023809523809523808, '10': 0.047619047619047616} floating=0.1623
+Stopping app - local entrypoint completed.
+✓ App completed. View run at 
+<modal-app-url-redacted>

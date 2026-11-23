@@ -1,0 +1,35 @@
+{
+ "tag": "C_s0_x1_90",
+ "model": "/kaggle/working/sft_C_s0_x1/merged",
+ "adapter": null,
+ "n": 90,
+ "checker": "connectivity",
+ "checker_methods_seen": [
+  "connectivity"
+ ],
+ "max_budget": 0,
+ "max_budget_reached": 0,
+ "solved_k0": 21,
+ "solved_kmax": 21,
+ "curve": {
+  "small": {
+   "0": 0.13333333333333333
+  },
+  "all": {
+   "0": 0.23333333333333334
+  },
+  "medium": {
+   "0": 0.23333333333333334
+  },
+  "large": {
+   "0": 0.3333333333333333
+  }
+ },
+ "failures": {
+  "unstable": 6,
+  "floating": 8,
+  "collision": 55,
+  "ok": 21
+ },
+ "seconds": 262.673401594162
+}

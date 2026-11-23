@@ -1,0 +1,394 @@
+[
+ {
+  "blind_id": "img_164112",
+  "group": "human",
+  "structure_id": "ebb89bd2-f850-4506-960c-e28a1720f45c",
+  "label": "bench",
+  "render": "renders\\human\\bench_ebb89bd2.png",
+  "top1": "bench",
+  "top2": [
+   "bench",
+   "sofa"
+  ],
+  "ok1": true,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_769728",
+  "group": "sft",
+  "structure_id": "dac80abd-2a77-478d-982b-ae1930af2eb5",
+  "label": "chair",
+  "render": "renders\\sft\\chair_dac80abd.png",
+  "top1": "tower",
+  "top2": [
+   "tower",
+   "bottle"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_920880",
+  "group": "sft",
+  "structure_id": "3bac893e-5bc6-41f8-83c6-e25aad5678ff",
+  "label": "vessel",
+  "render": "renders\\sft\\vessel_3bac893e.png",
+  "top1": "bus",
+  "top2": [
+   "bus",
+   "car"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_353992",
+  "group": "human",
+  "structure_id": "2064fb96-75f7-44aa-9579-b36fbbadde76",
+  "label": "camera",
+  "render": "renders\\human\\camera_2064fb96.png",
+  "top1": "camera",
+  "top2": [
+   "camera",
+   "car"
+  ],
+  "ok1": true,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_883376",
+  "group": "sft",
+  "structure_id": "ebb89bd2-f850-4506-960c-e28a1720f45c",
+  "label": "bench",
+  "render": "renders\\sft\\bench_ebb89bd2.png",
+  "top1": "bookshelf",
+  "top2": [
+   "bookshelf",
+   "bed"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_362938",
+  "group": "sft",
+  "structure_id": "b564f3a1-1eae-49bc-a922-1ffdd6776c78",
+  "label": "table",
+  "render": "renders\\sft\\table_b564f3a1.png",
+  "top1": "bookshelf",
+  "top2": [
+   "bookshelf",
+   "piano"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_987949",
+  "group": "human",
+  "structure_id": "dac80abd-2a77-478d-982b-ae1930af2eb5",
+  "label": "chair",
+  "render": "renders\\human\\chair_dac80abd.png",
+  "top1": "chair",
+  "top2": [
+   "chair",
+   "sofa"
+  ],
+  "ok1": true,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_230140",
+  "group": "sft",
+  "structure_id": "cb809780-43a1-4f85-a46b-6dcaed5b9d75",
+  "label": "table",
+  "render": "renders\\sft\\table_cb809780.png",
+  "top1": "bench",
+  "top2": [
+   "bench",
+   "train"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_417350",
+  "group": "human",
+  "structure_id": "872a7a34-1253-43c3-976c-ba001ed5c443",
+  "label": "table",
+  "render": "renders\\human\\table_872a7a34.png",
+  "top1": "table",
+  "top2": [
+   "table",
+   "bench"
+  ],
+  "ok1": true,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_475903",
+  "group": "human",
+  "structure_id": "c1c2d9df-fc8a-4b33-9ded-d72c7f1531ec",
+  "label": "chair",
+  "render": "renders\\human\\chair_c1c2d9df.png",
+  "top1": "chair",
+  "top2": [
+   "chair",
+   "table"
+  ],
+  "ok1": true,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_399937",
+  "group": "human",
+  "structure_id": "74a532df-32ed-474f-b28d-f0f9e774fb23",
+  "label": "guitar",
+  "render": "renders\\human\\guitar_74a532df.png",
+  "top1": "guitar",
+  "top2": [
+   "guitar",
+   "tower"
+  ],
+  "ok1": true,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_171980",
+  "group": "human",
+  "structure_id": "3bac893e-5bc6-41f8-83c6-e25aad5678ff",
+  "label": "vessel",
+  "render": "renders\\human\\vessel_3bac893e.png",
+  "top1": "train",
+  "top2": [
+   "train",
+   "vessel"
+  ],
+  "ok1": false,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_909268",
+  "group": "sft",
+  "structure_id": "cb0f14e5-48cd-4e46-871d-434231271ba6",
+  "label": "table",
+  "render": "renders\\sft\\table_cb0f14e5.png",
+  "top1": "sofa",
+  "top2": [
+   "sofa",
+   "bed"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_829799",
+  "group": "sft",
+  "structure_id": "2064fb96-75f7-44aa-9579-b36fbbadde76",
+  "label": "camera",
+  "render": "renders\\sft\\camera_2064fb96.png",
+  "top1": "tower",
+  "top2": [
+   "tower",
+   "bottle"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_490891",
+  "group": "sft",
+  "structure_id": "c97d3aa0-210b-40ee-bd2a-9bf65f9ad59a",
+  "label": "vessel",
+  "render": "renders\\sft\\vessel_c97d3aa0.png",
+  "top1": "tower",
+  "top2": [
+   "tower",
+   "basket"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_392031",
+  "group": "human",
+  "structure_id": "b564f3a1-1eae-49bc-a922-1ffdd6776c78",
+  "label": "table",
+  "render": "renders\\human\\table_b564f3a1.png",
+  "top1": "table",
+  "top2": [
+   "table",
+   "bench"
+  ],
+  "ok1": true,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_958694",
+  "group": "human",
+  "structure_id": "a47954d8-d271-4ba7-ac25-9200a7a57fed",
+  "label": "vessel",
+  "render": "renders\\human\\vessel_a47954d8.png",
+  "top1": "train",
+  "top2": [
+   "train",
+   "vessel"
+  ],
+  "ok1": false,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_772489",
+  "group": "human",
+  "structure_id": "cb809780-43a1-4f85-a46b-6dcaed5b9d75",
+  "label": "table",
+  "render": "renders\\human\\table_cb809780.png",
+  "top1": "sofa",
+  "top2": [
+   "sofa",
+   "piano"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_826456",
+  "group": "human",
+  "structure_id": "4c4f00df-84d1-4152-a77f-fd55af58aa65",
+  "label": "sofa",
+  "render": "renders\\human\\sofa_4c4f00df.png",
+  "top1": "bench",
+  "top2": [
+   "bench",
+   "sofa"
+  ],
+  "ok1": false,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_330489",
+  "group": "human",
+  "structure_id": "c97d3aa0-210b-40ee-bd2a-9bf65f9ad59a",
+  "label": "vessel",
+  "render": "renders\\human\\vessel_c97d3aa0.png",
+  "top1": "vessel",
+  "top2": [
+   "vessel",
+   "train"
+  ],
+  "ok1": true,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_643582",
+  "group": "human",
+  "structure_id": "cb0f14e5-48cd-4e46-871d-434231271ba6",
+  "label": "table",
+  "render": "renders\\human\\table_cb0f14e5.png",
+  "top1": "table",
+  "top2": [
+   "table",
+   "bench"
+  ],
+  "ok1": true,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_883488",
+  "group": "sft",
+  "structure_id": "872a7a34-1253-43c3-976c-ba001ed5c443",
+  "label": "table",
+  "render": "renders\\sft\\table_872a7a34.png",
+  "top1": "tower",
+  "top2": [
+   "tower",
+   "bookshelf"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_130420",
+  "group": "sft",
+  "structure_id": "a47954d8-d271-4ba7-ac25-9200a7a57fed",
+  "label": "vessel",
+  "render": "renders\\sft\\vessel_a47954d8.png",
+  "top1": "bed",
+  "top2": [
+   "bed",
+   "table"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_806976",
+  "group": "sft",
+  "structure_id": "4c4f00df-84d1-4152-a77f-fd55af58aa65",
+  "label": "sofa",
+  "render": "renders\\sft\\sofa_4c4f00df.png",
+  "top1": "tower",
+  "top2": [
+   "tower",
+   "bottle"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_895371",
+  "group": "sft",
+  "structure_id": "74a532df-32ed-474f-b28d-f0f9e774fb23",
+  "label": "guitar",
+  "render": "renders\\sft\\guitar_74a532df.png",
+  "top1": "tower",
+  "top2": [
+   "tower",
+   "bottle"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_924799",
+  "group": "sft",
+  "structure_id": "ef5f8016-66c1-422d-b3f0-7fd230f4db6b",
+  "label": "vessel",
+  "render": "renders\\sft\\vessel_ef5f8016.png",
+  "top1": "jar",
+  "top2": [
+   "jar",
+   "pot"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_200755",
+  "group": "sft",
+  "structure_id": "c1c2d9df-fc8a-4b33-9ded-d72c7f1531ec",
+  "label": "chair",
+  "render": "renders\\sft\\chair_c1c2d9df.png",
+  "top1": "piano",
+  "top2": [
+   "piano",
+   "bookshelf"
+  ],
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_902169",
+  "group": "human",
+  "structure_id": "ef5f8016-66c1-422d-b3f0-7fd230f4db6b",
+  "label": "vessel",
+  "render": "renders\\human\\vessel_ef5f8016.png",
+  "top1": "vessel",
+  "top2": [
+   "vessel",
+   "train"
+  ],
+  "ok1": true,
+  "ok2": true
+ }
+]

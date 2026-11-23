@@ -1,0 +1,506 @@
+[
+ {
+  "blind_id": "img_909745",
+  "group": "human",
+  "structure_id": "e204d9e2-b900-4c79-bece-cc7745b88a04",
+  "label": "sofa",
+  "solved_at": null,
+  "n_bricks": 151,
+  "brick_types": {
+   "2x1": 7,
+   "2x6": 27,
+   "6x2": 35,
+   "8x1": 12,
+   "1x8": 7,
+   "1x1": 17,
+   "1x2": 13,
+   "2x4": 9,
+   "1x4": 2,
+   "4x2": 4,
+   "2x2": 7,
+   "4x1": 9,
+   "6x1": 2
+  },
+  "render": "renders\\human\\sofa_e204d9e2.png",
+  "caption": "Compact seating with geometric features and clean lines."
+ },
+ {
+  "blind_id": "img_646590",
+  "group": "sft",
+  "structure_id": "872a7a34-1253-43c3-976c-ba001ed5c443",
+  "label": "table",
+  "solved_at": 0,
+  "n_bricks": 40,
+  "brick_types": {
+   "2x6": 40
+  },
+  "render": "renders\\sft\\table_872a7a34.png",
+  "caption": "Compact table with straight legs and flat top."
+ },
+ {
+  "blind_id": "img_183637",
+  "group": "sft",
+  "structure_id": "b564f3a1-1eae-49bc-a922-1ffdd6776c78",
+  "label": "table",
+  "solved_at": 0,
+  "n_bricks": 128,
+  "brick_types": {
+   "2x4": 128
+  },
+  "render": "renders\\sft\\table_b564f3a1.png",
+  "caption": "Compact table with a flat top and four legs."
+ },
+ {
+  "blind_id": "img_138834",
+  "group": "human",
+  "structure_id": "99bb179a-6b8e-4f49-b7df-cb1233737e16",
+  "label": "chair",
+  "solved_at": null,
+  "n_bricks": 155,
+  "brick_types": {
+   "2x2": 27,
+   "1x1": 42,
+   "2x1": 23,
+   "4x2": 4,
+   "2x4": 8,
+   "1x2": 22,
+   "6x2": 4,
+   "2x6": 6,
+   "1x6": 4,
+   "1x4": 2,
+   "4x1": 5,
+   "6x1": 5,
+   "8x1": 3
+  },
+  "render": "renders\\human\\chair_99bb179a.png",
+  "caption": "Compact chair with angular features and staggered base."
+ },
+ {
+  "blind_id": "img_275724",
+  "group": "sft",
+  "structure_id": "cb809780-43a1-4f85-a46b-6dcaed5b9d75",
+  "label": "table",
+  "solved_at": 3,
+  "n_bricks": 14,
+  "brick_types": {
+   "6x1": 14
+  },
+  "render": "renders\\sft\\table_cb809780.png",
+  "caption": "Angular table with two right-angled legs."
+ },
+ {
+  "blind_id": "img_650244",
+  "group": "sft",
+  "structure_id": "3bac893e-5bc6-41f8-83c6-e25aad5678ff",
+  "label": "vessel",
+  "solved_at": 1,
+  "n_bricks": 48,
+  "brick_types": {
+   "2x6": 48
+  },
+  "render": "renders\\sft\\vessel_3bac893e.png",
+  "caption": "Long vessel with rectangular structure and vertical extensions."
+ },
+ {
+  "blind_id": "img_745486",
+  "group": "human",
+  "structure_id": "72c7396b-c458-4609-a0ac-f0774c40dc5f",
+  "label": "vessel",
+  "solved_at": null,
+  "n_bricks": 54,
+  "brick_types": {
+   "1x4": 6,
+   "1x8": 3,
+   "2x2": 4,
+   "2x6": 13,
+   "1x2": 7,
+   "1x1": 14,
+   "4x1": 2,
+   "2x1": 3,
+   "2x4": 1,
+   "4x2": 1
+  },
+  "render": "renders\\human\\vessel_72c7396b.png",
+  "caption": "Geometric vessel with vertical and horizontal linear elements."
+ },
+ {
+  "blind_id": "img_878662",
+  "group": "sft",
+  "structure_id": "74a532df-32ed-474f-b28d-f0f9e774fb23",
+  "label": "guitar",
+  "solved_at": 0,
+  "n_bricks": 60,
+  "brick_types": {
+   "2x4": 60
+  },
+  "render": "renders\\sft\\guitar_74a532df.png",
+  "caption": "Guitar with a slender neck and distinct body shape."
+ },
+ {
+  "blind_id": "img_650633",
+  "group": "human",
+  "structure_id": "861fc352-1feb-47f4-b70d-396788bab07e",
+  "label": "guitar",
+  "solved_at": null,
+  "n_bricks": 32,
+  "brick_types": {
+   "1x1": 9,
+   "4x1": 2,
+   "6x1": 3,
+   "2x1": 2,
+   "1x2": 2,
+   "2x2": 11,
+   "4x2": 3
+  },
+  "render": "renders\\human\\guitar_861fc352.png",
+  "caption": "Vertical guitar with rectangular body and long neck."
+ },
+ {
+  "blind_id": "img_388660",
+  "group": "human",
+  "structure_id": "02113f5e-3f4f-44b5-b82d-98b2d9782a63",
+  "label": "table",
+  "solved_at": null,
+  "n_bricks": 55,
+  "brick_types": {
+   "2x1": 8,
+   "2x2": 6,
+   "1x1": 10,
+   "1x2": 6,
+   "1x6": 4,
+   "2x6": 9,
+   "6x2": 7,
+   "1x8": 2,
+   "4x2": 1,
+   "8x1": 2
+  },
+  "render": "renders\\human\\table_02113f5e.png",
+  "caption": "Rectangular table with evenly spaced support columns."
+ },
+ {
+  "blind_id": "img_930988",
+  "group": "sft",
+  "structure_id": "4c4f00df-84d1-4152-a77f-fd55af58aa65",
+  "label": "sofa",
+  "solved_at": 0,
+  "n_bricks": 80,
+  "brick_types": {
+   "2x2": 80
+  },
+  "render": "renders\\sft\\sofa_4c4f00df.png",
+  "caption": "Compact couch with a backrest and armrests."
+ },
+ {
+  "blind_id": "img_391881",
+  "group": "human",
+  "structure_id": "6e71bbbc-8c04-4b19-ae03-6b0bee24e7c0",
+  "label": "table",
+  "solved_at": null,
+  "n_bricks": 109,
+  "brick_types": {
+   "2x6": 25,
+   "2x1": 18,
+   "1x6": 4,
+   "2x2": 3,
+   "6x2": 32,
+   "6x1": 4,
+   "4x1": 2,
+   "4x2": 7,
+   "2x4": 1,
+   "1x4": 1,
+   "1x2": 4,
+   "8x1": 3,
+   "1x1": 4,
+   "1x8": 1
+  },
+  "render": "renders\\human\\table_6e71bbbc.png",
+  "caption": "Rectangular table with layered top and support structure."
+ },
+ {
+  "blind_id": "img_403391",
+  "group": "sft",
+  "structure_id": "ef5f8016-66c1-422d-b3f0-7fd230f4db6b",
+  "label": "vessel",
+  "solved_at": 0,
+  "n_bricks": 302,
+  "brick_types": {
+   "2x2": 302
+  },
+  "render": "renders\\sft\\vessel_ef5f8016.png",
+  "caption": "Elongated vessel with varying block heights and protruding sections."
+ },
+ {
+  "blind_id": "img_455367",
+  "group": "human",
+  "structure_id": "476f653a-2067-42d2-a21b-20b8c3c1bcd8",
+  "label": "vessel",
+  "solved_at": null,
+  "n_bricks": 27,
+  "brick_types": {
+   "1x1": 9,
+   "1x6": 2,
+   "1x2": 3,
+   "2x6": 6,
+   "1x4": 3,
+   "2x4": 1,
+   "1x8": 1,
+   "2x1": 1,
+   "2x2": 1
+  },
+  "render": "renders\\human\\vessel_476f653a.png",
+  "caption": "Elongated vessel with stepped surface design."
+ },
+ {
+  "blind_id": "img_977033",
+  "group": "human",
+  "structure_id": "202e3d3d-28ec-4771-b150-c3bebf44faf4",
+  "label": "camera",
+  "solved_at": null,
+  "n_bricks": 77,
+  "brick_types": {
+   "1x8": 3,
+   "2x6": 17,
+   "1x1": 17,
+   "2x1": 8,
+   "2x4": 2,
+   "1x4": 6,
+   "2x2": 8,
+   "1x2": 9,
+   "1x6": 2,
+   "6x2": 3,
+   "4x1": 2
+  },
+  "render": "renders\\human\\camera_202e3d3d.png",
+  "caption": "A camera-like structure with blocky, geometric shapes."
+ },
+ {
+  "blind_id": "img_611423",
+  "group": "human",
+  "structure_id": "1a1f16d2-597e-46fd-b611-ed218488c756",
+  "label": "bench",
+  "solved_at": null,
+  "n_bricks": 58,
+  "brick_types": {
+   "2x6": 3,
+   "2x2": 9,
+   "2x1": 9,
+   "1x4": 3,
+   "2x4": 3,
+   "4x1": 1,
+   "4x2": 8,
+   "6x2": 10,
+   "8x1": 2,
+   "1x1": 6,
+   "1x2": 3,
+   "6x1": 1
+  },
+  "render": "renders\\human\\bench_1a1f16d2.png",
+  "caption": "Bench with backrest and three supporting legs."
+ },
+ {
+  "blind_id": "img_693005",
+  "group": "human",
+  "structure_id": "786c9a0e-9ef9-4a24-a85f-b79dd4580795",
+  "label": "vessel",
+  "solved_at": null,
+  "n_bricks": 64,
+  "brick_types": {
+   "2x1": 10,
+   "2x4": 4,
+   "2x6": 13,
+   "1x1": 15,
+   "1x8": 2,
+   "1x4": 4,
+   "2x2": 11,
+   "6x2": 1,
+   "1x2": 2,
+   "4x2": 1,
+   "4x1": 1
+  },
+  "render": "renders\\human\\vessel_786c9a0e.png",
+  "caption": "Ship-shaped vessel with towering central structure."
+ },
+ {
+  "blind_id": "img_930717",
+  "group": "sft",
+  "structure_id": "c97d3aa0-210b-40ee-bd2a-9bf65f9ad59a",
+  "label": "vessel",
+  "solved_at": 0,
+  "n_bricks": 153,
+  "brick_types": {
+   "1x1": 153
+  },
+  "render": "renders\\sft\\vessel_c97d3aa0.png",
+  "caption": "Vessel with a stepped, angular form."
+ },
+ {
+  "blind_id": "img_481575",
+  "group": "sft",
+  "structure_id": "2064fb96-75f7-44aa-9579-b36fbbadde76",
+  "label": "camera",
+  "solved_at": 0,
+  "n_bricks": 40,
+  "brick_types": {
+   "2x2": 40
+  },
+  "render": "renders\\sft\\camera_2064fb96.png",
+  "caption": "A geometric camera with layered, blocky protrusions."
+ },
+ {
+  "blind_id": "img_452701",
+  "group": "sft",
+  "structure_id": "c1c2d9df-fc8a-4b33-9ded-d72c7f1531ec",
+  "label": "chair",
+  "solved_at": 0,
+  "n_bricks": 286,
+  "brick_types": {
+   "1x1": 286
+  },
+  "render": "renders\\sft\\chair_c1c2d9df.png",
+  "caption": "Chair with angular backrest and square seat."
+ },
+ {
+  "blind_id": "img_278319",
+  "group": "sft",
+  "structure_id": "ebb89bd2-f850-4506-960c-e28a1720f45c",
+  "label": "bench",
+  "solved_at": 0,
+  "n_bricks": 60,
+  "brick_types": {
+   "2x2": 60
+  },
+  "render": "renders\\sft\\bench_ebb89bd2.png",
+  "caption": "Simple bench with elongated rectangular form and flat surface."
+ },
+ {
+  "blind_id": "img_544257",
+  "group": "human",
+  "structure_id": "0a16def9-3f51-4c89-a563-04df6d7bf961",
+  "label": "chair",
+  "solved_at": null,
+  "n_bricks": 97,
+  "brick_types": {
+   "2x2": 32,
+   "1x1": 16,
+   "1x6": 2,
+   "2x6": 4,
+   "6x2": 6,
+   "2x1": 18,
+   "6x1": 2,
+   "4x1": 5,
+   "1x2": 11,
+   "1x4": 1
+  },
+  "render": "renders\\human\\chair_0a16def9.png",
+  "caption": "Simple chair with vertical backrest and angular seat."
+ },
+ {
+  "blind_id": "img_020680",
+  "group": "human",
+  "structure_id": "b71da3d8-3ae2-4d67-8929-44f5042aa5ff",
+  "label": "table",
+  "solved_at": null,
+  "n_bricks": 118,
+  "brick_types": {
+   "1x2": 7,
+   "1x4": 7,
+   "1x1": 22,
+   "2x4": 12,
+   "2x6": 14,
+   "1x6": 2,
+   "2x2": 8,
+   "8x1": 11,
+   "2x1": 13,
+   "4x1": 5,
+   "6x1": 1,
+   "6x2": 12,
+   "4x2": 2,
+   "1x8": 2
+  },
+  "render": "renders\\human\\table_b71da3d8.png",
+  "caption": "Compact table with a flat surface and sturdy base. "
+ },
+ {
+  "blind_id": "img_229855",
+  "group": "human",
+  "structure_id": "f266eb6f-45fe-4021-b78b-04979734f3fc",
+  "label": "table",
+  "solved_at": null,
+  "n_bricks": 68,
+  "brick_types": {
+   "1x2": 15,
+   "1x1": 18,
+   "6x2": 17,
+   "1x8": 5,
+   "4x1": 4,
+   "2x6": 6,
+   "8x1": 2,
+   "1x6": 1
+  },
+  "render": "renders\\human\\table_f266eb6f.png",
+  "caption": "A four-legged rectangular table. "
+ },
+ {
+  "blind_id": "img_626899",
+  "group": "sft",
+  "structure_id": "dac80abd-2a77-478d-982b-ae1930af2eb5",
+  "label": "chair",
+  "solved_at": 0,
+  "n_bricks": 80,
+  "brick_types": {
+   "2x2": 80
+  },
+  "render": "renders\\sft\\chair_dac80abd.png",
+  "caption": "Compact chair with straight legs and an elevated backrest."
+ },
+ {
+  "blind_id": "img_724191",
+  "group": "sft",
+  "structure_id": "cb0f14e5-48cd-4e46-871d-434231271ba6",
+  "label": "table",
+  "solved_at": 0,
+  "n_bricks": 293,
+  "brick_types": {
+   "6x1": 293
+  },
+  "render": "renders\\sft\\table_cb0f14e5.png",
+  "caption": "Compact, square table with blocky legs and flat surface."
+ },
+ {
+  "blind_id": "img_255995",
+  "group": "human",
+  "structure_id": "e013a185-f66d-4dff-bb9c-f784f74222a3",
+  "label": "vessel",
+  "solved_at": null,
+  "n_bricks": 63,
+  "brick_types": {
+   "1x1": 12,
+   "2x4": 6,
+   "1x2": 14,
+   "1x4": 3,
+   "2x2": 5,
+   "2x6": 10,
+   "4x1": 1,
+   "6x2": 5,
+   "6x1": 1,
+   "2x1": 4,
+   "1x6": 1,
+   "4x2": 1
+  },
+  "render": "renders\\human\\vessel_e013a185.png",
+  "caption": "Teardrop-shaped vessel with a stepped, layered form."
+ },
+ {
+  "blind_id": "img_919499",
+  "group": "sft",
+  "structure_id": "a47954d8-d271-4ba7-ac25-9200a7a57fed",
+  "label": "vessel",
+  "solved_at": 0,
+  "n_bricks": 256,
+  "brick_types": {
+   "1x1": 256
+  },
+  "render": "renders\\sft\\vessel_a47954d8.png",
+  "caption": "Elongated rectangular vessel with stacked brick elements."
+ }
+]

@@ -1,0 +1,510 @@
+model H=64 L=4 params=150785 device=cpu
+seed 0 ep 0 val_bce 0.0620 23s
+seed 0 ep 1 val_bce 0.0435 23s
+seed 0 ep 2 val_bce 0.0237 24s
+seed 0 ep 3 val_bce 0.0280 24s
+seed 0 ep 4 val_bce 0.0253 24s
+seed 0 ep 5 val_bce 0.0604 24s
+seed 0 ep 6 val_bce 0.0390 24s
+seed 0 ep 7 val_bce 0.0329 23s
+seed 0 ep 8 val_bce 0.0294 24s
+seed 0 ep 9 val_bce 0.0300 24s
+seed 0 ep 10 val_bce 0.0316 24s
+seed 0 ep 11 val_bce 0.0300 23s
+seed 0 ep 12 val_bce 0.0282 24s
+seed 0 ep 13 val_bce 0.0291 24s
+seed 0 ep 14 val_bce 0.0283 24s
+{"cat": "02801938", "seed": 0, "n_train": 14000, "n_test": 1541, "val_bce": 0.02368214472196831, "tau": 0.9609167575836182, "miss": 0.011428571428571429, "saved": 0.8877352368591823, "auc": 1.0, "precision_safe": 0.9985380116959064, "n_unstable": 175, "infeasible": false, "miss_excess": -0.038571428571428576, "S2": 0.01427644386761843, "S1": 0.007787151200519144, "S3": 0.0282745361328125, "sec": 363}
+model H=64 L=4 params=150785 device=cpu
+seed 1 ep 0 val_bce 0.0672 24s
+seed 1 ep 1 val_bce 0.0282 24s
+seed 1 ep 2 val_bce 0.0251 25s
+seed 1 ep 3 val_bce 0.0299 24s
+seed 1 ep 4 val_bce 0.0246 25s
+seed 1 ep 5 val_bce 0.0259 25s
+seed 1 ep 6 val_bce 0.0588 24s
+seed 1 ep 7 val_bce 0.0294 24s
+seed 1 ep 8 val_bce 0.0313 23s
+seed 1 ep 9 val_bce 0.0294 24s
+seed 1 ep 10 val_bce 0.0304 25s
+seed 1 ep 11 val_bce 0.0355 24s
+seed 1 ep 12 val_bce 0.0284 24s
+seed 1 ep 13 val_bce 0.0273 24s
+seed 1 ep 14 val_bce 0.0301 25s
+{"cat": "02801938", "seed": 1, "n_train": 14000, "n_test": 1541, "val_bce": 0.0246289595806126, "tau": 0.978173553943634, "miss": 0.011428571428571429, "saved": 0.8877352368591823, "auc": 0.9999958167747334, "precision_safe": 0.9985380116959064, "n_unstable": 175, "infeasible": false, "miss_excess": -0.038571428571428576, "S2": 0.01427644386761843, "S1": 0.007787151200519144, "S3": 0.026289641857147217, "sec": 369}
+model H=64 L=4 params=150785 device=cpu
+seed 2 ep 0 val_bce 0.0669 24s
+seed 2 ep 1 val_bce 0.0409 23s
+seed 2 ep 2 val_bce 0.0274 23s
+seed 2 ep 3 val_bce 0.0693 25s
+seed 2 ep 4 val_bce 0.0335 25s
+seed 2 ep 5 val_bce 0.0316 24s
+seed 2 ep 6 val_bce 0.0361 25s
+seed 2 ep 7 val_bce 0.0328 25s
+seed 2 ep 8 val_bce 0.0305 25s
+seed 2 ep 9 val_bce 0.0326 26s
+seed 2 ep 10 val_bce 0.0450 25s
+seed 2 ep 11 val_bce 0.0399 25s
+seed 2 ep 12 val_bce 0.0460 25s
+seed 2 ep 13 val_bce 0.0391 26s
+seed 2 ep 14 val_bce 0.0378 25s
+{"cat": "02801938", "seed": 2, "n_train": 14000, "n_test": 1541, "val_bce": 0.027369017106348974, "tau": 0.9260783791542053, "miss": 0.011428571428571429, "saved": 0.8877352368591823, "auc": 0.9999790838736666, "precision_safe": 0.9985380116959064, "n_unstable": 175, "infeasible": false, "miss_excess": -0.038571428571428576, "S2": 0.01427644386761843, "S1": 0.007787151200519144, "S3": 0.04012441635131836, "sec": 376}
+model H=64 L=4 params=150785 device=cpu
+seed 0 ep 0 val_bce 0.0473 24s
+seed 0 ep 1 val_bce 0.0318 23s
+seed 0 ep 2 val_bce 0.0236 23s
+seed 0 ep 3 val_bce 0.0375 24s
+seed 0 ep 4 val_bce 0.0290 24s
+seed 0 ep 5 val_bce 0.0221 24s
+seed 0 ep 6 val_bce 0.0404 24s
+seed 0 ep 7 val_bce 0.0296 24s
+seed 0 ep 8 val_bce 0.0319 24s
+seed 0 ep 9 val_bce 0.0310 24s
+seed 0 ep 10 val_bce 0.0299 24s
+seed 0 ep 11 val_bce 0.0287 24s
+seed 0 ep 12 val_bce 0.0349 24s
+seed 0 ep 13 val_bce 0.0362 25s
+seed 0 ep 14 val_bce 0.0277 24s
+{"cat": "02818832", "seed": 0, "n_train": 14000, "n_test": 573, "val_bce": 0.02207451917912199, "tau": 0.9949889779090881, "miss": 0.011428571428571429, "saved": 0.6980802792321117, "auc": 0.9999856424982053, "precision_safe": 0.995, "n_unstable": 175, "infeasible": false, "miss_excess": -0.038571428571428576, "S2": 0.08726003490401396, "S1": 0.013961605584642234, "S3": 0.016265153884887695, "sec": 363}
+model H=64 L=4 params=150785 device=cpu
+seed 1 ep 0 val_bce 0.0404 23s
+seed 1 ep 1 val_bce 0.0219 24s
+seed 1 ep 2 val_bce 0.0210 25s
+seed 1 ep 3 val_bce 0.0199 24s
+seed 1 ep 4 val_bce 0.0251 24s
+seed 1 ep 5 val_bce 0.0266 24s
+seed 1 ep 6 val_bce 0.0236 24s
+seed 1 ep 7 val_bce 0.0227 24s
+seed 1 ep 8 val_bce 0.0220 25s
+seed 1 ep 9 val_bce 0.0225 24s
+seed 1 ep 10 val_bce 0.0263 24s
+seed 1 ep 11 val_bce 0.0235 24s
+seed 1 ep 12 val_bce 0.0254 24s
+seed 1 ep 13 val_bce 0.0272 24s
+seed 1 ep 14 val_bce 0.0238 24s
+{"cat": "02818832", "seed": 1, "n_train": 14000, "n_test": 573, "val_bce": 0.01986684867480541, "tau": 0.9786183834075928, "miss": 0.011428571428571429, "saved": 0.6980802792321117, "auc": 1.0, "precision_safe": 0.995, "n_unstable": 175, "infeasible": false, "miss_excess": -0.038571428571428576, "S2": 0.08726003490401396, "S1": 0.013961605584642234, "S3": 0.027381420135498047, "sec": 364}
+model H=64 L=4 params=150785 device=cpu
+seed 2 ep 0 val_bce 0.0422 23s
+seed 2 ep 1 val_bce 0.0411 23s
+seed 2 ep 2 val_bce 0.0239 25s
+seed 2 ep 3 val_bce 0.0239 25s
+seed 2 ep 4 val_bce 0.0314 23s
+seed 2 ep 5 val_bce 0.0242 24s
+seed 2 ep 6 val_bce 0.0260 24s
+seed 2 ep 7 val_bce 0.0241 24s
+seed 2 ep 8 val_bce 0.0256 24s
+seed 2 ep 9 val_bce 0.0239 24s
+seed 2 ep 10 val_bce 0.0244 24s
+seed 2 ep 11 val_bce 0.0291 24s
+seed 2 ep 12 val_bce 0.0219 25s
+seed 2 ep 13 val_bce 0.0214 25s
+seed 2 ep 14 val_bce 0.0296 25s
+{"cat": "02818832", "seed": 2, "n_train": 14000, "n_test": 573, "val_bce": 0.021413592530150148, "tau": 0.9973477125167847, "miss": 0.022857142857142857, "saved": 0.7015706806282722, "auc": 0.9999856424982053, "precision_safe": 0.9900497512437811, "n_unstable": 175, "infeasible": false, "miss_excess": -0.027142857142857146, "S2": 0.08726003490401396, "S1": 0.013961605584642234, "S3": 0.01233285665512085, "sec": 364}
+model H=64 L=4 params=150785 device=cpu
+seed 0 ep 0 val_bce 0.0313 24s
+seed 0 ep 1 val_bce 0.0417 25s
+seed 0 ep 2 val_bce 0.0265 23s
+seed 0 ep 3 val_bce 0.0242 25s
+seed 0 ep 4 val_bce 0.0341 25s
+seed 0 ep 5 val_bce 0.0340 24s
+seed 0 ep 6 val_bce 0.0282 24s
+seed 0 ep 7 val_bce 0.0353 24s
+seed 0 ep 8 val_bce 0.0233 24s
+seed 0 ep 9 val_bce 0.0203 24s
+seed 0 ep 10 val_bce 0.0269 26s
+seed 0 ep 11 val_bce 0.0246 25s
+seed 0 ep 12 val_bce 0.0247 26s
+seed 0 ep 13 val_bce 0.0470 26s
+seed 0 ep 14 val_bce 0.0343 25s
+{"cat": "02828884", "seed": 0, "n_train": 14000, "n_test": 1106, "val_bce": 0.02030225764121153, "tau": 0.996991753578186, "miss": 0.05922551252847381, "saved": 0.6265822784810127, "auc": 0.9965233784019152, "precision_safe": 0.9624819624819625, "n_unstable": 439, "infeasible": false, "miss_excess": 0.009225512528473805, "S2": 0.08860759493670886, "S1": 0.0406871609403255, "S3": 0.11613184213638306, "sec": 374}
+model H=64 L=4 params=150785 device=cpu
+seed 1 ep 0 val_bce 0.0406 24s
+seed 1 ep 1 val_bce 0.0298 23s
+seed 1 ep 2 val_bce 0.0291 24s
+seed 1 ep 3 val_bce 0.0636 25s
+seed 1 ep 4 val_bce 0.0399 27s
+seed 1 ep 5 val_bce 0.0507 25s
+seed 1 ep 6 val_bce 0.0345 26s
+seed 1 ep 7 val_bce 0.0336 25s
+seed 1 ep 8 val_bce 0.0578 25s
+seed 1 ep 9 val_bce 0.0498 25s
+seed 1 ep 10 val_bce 0.0542 28s
+seed 1 ep 11 val_bce 0.0464 27s
+seed 1 ep 12 val_bce 0.0326 25s
+seed 1 ep 13 val_bce 0.0356 25s
+seed 1 ep 14 val_bce 0.0305 25s
+{"cat": "02828884", "seed": 1, "n_train": 14000, "n_test": 1106, "val_bce": 0.02913008356798151, "tau": 0.954271674156189, "miss": 0.05922551252847381, "saved": 0.6265822784810127, "auc": 0.9961169756807245, "precision_safe": 0.9624819624819625, "n_unstable": 439, "infeasible": false, "miss_excess": 0.009225512528473805, "S2": 0.08860759493670886, "S1": 0.0406871609403255, "S3": 0.05554163455963135, "sec": 384}
+model H=64 L=4 params=150785 device=cpu
+seed 2 ep 0 val_bce 0.0358 23s
+seed 2 ep 1 val_bce 0.0389 24s
+seed 2 ep 2 val_bce 0.0267 24s
+seed 2 ep 3 val_bce 0.0257 24s
+seed 2 ep 4 val_bce 0.0235 23s
+seed 2 ep 5 val_bce 0.0244 24s
+seed 2 ep 6 val_bce 0.0218 23s
+seed 2 ep 7 val_bce 0.0342 25s
+seed 2 ep 8 val_bce 0.0389 24s
+seed 2 ep 9 val_bce 0.0302 24s
+seed 2 ep 10 val_bce 0.0284 24s
+seed 2 ep 11 val_bce 0.0320 24s
+seed 2 ep 12 val_bce 0.0297 24s
+seed 2 ep 13 val_bce 0.0293 24s
+seed 2 ep 14 val_bce 0.0307 24s
+{"cat": "02828884", "seed": 2, "n_train": 14000, "n_test": 1106, "val_bce": 0.021771796190754252, "tau": 0.9910746216773987, "miss": 0.05922551252847381, "saved": 0.6265822784810127, "auc": 0.9940269045431726, "precision_safe": 0.9624819624819625, "n_unstable": 439, "infeasible": false, "miss_excess": 0.009225512528473805, "S2": 0.08860759493670886, "S1": 0.0406871609403255, "S3": 0.08531492948532104, "sec": 364}
+model H=64 L=4 params=150785 device=cpu
+seed 0 ep 0 val_bce 0.0427 24s
+seed 0 ep 1 val_bce 0.0375 23s
+seed 0 ep 2 val_bce 0.0293 23s
+seed 0 ep 3 val_bce 0.0301 24s
+seed 0 ep 4 val_bce 0.0311 24s
+seed 0 ep 5 val_bce 0.0311 26s
+seed 0 ep 6 val_bce 0.0298 26s
+seed 0 ep 7 val_bce 0.0310 24s
+seed 0 ep 8 val_bce 0.0290 24s
+seed 0 ep 9 val_bce 0.0357 25s
+seed 0 ep 10 val_bce 0.0299 25s
+seed 0 ep 11 val_bce 0.0302 24s
+seed 0 ep 12 val_bce 0.0298 25s
+seed 0 ep 13 val_bce 0.0462 24s
+seed 0 ep 14 val_bce 0.0300 24s
+{"cat": "02843684", "seed": 0, "n_train": 14000, "n_test": 1804, "val_bce": 0.02904580961360562, "tau": 0.9798729419708252, "miss": 0.06842105263157895, "saved": 0.9018847006651884, "auc": 0.9996641231331116, "precision_safe": 0.9920098340503996, "n_unstable": 190, "infeasible": false, "miss_excess": 0.01842105263157895, "S2": 0.10920177383592018, "S1": 0.07206208425720621, "S3": 0.03311038017272949, "sec": 370}
+model H=64 L=4 params=150785 device=cpu
+seed 1 ep 0 val_bce 0.0398 24s
+seed 1 ep 1 val_bce 0.0381 24s
+seed 1 ep 2 val_bce 0.0255 24s
+seed 1 ep 3 val_bce 0.0230 25s
+seed 1 ep 4 val_bce 0.0240 23s
+seed 1 ep 5 val_bce 0.0245 25s
+seed 1 ep 6 val_bce 0.0263 25s
+seed 1 ep 7 val_bce 0.0266 24s
+seed 1 ep 8 val_bce 0.0223 24s
+seed 1 ep 9 val_bce 0.0552 23s
+seed 1 ep 10 val_bce 0.0525 24s
+seed 1 ep 11 val_bce 0.0449 24s
+seed 1 ep 12 val_bce 0.0490 25s
+seed 1 ep 13 val_bce 0.0582 25s
+seed 1 ep 14 val_bce 0.0569 24s
+{"cat": "02843684", "seed": 1, "n_train": 14000, "n_test": 1804, "val_bce": 0.0223002057413674, "tau": 0.9680690765380859, "miss": 0.06842105263157895, "saved": 0.9018847006651884, "auc": 0.9997423857040371, "precision_safe": 0.9920098340503996, "n_unstable": 190, "infeasible": false, "miss_excess": 0.01842105263157895, "S2": 0.10920177383592018, "S1": 0.07206208425720621, "S3": 0.02959883213043213, "sec": 368}
+model H=64 L=4 params=150785 device=cpu
+seed 2 ep 0 val_bce 0.0322 23s
+seed 2 ep 1 val_bce 0.0288 23s
+seed 2 ep 2 val_bce 0.0242 23s
+seed 2 ep 3 val_bce 0.0240 25s
+seed 2 ep 4 val_bce 0.0257 24s
+seed 2 ep 5 val_bce 0.0301 24s
+seed 2 ep 6 val_bce 0.0637 23s
+seed 2 ep 7 val_bce 0.0307 24s
+seed 2 ep 8 val_bce 0.0317 23s
+seed 2 ep 9 val_bce 0.0316 24s
+seed 2 ep 10 val_bce 0.0378 25s
+seed 2 ep 11 val_bce 0.0356 24s
+seed 2 ep 12 val_bce 0.0302 24s
+seed 2 ep 13 val_bce 0.0319 24s
+seed 2 ep 14 val_bce 0.0380 24s
+{"cat": "02843684", "seed": 2, "n_train": 14000, "n_test": 1804, "val_bce": 0.024028210976058114, "tau": 0.9979719519615173, "miss": 0.08421052631578947, "saved": 0.9035476718403548, "auc": 0.9999315202504402, "precision_safe": 0.9901840490797545, "n_unstable": 190, "infeasible": false, "miss_excess": 0.03421052631578947, "S2": 0.10920177383592018, "S1": 0.07206208425720621, "S3": 0.035166263580322266, "sec": 362}
+model H=64 L=4 params=150785 device=cpu
+seed 0 ep 0 val_bce 0.0538 24s
+seed 0 ep 1 val_bce 0.0262 23s
+seed 0 ep 2 val_bce 0.0251 24s
+seed 0 ep 3 val_bce 0.0221 23s
+seed 0 ep 4 val_bce 0.0239 24s
+seed 0 ep 5 val_bce 0.0273 23s
+seed 0 ep 6 val_bce 0.0239 23s
+seed 0 ep 7 val_bce 0.0232 24s
+seed 0 ep 8 val_bce 0.0321 23s
+seed 0 ep 9 val_bce 0.0582 23s
+seed 0 ep 10 val_bce 0.0393 23s
+seed 0 ep 11 val_bce 0.0297 23s
+seed 0 ep 12 val_bce 0.0404 23s
+seed 0 ep 13 val_bce 0.0301 24s
+seed 0 ep 14 val_bce 0.0267 23s
+{"cat": "02871439", "seed": 0, "n_train": 14000, "n_test": 1553, "val_bce": 0.022076144481570577, "tau": 0.9993911981582642, "miss": 0.043243243243243246, "saved": 0.8860270444301352, "auc": 0.9998577524893314, "precision_safe": 0.9941860465116279, "n_unstable": 185, "infeasible": false, "miss_excess": -0.006756756756756757, "S2": 0.028332260141661302, "S1": 0.08177720540888603, "S3": 0.049993157386779785, "sec": 356}
+model H=64 L=4 params=150785 device=cpu
+seed 1 ep 0 val_bce 0.0393 23s
+seed 1 ep 1 val_bce 0.0381 23s
+seed 1 ep 2 val_bce 0.0380 24s
+seed 1 ep 3 val_bce 0.0267 24s
+seed 1 ep 4 val_bce 0.0327 24s
+seed 1 ep 5 val_bce 0.0235 24s
+seed 1 ep 6 val_bce 0.0254 24s
+seed 1 ep 7 val_bce 0.0268 24s
+seed 1 ep 8 val_bce 0.0378 24s
+seed 1 ep 9 val_bce 0.0352 24s
+seed 1 ep 10 val_bce 0.0412 24s
+seed 1 ep 11 val_bce 0.0279 24s
+seed 1 ep 12 val_bce 0.0244 24s
+seed 1 ep 13 val_bce 0.0225 24s
+seed 1 ep 14 val_bce 0.0418 25s
+{"cat": "02871439", "seed": 1, "n_train": 14000, "n_test": 1553, "val_bce": 0.02249121755781147, "tau": 0.9429576396942139, "miss": 0.043243243243243246, "saved": 0.8860270444301352, "auc": 0.9993164216848427, "precision_safe": 0.9941860465116279, "n_unstable": 185, "infeasible": false, "miss_excess": -0.006756756756756757, "S2": 0.028332260141661302, "S1": 0.08177720540888603, "S3": 0.05544888973236084, "sec": 364}
+model H=64 L=4 params=150785 device=cpu
+seed 2 ep 0 val_bce 0.0397 23s
+seed 2 ep 1 val_bce 0.0267 24s
+seed 2 ep 2 val_bce 0.0437 24s
+seed 2 ep 3 val_bce 0.0246 25s
+seed 2 ep 4 val_bce 0.0345 24s
+seed 2 ep 5 val_bce 0.0361 24s
+seed 2 ep 6 val_bce 0.0329 23s
+seed 2 ep 7 val_bce 0.0324 24s
+seed 2 ep 8 val_bce 0.0305 23s
+seed 2 ep 9 val_bce 0.0327 23s
+seed 2 ep 10 val_bce 0.0299 24s
+seed 2 ep 11 val_bce 0.0302 24s
+seed 2 ep 12 val_bce 0.0300 24s
+seed 2 ep 13 val_bce 0.0358 24s
+seed 2 ep 14 val_bce 0.0296 25s
+{"cat": "02871439", "seed": 2, "n_train": 14000, "n_test": 1553, "val_bce": 0.024595909251196858, "tau": 0.7939126491546631, "miss": 0.043243243243243246, "saved": 0.8860270444301352, "auc": 0.9982337600758653, "precision_safe": 0.9941860465116279, "n_unstable": 185, "infeasible": false, "miss_excess": -0.006756756756756757, "S2": 0.028332260141661302, "S1": 0.08177720540888603, "S3": 0.057273268699645996, "sec": 364}
+model H=64 L=4 params=150785 device=cpu
+seed 0 ep 0 val_bce 0.0590 24s
+seed 0 ep 1 val_bce 0.0349 23s
+seed 0 ep 2 val_bce 0.0257 23s
+seed 0 ep 3 val_bce 0.0426 23s
+seed 0 ep 4 val_bce 0.0426 24s
+seed 0 ep 5 val_bce 0.0428 24s
+seed 0 ep 6 val_bce 0.0308 24s
+seed 0 ep 7 val_bce 0.0307 24s
+seed 0 ep 8 val_bce 0.0365 24s
+seed 0 ep 9 val_bce 0.0731 24s
+seed 0 ep 10 val_bce 0.0379 24s
+seed 0 ep 11 val_bce 0.0354 23s
+seed 0 ep 12 val_bce 0.0728 25s
+seed 0 ep 13 val_bce 0.0321 24s
+seed 0 ep 14 val_bce 0.0317 24s
+{"cat": "02876657", "seed": 0, "n_train": 14000, "n_test": 3622, "val_bce": 0.025743448912727143, "tau": 0.9903634190559387, "miss": 0.03888888888888889, "saved": 0.9522363335173937, "auc": 0.9999919297566014, "precision_safe": 0.9979704262104958, "n_unstable": 180, "infeasible": false, "miss_excess": -0.011111111111111113, "S2": 0.010491441192711209, "S1": 0.009387078961899503, "S3": 0.05138742923736572, "sec": 361}
+model H=64 L=4 params=150785 device=cpu
+seed 1 ep 0 val_bce 0.0517 23s
+seed 1 ep 1 val_bce 0.0378 23s
+seed 1 ep 2 val_bce 0.0407 23s
+seed 1 ep 3 val_bce 0.0342 23s
+seed 1 ep 4 val_bce 0.0312 23s
+seed 1 ep 5 val_bce 0.0315 23s
+seed 1 ep 6 val_bce 0.0306 23s
+seed 1 ep 7 val_bce 0.0357 24s
+seed 1 ep 8 val_bce 0.0490 24s
+seed 1 ep 9 val_bce 0.0307 24s
+seed 1 ep 10 val_bce 0.0416 23s
+seed 1 ep 11 val_bce 0.0416 23s
+seed 1 ep 12 val_bce 0.0340 24s
+seed 1 ep 13 val_bce 0.0329 23s
+seed 1 ep 14 val_bce 0.0300 23s
+{"cat": "02876657", "seed": 1, "n_train": 14000, "n_test": 3622, "val_bce": 0.02997330501271582, "tau": 0.8706647753715515, "miss": 0.03333333333333333, "saved": 0.9519602429596907, "auc": 0.9999903157079217, "precision_safe": 0.9982598607888631, "n_unstable": 180, "infeasible": false, "miss_excess": -0.01666666666666667, "S2": 0.010491441192711209, "S1": 0.009387078961899503, "S3": 0.07648205757141113, "sec": 357}
+model H=64 L=4 params=150785 device=cpu
+seed 2 ep 0 val_bce 0.0377 42s
+seed 2 ep 1 val_bce 0.0571 37s
+seed 2 ep 2 val_bce 0.0282 42s
+seed 2 ep 3 val_bce 0.0292 32s
+seed 2 ep 4 val_bce 0.0340 34s
+seed 2 ep 5 val_bce 0.0352 36s
+seed 2 ep 6 val_bce 0.0289 32s
+seed 2 ep 7 val_bce 0.0272 31s
+seed 2 ep 8 val_bce 0.0260 31s
+seed 2 ep 9 val_bce 0.0319 30s
+seed 2 ep 10 val_bce 0.0290 30s
+seed 2 ep 11 val_bce 0.0312 29s
+seed 2 ep 12 val_bce 0.0314 31s
+seed 2 ep 13 val_bce 0.0244 29s
+seed 2 ep 14 val_bce 0.0494 30s
+{"cat": "02876657", "seed": 2, "n_train": 14000, "n_test": 3622, "val_bce": 0.024354224748121225, "tau": 0.9861241579055786, "miss": 0.03333333333333333, "saved": 0.9519602429596907, "auc": 1.0, "precision_safe": 0.9982598607888631, "n_unstable": 180, "infeasible": false, "miss_excess": -0.01666666666666667, "S2": 0.010491441192711209, "S1": 0.009387078961899503, "S3": 0.0555347204208374, "sec": 503}
+model H=64 L=4 params=150785 device=cpu
+seed 0 ep 0 val_bce 0.0337 30s
+seed 0 ep 1 val_bce 0.0238 29s
+seed 0 ep 2 val_bce 0.0446 32s
+seed 0 ep 3 val_bce 0.0223 31s
+seed 0 ep 4 val_bce 0.0374 30s
+seed 0 ep 5 val_bce 0.0344 29s
+seed 0 ep 6 val_bce 0.0309 32s
+seed 0 ep 7 val_bce 0.0276 33s
+seed 0 ep 8 val_bce 0.0303 32s
+seed 0 ep 9 val_bce 0.0286 27s
+seed 0 ep 10 val_bce 0.0291 25s
+seed 0 ep 11 val_bce 0.0304 25s
+seed 0 ep 12 val_bce 0.0335 25s
+seed 0 ep 13 val_bce 0.0280 25s
+seed 0 ep 14 val_bce 0.0287 26s
+{"cat": "02880940", "seed": 0, "n_train": 14000, "n_test": 245, "val_bce": 0.022300322881816787, "tau": 0.9660232663154602, "miss": 0.0, "saved": 0.34285714285714286, "auc": 1.0, "precision_safe": 1.0, "n_unstable": 161, "infeasible": false, "miss_excess": -0.05, "S2": 0.02857142857142857, "S1": 0.0, "S3": 0.2827107012271881, "sec": 437}
+model H=64 L=4 params=150785 device=cpu
+seed 1 ep 0 val_bce 0.0482 24s
+seed 1 ep 1 val_bce 0.0260 25s
+seed 1 ep 2 val_bce 0.0296 24s
+seed 1 ep 3 val_bce 0.0284 25s
+seed 1 ep 4 val_bce 0.0278 25s
+seed 1 ep 5 val_bce 0.0303 26s
+seed 1 ep 6 val_bce 0.0299 26s
+seed 1 ep 7 val_bce 0.0322 31s
+seed 1 ep 8 val_bce 0.0403 27s
+seed 1 ep 9 val_bce 0.0288 25s
+seed 1 ep 10 val_bce 0.0277 26s
+seed 1 ep 11 val_bce 0.0255 25s
+seed 1 ep 12 val_bce 0.0267 26s
+seed 1 ep 13 val_bce 0.0268 27s
+seed 1 ep 14 val_bce 0.0268 27s
+{"cat": "02880940", "seed": 1, "n_train": 14000, "n_test": 245, "val_bce": 0.02551540177476682, "tau": 0.9979807734489441, "miss": 0.0, "saved": 0.34285714285714286, "auc": 1.0, "precision_safe": 1.0, "n_unstable": 161, "infeasible": false, "miss_excess": -0.05, "S2": 0.02857142857142857, "S1": 0.0, "S3": 0.22323453426361084, "sec": 391}
+model H=64 L=4 params=150785 device=cpu
+seed 2 ep 0 val_bce 0.0412 26s
+seed 2 ep 1 val_bce 0.0336 25s
+seed 2 ep 2 val_bce 0.0282 25s
+seed 2 ep 3 val_bce 0.0260 24s
+seed 2 ep 4 val_bce 0.0244 24s
+seed 2 ep 5 val_bce 0.0227 25s
+seed 2 ep 6 val_bce 0.0220 25s
+seed 2 ep 7 val_bce 0.0255 26s
+seed 2 ep 8 val_bce 0.0328 25s
+seed 2 ep 9 val_bce 0.0275 25s
+seed 2 ep 10 val_bce 0.0256 25s
+seed 2 ep 11 val_bce 0.0235 25s
+seed 2 ep 12 val_bce 0.0239 26s
+seed 2 ep 13 val_bce 0.0240 27s
+seed 2 ep 14 val_bce 0.0247 25s
+{"cat": "02880940", "seed": 2, "n_train": 14000, "n_test": 245, "val_bce": 0.022022159284564895, "tau": 0.9964577555656433, "miss": 0.0, "saved": 0.34285714285714286, "auc": 1.0, "precision_safe": 1.0, "n_unstable": 161, "infeasible": false, "miss_excess": -0.05, "S2": 0.02857142857142857, "S1": 0.0, "S3": 0.25496265292167664, "sec": 382}
+model H=64 L=4 params=150785 device=cpu
+seed 0 ep 0 val_bce 0.0424 25s
+seed 0 ep 1 val_bce 0.0329 25s
+seed 0 ep 2 val_bce 0.0302 25s
+seed 0 ep 3 val_bce 0.0293 25s
+seed 0 ep 4 val_bce 0.0265 25s
+seed 0 ep 5 val_bce 0.0245 24s
+seed 0 ep 6 val_bce 0.0242 24s
+seed 0 ep 7 val_bce 0.0255 25s
+seed 0 ep 8 val_bce 0.0415 25s
+seed 0 ep 9 val_bce 0.0264 26s
+seed 0 ep 10 val_bce 0.0223 26s
+seed 0 ep 11 val_bce 0.0228 25s
+seed 0 ep 12 val_bce 0.0218 26s
+seed 0 ep 13 val_bce 0.0225 26s
+seed 0 ep 14 val_bce 0.0216 26s
+{"cat": "02924116", "seed": 0, "n_train": 14000, "n_test": 801, "val_bce": 0.02155748672741821, "tau": 0.9991389513015747, "miss": 0.059880239520958084, "saved": 0.8039950062421972, "auc": 0.9998772171744839, "precision_safe": 0.984472049689441, "n_unstable": 167, "infeasible": false, "miss_excess": 0.009880239520958081, "S2": 0.02372034956304619, "S1": 0.0, "S3": 0.013597249984741211, "sec": 382}
+model H=64 L=4 params=150785 device=cpu
+seed 1 ep 0 val_bce 0.0362 26s
+seed 1 ep 1 val_bce 0.0301 25s
+seed 1 ep 2 val_bce 0.0263 25s
+seed 1 ep 3 val_bce 0.0303 24s
+seed 1 ep 4 val_bce 0.0280 24s
+seed 1 ep 5 val_bce 0.0320 25s
+seed 1 ep 6 val_bce 0.0296 25s
+seed 1 ep 7 val_bce 0.0265 27s
+seed 1 ep 8 val_bce 0.0275 25s
+seed 1 ep 9 val_bce 0.0299 25s
+seed 1 ep 10 val_bce 0.0257 26s
+seed 1 ep 11 val_bce 0.0247 25s
+seed 1 ep 12 val_bce 0.0288 25s
+seed 1 ep 13 val_bce 0.0552 25s
+seed 1 ep 14 val_bce 0.0498 24s
+{"cat": "02924116", "seed": 1, "n_train": 14000, "n_test": 801, "val_bce": 0.024671332329917903, "tau": 0.9885009527206421, "miss": 0.059880239520958084, "saved": 0.8039950062421972, "auc": 0.999981110334536, "precision_safe": 0.984472049689441, "n_unstable": 167, "infeasible": false, "miss_excess": 0.009880239520958081, "S2": 0.02372034956304619, "S1": 0.0, "S3": 0.009347617626190186, "sec": 381}
+model H=64 L=4 params=150785 device=cpu
+seed 2 ep 0 val_bce 0.0510 26s
+seed 2 ep 1 val_bce 0.0310 25s
+seed 2 ep 2 val_bce 0.0215 24s
+seed 2 ep 3 val_bce 0.0240 25s
+seed 2 ep 4 val_bce 0.0256 24s
+seed 2 ep 5 val_bce 0.0248 25s
+seed 2 ep 6 val_bce 0.0367 25s
+seed 2 ep 7 val_bce 0.0242 25s
+seed 2 ep 8 val_bce 0.0276 25s
+seed 2 ep 9 val_bce 0.0300 25s
+seed 2 ep 10 val_bce 0.0587 25s
+seed 2 ep 11 val_bce 0.0331 25s
+seed 2 ep 12 val_bce 0.0257 24s
+seed 2 ep 13 val_bce 0.0280 25s
+seed 2 ep 14 val_bce 0.0302 26s
+{"cat": "02924116", "seed": 2, "n_train": 14000, "n_test": 801, "val_bce": 0.021530011791336595, "tau": 0.9697891473770142, "miss": 0.0718562874251497, "saved": 0.8064918851435705, "auc": 0.9998583275090198, "precision_safe": 0.9814241486068112, "n_unstable": 167, "infeasible": false, "miss_excess": 0.021856287425149695, "S2": 0.02372034956304619, "S1": 0.0, "S3": 0.00785970687866211, "sec": 379}
+model H=64 L=4 params=150785 device=cpu
+seed 0 ep 0 val_bce 0.0595 28s
+seed 0 ep 1 val_bce 0.0303 27s
+seed 0 ep 2 val_bce 0.0300 31s
+seed 0 ep 3 val_bce 0.0317 25s
+seed 0 ep 4 val_bce 0.0238 25s
+seed 0 ep 5 val_bce 0.0242 26s
+seed 0 ep 6 val_bce 0.0249 26s
+seed 0 ep 7 val_bce 0.0291 25s
+seed 0 ep 8 val_bce 0.0474 25s
+seed 0 ep 9 val_bce 0.0402 26s
+seed 0 ep 10 val_bce 0.0296 25s
+seed 0 ep 11 val_bce 0.0289 26s
+seed 0 ep 12 val_bce 0.0375 26s
+seed 0 ep 13 val_bce 0.0291 25s
+seed 0 ep 14 val_bce 0.0274 26s
+{"cat": "02942699", "seed": 0, "n_train": 14000, "n_test": 527, "val_bce": 0.02375785184671933, "tau": 0.9976595640182495, "miss": 0.12578616352201258, "saved": 0.7362428842504743, "auc": 0.9936252392671588, "precision_safe": 0.9484536082474226, "n_unstable": 159, "infeasible": false, "miss_excess": 0.07578616352201258, "S2": 0.1252371916508539, "S1": 0.036053130929791274, "S3": 0.013006150722503662, "sec": 396}
+model H=64 L=4 params=150785 device=cpu
+seed 1 ep 0 val_bce 0.0416 27s
+seed 1 ep 1 val_bce 0.0340 26s
+seed 1 ep 2 val_bce 0.0304 25s
+seed 1 ep 3 val_bce 0.0445 25s
+seed 1 ep 4 val_bce 0.0335 26s
+seed 1 ep 5 val_bce 0.0457 25s
+seed 1 ep 6 val_bce 0.0289 25s
+seed 1 ep 7 val_bce 0.0334 25s
+seed 1 ep 8 val_bce 0.0295 26s
+seed 1 ep 9 val_bce 0.0301 25s
+seed 1 ep 10 val_bce 0.0282 25s
+seed 1 ep 11 val_bce 0.0280 26s
+seed 1 ep 12 val_bce 0.0286 25s
+seed 1 ep 13 val_bce 0.0316 26s
+seed 1 ep 14 val_bce 0.0369 25s
+{"cat": "02942699", "seed": 1, "n_train": 14000, "n_test": 527, "val_bce": 0.02796338959508664, "tau": 0.9988510608673096, "miss": 0.1320754716981132, "saved": 0.7381404174573055, "auc": 0.9957615531856713, "precision_safe": 0.9460154241645244, "n_unstable": 159, "infeasible": false, "miss_excess": 0.0820754716981132, "S2": 0.1252371916508539, "S1": 0.036053130929791274, "S3": 0.013139963150024414, "sec": 387}
+model H=64 L=4 params=150785 device=cpu
+seed 2 ep 0 val_bce 0.0389 27s
+seed 2 ep 1 val_bce 0.0306 25s
+seed 2 ep 2 val_bce 0.0427 26s
+seed 2 ep 3 val_bce 0.0300 27s
+seed 2 ep 4 val_bce 0.0281 26s
+seed 2 ep 5 val_bce 0.0244 25s
+seed 2 ep 6 val_bce 0.0236 25s
+seed 2 ep 7 val_bce 0.0231 26s
+seed 2 ep 8 val_bce 0.0235 25s
+seed 2 ep 9 val_bce 0.0213 25s
+seed 2 ep 10 val_bce 0.0237 25s
+seed 2 ep 11 val_bce 0.0294 26s
+seed 2 ep 12 val_bce 0.0333 25s
+seed 2 ep 13 val_bce 0.0270 25s
+seed 2 ep 14 val_bce 0.0498 25s
+{"cat": "02942699", "seed": 2, "n_train": 14000, "n_test": 527, "val_bce": 0.021327614341226233, "tau": 0.9980677962303162, "miss": 0.11320754716981132, "saved": 0.7324478178368121, "auc": 0.9993676510801203, "precision_safe": 0.9533678756476685, "n_unstable": 159, "infeasible": false, "miss_excess": 0.06320754716981132, "S2": 0.1252371916508539, "S1": 0.036053130929791274, "S3": 0.013536930084228516, "sec": 386}
+model H=64 L=4 params=150785 device=cpu
+seed 0 ep 0 val_bce 0.0316 26s
+seed 0 ep 1 val_bce 0.0290 25s
+seed 0 ep 2 val_bce 0.0282 26s
+seed 0 ep 3 val_bce 0.0284 25s
+seed 0 ep 4 val_bce 0.0254 25s
+seed 0 ep 5 val_bce 0.0257 26s
+seed 0 ep 6 val_bce 0.0261 26s
+seed 0 ep 7 val_bce 0.0396 27s
+seed 0 ep 8 val_bce 0.0256 26s
+seed 0 ep 9 val_bce 0.0260 26s
+seed 0 ep 10 val_bce 0.0329 27s
+seed 0 ep 11 val_bce 0.0280 28s
+seed 0 ep 12 val_bce 0.0259 26s
+seed 0 ep 13 val_bce 0.0354 27s
+seed 0 ep 14 val_bce 0.0471 26s
+{"cat": "02958343", "seed": 0, "n_train": 14000, "n_test": 3191, "val_bce": 0.02539647818680316, "tau": 0.9879595041275024, "miss": 0.08205953338696702, "saved": 0.6424318395487308, "auc": 0.9986255680682459, "precision_safe": 0.9502439024390243, "n_unstable": 1243, "infeasible": false, "miss_excess": 0.032059533386967015, "S2": 0.020683171419617674, "S1": 0.0, "S3": 0.03050971031188965, "sec": 399}
+model H=64 L=4 params=150785 device=cpu
+seed 1 ep 0 val_bce 0.0350 24s
+seed 1 ep 1 val_bce 0.0645 25s
+seed 1 ep 2 val_bce 0.0466 24s
+seed 1 ep 3 val_bce 0.0210 24s
+seed 1 ep 4 val_bce 0.0215 24s
+seed 1 ep 5 val_bce 0.0201 24s
+seed 1 ep 6 val_bce 0.0220 25s
+seed 1 ep 7 val_bce 0.0449 25s
+seed 1 ep 8 val_bce 0.0198 25s
+seed 1 ep 9 val_bce 0.0194 25s
+seed 1 ep 10 val_bce 0.0286 25s
+seed 1 ep 11 val_bce 0.0277 26s
+seed 1 ep 12 val_bce 0.0300 24s
+seed 1 ep 13 val_bce 0.0257 24s
+seed 1 ep 14 val_bce 0.0286 24s
+{"cat": "02958343", "seed": 1, "n_train": 14000, "n_test": 3191, "val_bce": 0.019366764750957093, "tau": 0.992882490158081, "miss": 0.08205953338696702, "saved": 0.6424318395487308, "auc": 0.9995002816594283, "precision_safe": 0.9502439024390243, "n_unstable": 1243, "infeasible": false, "miss_excess": 0.032059533386967015, "S2": 0.020683171419617674, "S1": 0.0, "S3": 0.026791036128997803, "sec": 376}
+model H=64 L=4 params=150785 device=cpu
+seed 2 ep 0 val_bce 0.0280 26s
+seed 2 ep 1 val_bce 0.0433 24s
+seed 2 ep 2 val_bce 0.0250 27s
+seed 2 ep 3 val_bce 0.0252 26s
+seed 2 ep 4 val_bce 0.0244 25s
+seed 2 ep 5 val_bce 0.0241 26s
+seed 2 ep 6 val_bce 0.0252 26s
+seed 2 ep 7 val_bce 0.0294 25s
+seed 2 ep 8 val_bce 0.0269 29s
+seed 2 ep 9 val_bce 0.0246 29s
+seed 2 ep 10 val_bce 0.0227 25s
+seed 2 ep 11 val_bce 0.0240 24s
+seed 2 ep 12 val_bce 0.0286 25s
+seed 2 ep 13 val_bce 0.0246 24s
+seed 2 ep 14 val_bce 0.0449 25s
+{"cat": "02958343", "seed": 2, "n_train": 14000, "n_test": 3191, "val_bce": 0.02267894539212051, "tau": 0.9976314306259155, "miss": 0.08045052292839903, "saved": 0.6418050767784393, "auc": 0.9996799324678156, "precision_safe": 0.951171875, "n_unstable": 1243, "infeasible": false, "miss_excess": 0.030450522928399032, "S2": 0.020683171419617674, "S1": 0.0, "S3": 0.021330058574676514, "sec": 394}

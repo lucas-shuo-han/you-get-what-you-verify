@@ -1,0 +1,15 @@
+# figures / tables / checker
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+pillow>=10
+networkx>=3
+datasets>=2.19        # StableText2Brick download
+gurobipy>=11          # optional: only for use_gurobi=True (needs a license)
+# training / evaluation (GPU)
+torch>=2.3
+transformers>=4.46
+peft>=0.13
+accelerate>=0.34
+# vllm==0.17.1        # optional fast evaluation backend used on Kaggle
+pytest

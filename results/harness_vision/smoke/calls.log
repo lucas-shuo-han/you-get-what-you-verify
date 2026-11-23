@@ -1,0 +1,11 @@
+{"event": "start", "balance_cny": 8.12}
+{"event": "call", "tag": "A:c59ff7bc:0", "prompt_tokens": 297, "completion_tokens": 1573, "reasoning_tokens": 1462, "cache_hit": 0, "finish": "stop", "sec": 9.4}
+{"event": "call", "tag": "A:88ae8881:0", "prompt_tokens": 298, "completion_tokens": 2013, "reasoning_tokens": 1732, "cache_hit": 0, "finish": "stop", "sec": 10.6}
+{"event": "call", "tag": "B:88ae8881:0", "prompt_tokens": 334, "completion_tokens": 2201, "reasoning_tokens": 1840, "cache_hit": 0, "finish": "stop", "sec": 11.8}
+{"event": "call", "tag": "B:c59ff7bc:0", "prompt_tokens": 333, "completion_tokens": 2382, "reasoning_tokens": 2241, "cache_hit": 0, "finish": "stop", "sec": 14.1}
+{"event": "call", "tag": "B:c59ff7bc:1", "prompt_tokens": 751, "completion_tokens": 5143, "reasoning_tokens": 4982, "cache_hit": 256, "finish": "stop", "sec": 27.0}
+{"event": "call", "tag": "B:88ae8881:1", "prompt_tokens": 992, "completion_tokens": 9160, "reasoning_tokens": 8839, "cache_hit": 256, "finish": "stop", "sec": 51.0}
+{"event": "call", "tag": "B:88ae8881:2", "prompt_tokens": 933, "completion_tokens": 2684, "reasoning_tokens": 2503, "cache_hit": 256, "finish": "stop", "sec": 16.1}
+{"event": "call", "tag": "B:c59ff7bc:2", "prompt_tokens": 771, "completion_tokens": 11425, "reasoning_tokens": 11194, "cache_hit": 256, "finish": "stop", "sec": 57.4}
+{"event": "call", "tag": "B:88ae8881:3", "prompt_tokens": 812, "completion_tokens": 5946, "reasoning_tokens": 5805, "cache_hit": 256, "finish": "stop", "sec": 37.6}
+{"event": "call", "tag": "B:c59ff7bc:3", "prompt_tokens": 841, "completion_tokens": 4341, "reasoning_tokens": 4080, "cache_hit": 256, "finish": "stop", "sec": 22.3}

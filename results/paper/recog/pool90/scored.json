@@ -1,0 +1,740 @@
+[
+ {
+  "blind_id": "img_566506",
+  "group": "B_s1",
+  "structure_id": "2a80a0be-0195-4301-8da0-4b3765300989",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_269340",
+  "group": "B_s0",
+  "structure_id": "41096037-6583-4287-a666-1751cf2cbf0c",
+  "label": "sofa",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_880324",
+  "group": "B_s0",
+  "structure_id": "8ca3a029-bf45-4c2e-9712-9aceabf2da0e",
+  "label": "bench",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_224826",
+  "group": "B_s0",
+  "structure_id": "dac80abd-2a77-478d-982b-ae1930af2eb5",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_580777",
+  "group": "C_s0",
+  "structure_id": "b564f3a1-1eae-49bc-a922-1ffdd6776c78",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_135529",
+  "group": "A_s0",
+  "structure_id": "8a87c5b7-2da2-4d5c-bf7f-bb78d520ac31",
+  "label": "table",
+  "top1": "bookshelf",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_140295",
+  "group": "B_s1",
+  "structure_id": "f15659aa-1842-44d7-b135-ae1ceced1376",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_077168",
+  "group": "A_s0",
+  "structure_id": "dfc85fc3-9d6d-4281-a5e5-eda97faebdb5",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_767066",
+  "group": "B_s0",
+  "structure_id": "769f3ad2-3cc7-4e53-9d79-2373d0dd7e85",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_791893",
+  "group": "C_s0",
+  "structure_id": "2a80a0be-0195-4301-8da0-4b3765300989",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_785582",
+  "group": "B_s0",
+  "structure_id": "9a300780-219a-435a-9d50-fa04499e37b7",
+  "label": "bench",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_032759",
+  "group": "A_s0",
+  "structure_id": "b564f3a1-1eae-49bc-a922-1ffdd6776c78",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_659516",
+  "group": "C_s0",
+  "structure_id": "27d22b14-3482-4915-b55a-81743178437c",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_834563",
+  "group": "A_s0",
+  "structure_id": "45ede9a4-ae49-472c-8b47-2b8f779233dc",
+  "label": "vessel",
+  "top1": "bookshelf",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_593778",
+  "group": "B_s1",
+  "structure_id": "b564f3a1-1eae-49bc-a922-1ffdd6776c78",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_483515",
+  "group": "B_s1",
+  "structure_id": "71c3bcd9-3666-43d6-90e3-f8711c87c825",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_578627",
+  "group": "C_s0",
+  "structure_id": "ddd9effe-5170-47be-ae65-7be1a2b29d0a",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_605227",
+  "group": "C_s0",
+  "structure_id": "2654f67c-2837-48cf-aa28-2dfe38129c2f",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_104867",
+  "group": "B_s1",
+  "structure_id": "ebb89bd2-f850-4506-960c-e28a1720f45c",
+  "label": "bench",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_272521",
+  "group": "B_s1",
+  "structure_id": "20c1cbf7-82a6-4dba-afcd-d69918ab8d56",
+  "label": "bus",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_487835",
+  "group": "B_s0",
+  "structure_id": "6ecea2c7-0c0c-414d-a34c-db1a804a3294",
+  "label": "bookshelf",
+  "top1": "train",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_085992",
+  "group": "C_s0",
+  "structure_id": "f15659aa-1842-44d7-b135-ae1ceced1376",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_766735",
+  "group": "B_s0",
+  "structure_id": "1b9dff07-d590-44e7-a212-1eb8b1556427",
+  "label": "sofa",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_403919",
+  "group": "C_s0",
+  "structure_id": "c9137405-27ef-4ef5-b779-00a5778bb85a",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_317206",
+  "group": "A_s0",
+  "structure_id": "53cc3c3a-e9c6-4484-bf54-a2092199643a",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_902943",
+  "group": "B_s1",
+  "structure_id": "dfc85fc3-9d6d-4281-a5e5-eda97faebdb5",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_116660",
+  "group": "B_s1",
+  "structure_id": "53cc3c3a-e9c6-4484-bf54-a2092199643a",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_438368",
+  "group": "B_s0",
+  "structure_id": "0a884bde-dd93-41c4-921c-611020168ab1",
+  "label": "bench",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_358323",
+  "group": "B_s0",
+  "structure_id": "b564f3a1-1eae-49bc-a922-1ffdd6776c78",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_935155",
+  "group": "C_s0",
+  "structure_id": "dfc85fc3-9d6d-4281-a5e5-eda97faebdb5",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_775468",
+  "group": "A_s0",
+  "structure_id": "c9137405-27ef-4ef5-b779-00a5778bb85a",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_725456",
+  "group": "B_s1",
+  "structure_id": "41096037-6583-4287-a666-1751cf2cbf0c",
+  "label": "sofa",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_779532",
+  "group": "B_s1",
+  "structure_id": "769f3ad2-3cc7-4e53-9d79-2373d0dd7e85",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_628303",
+  "group": "A_s0",
+  "structure_id": "cb809780-43a1-4f85-a46b-6dcaed5b9d75",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_086644",
+  "group": "B_s0",
+  "structure_id": "ef5f8016-66c1-422d-b3f0-7fd230f4db6b",
+  "label": "vessel",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_206063",
+  "group": "B_s1",
+  "structure_id": "c9cb7de5-1de9-4795-b5f4-16e14459ee6c",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_533910",
+  "group": "B_s0",
+  "structure_id": "ebb89bd2-f850-4506-960c-e28a1720f45c",
+  "label": "bench",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_121169",
+  "group": "B_s1",
+  "structure_id": "8fca3e0f-b4ce-4efa-984e-86c4fb3a652d",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_535635",
+  "group": "A_s0",
+  "structure_id": "71c3bcd9-3666-43d6-90e3-f8711c87c825",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_328723",
+  "group": "A_s0",
+  "structure_id": "27d22b14-3482-4915-b55a-81743178437c",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_135275",
+  "group": "B_s1",
+  "structure_id": "8ca3a029-bf45-4c2e-9712-9aceabf2da0e",
+  "label": "bench",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_695007",
+  "group": "B_s0",
+  "structure_id": "c9cb7de5-1de9-4795-b5f4-16e14459ee6c",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_123460",
+  "group": "B_s0",
+  "structure_id": "d8022c20-3357-4d46-aca0-257207bd0240",
+  "label": "sofa",
+  "top1": "bus",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_742054",
+  "group": "B_s0",
+  "structure_id": "ddd9effe-5170-47be-ae65-7be1a2b29d0a",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_007535",
+  "group": "C_s0",
+  "structure_id": "53cc3c3a-e9c6-4484-bf54-a2092199643a",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_290739",
+  "group": "B_s1",
+  "structure_id": "8a87c5b7-2da2-4d5c-bf7f-bb78d520ac31",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_381553",
+  "group": "B_s0",
+  "structure_id": "8a87c5b7-2da2-4d5c-bf7f-bb78d520ac31",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_460538",
+  "group": "C_s0",
+  "structure_id": "8fca3e0f-b4ce-4efa-984e-86c4fb3a652d",
+  "label": "chair",
+  "top1": "guitar",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_278712",
+  "group": "B_s1",
+  "structure_id": "1b7b9ed9-08d3-4459-a6df-77581ea72606",
+  "label": "pot",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_998571",
+  "group": "B_s0",
+  "structure_id": "f15659aa-1842-44d7-b135-ae1ceced1376",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_241413",
+  "group": "C_s0",
+  "structure_id": "cb0f14e5-48cd-4e46-871d-434231271ba6",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_931270",
+  "group": "B_s0",
+  "structure_id": "837dfd98-a08e-4327-8c92-b3db88876e94",
+  "label": "bench",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_773101",
+  "group": "C_s0",
+  "structure_id": "d1edda1f-6b63-44ef-8cec-3b8bd8278436",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_284565",
+  "group": "B_s0",
+  "structure_id": "c1c2d9df-fc8a-4b33-9ded-d72c7f1531ec",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_821326",
+  "group": "C_s0",
+  "structure_id": "2e67889d-4447-4121-8a49-73104bc4bd9e",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_737225",
+  "group": "B_s0",
+  "structure_id": "d1edda1f-6b63-44ef-8cec-3b8bd8278436",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_635097",
+  "group": "A_s0",
+  "structure_id": "cb0f14e5-48cd-4e46-871d-434231271ba6",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_357441",
+  "group": "C_s0",
+  "structure_id": "2e20eb7d-7c96-457b-ab88-dc6fdc418be5",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_857498",
+  "group": "B_s0",
+  "structure_id": "20c1cbf7-82a6-4dba-afcd-d69918ab8d56",
+  "label": "bus",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_886353",
+  "group": "B_s0",
+  "structure_id": "cb809780-43a1-4f85-a46b-6dcaed5b9d75",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_507819",
+  "group": "B_s1",
+  "structure_id": "2675d663-dc14-4e86-b807-25331d0fd181",
+  "label": "bench",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_362895",
+  "group": "B_s1",
+  "structure_id": "3521812d-7ba2-457e-85f8-2ab435a343a7",
+  "label": "table",
+  "top1": "bookshelf",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_641802",
+  "group": "C_s0",
+  "structure_id": "837dfd98-a08e-4327-8c92-b3db88876e94",
+  "label": "bench",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_175844",
+  "group": "B_s1",
+  "structure_id": "27d22b14-3482-4915-b55a-81743178437c",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_183732",
+  "group": "C_s0",
+  "structure_id": "c9cb7de5-1de9-4795-b5f4-16e14459ee6c",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_590467",
+  "group": "B_s1",
+  "structure_id": "d9ca0e04-e1c7-4050-8a98-f85e329c65e4",
+  "label": "guitar",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_161331",
+  "group": "B_s0",
+  "structure_id": "aeb65e20-1374-4218-a842-99a76eed05ad",
+  "label": "chair",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_779184",
+  "group": "C_s0",
+  "structure_id": "71c3bcd9-3666-43d6-90e3-f8711c87c825",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_241592",
+  "group": "A_s0",
+  "structure_id": "d9ca0e04-e1c7-4050-8a98-f85e329c65e4",
+  "label": "guitar",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_155596",
+  "group": "C_s0",
+  "structure_id": "9cefbeae-ac3d-42f7-8687-44124fd05084",
+  "label": "vessel",
+  "top1": "bookshelf",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_382193",
+  "group": "B_s0",
+  "structure_id": "6d8d90f1-aa82-46d3-b140-26362481c9f7",
+  "label": "car",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_940372",
+  "group": "A_s0",
+  "structure_id": "3521812d-7ba2-457e-85f8-2ab435a343a7",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_725897",
+  "group": "A_s0",
+  "structure_id": "81338663-6255-4a70-b167-2cf8994fd281",
+  "label": "train",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_833541",
+  "group": "B_s0",
+  "structure_id": "4c4f00df-84d1-4152-a77f-fd55af58aa65",
+  "label": "sofa",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_254027",
+  "group": "B_s1",
+  "structure_id": "cb809780-43a1-4f85-a46b-6dcaed5b9d75",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_095223",
+  "group": "A_s0",
+  "structure_id": "41096037-6583-4287-a666-1751cf2cbf0c",
+  "label": "sofa",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_336937",
+  "group": "C_s0",
+  "structure_id": "c2920c50-8061-492e-bb15-75923b1aa8fa",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_767707",
+  "group": "A_s0",
+  "structure_id": "74a532df-32ed-474f-b28d-f0f9e774fb23",
+  "label": "guitar",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_017477",
+  "group": "C_s0",
+  "structure_id": "6d8d90f1-aa82-46d3-b140-26362481c9f7",
+  "label": "car",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_251572",
+  "group": "C_s0",
+  "structure_id": "8ca3a029-bf45-4c2e-9712-9aceabf2da0e",
+  "label": "bench",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_451183",
+  "group": "B_s0",
+  "structure_id": "dfc85fc3-9d6d-4281-a5e5-eda97faebdb5",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_817983",
+  "group": "B_s0",
+  "structure_id": "2e67889d-4447-4121-8a49-73104bc4bd9e",
+  "label": "table",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ }
+]

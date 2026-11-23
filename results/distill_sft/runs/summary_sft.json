@@ -1,0 +1,40 @@
+{
+ "tag": "sft",
+ "model": "/content/drive/MyDrive/brickexp_distill/sft/merged",
+ "adapter": null,
+ "n": 90,
+ "checker": "connectivity",
+ "checker_methods_seen": [
+  "connectivity"
+ ],
+ "max_budget": 3,
+ "max_budget_reached": 3,
+ "solved_k0": 12,
+ "solved_kmax": 14,
+ "curve": {
+  "small": {
+   "0": 0.16666666666666666,
+   "3": 0.2
+  },
+  "all": {
+   "0": 0.13333333333333333,
+   "3": 0.15555555555555556
+  },
+  "medium": {
+   "0": 0.06666666666666667,
+   "3": 0.06666666666666667
+  },
+  "large": {
+   "0": 0.16666666666666666,
+   "3": 0.2
+  }
+ },
+ "failures": {
+  "out_of_bounds": 258,
+  "ok": 14,
+  "collision": 45,
+  "floating": 1,
+  "unstable": 4
+ },
+ "seconds": 3963.283614873886
+}

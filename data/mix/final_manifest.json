@@ -1,0 +1,11 @@
+{
+ "FA": 4000,
+ "FB": 4665,
+ "FC": 4665,
+ "n_ai": 665,
+ "steps": 292,
+ "answer_chars_extra": {
+  "gemini": 1082929,
+  "human_paired": 1121567
+ }
+}

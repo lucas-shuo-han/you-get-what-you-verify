@@ -1,0 +1,110 @@
+[
+ {
+  "blind_id": "img_145792",
+  "group": "B_s1",
+  "structure_id": "house_03",
+  "label": "house",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_741594",
+  "group": "B_s1",
+  "structure_id": "tree_09",
+  "label": "tree",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_577301",
+  "group": "A_s0",
+  "structure_id": "lamp_01",
+  "label": "lamp",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_377992",
+  "group": "C_s0",
+  "structure_id": "lamp_10",
+  "label": "lamp",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_869872",
+  "group": "C_s0",
+  "structure_id": "house_14",
+  "label": "house",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_730340",
+  "group": "A_s0",
+  "structure_id": "tree_03",
+  "label": "tree",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_952232",
+  "group": "C_s0",
+  "structure_id": "lamp_08",
+  "label": "lamp",
+  "top1": "lamp",
+  "ok1": true,
+  "ok2": true
+ },
+ {
+  "blind_id": "img_649695",
+  "group": "B_s0",
+  "structure_id": "airplane_05",
+  "label": "airplane",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_592713",
+  "group": "C_s0",
+  "structure_id": "airplane_05",
+  "label": "airplane",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_896073",
+  "group": "A_s0",
+  "structure_id": "house_06",
+  "label": "house",
+  "top1": "lamp",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_299160",
+  "group": "B_s1",
+  "structure_id": "airplane_01",
+  "label": "airplane",
+  "top1": "house",
+  "ok1": false,
+  "ok2": false
+ },
+ {
+  "blind_id": "img_874451",
+  "group": "B_s1",
+  "structure_id": "airplane_05",
+  "label": "airplane",
+  "top1": "tower",
+  "ok1": false,
+  "ok2": false
+ }
+]

@@ -1,0 +1,11 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+dropped 211/4000 examples longer than 3072 tok
+3789 examples, mean len 1356 tok
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<03:12,  1.75it/s]Loading weights:  40%|███▉      | 135/338 [00:00<00:00, 258.01it/s]Loading weights:  59%|█████▉    | 200/338 [00:00<00:00, 289.07it/s]Loading weights:  75%|███████▍  | 252/338 [00:01<00:00, 293.50it/s]Loading weights:  87%|████████▋ | 295/338 [00:01<00:00, 293.76it/s]Loading weights:  99%|█████████▉| 334/338 [00:01<00:00, 303.51it/s]Loading weights: 100%|██████████| 338/338 [00:01<00:00, 257.36it/s]
+loaded Qwen2ForCausalLM
+trainable params: 18,464,768 || all params: 1,562,179,072 || trainable%: 1.1820
+TrainingArguments: dropping unsupported ['group_by_length']
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:22<00:44, 22.10s/it] 67%|██████▋   | 2/3 [00:48<00:24, 24.44s/it]100%|██████████| 3/3 [01:12<00:00, 24.44s/it]                                             100%|██████████| 3/3 [01:12<00:00, 24.44s/it]100%|██████████| 3/3 [01:12<00:00, 24.22s/it]
+{'train_runtime': '72.65', 'train_samples_per_second': '0.661', 'train_steps_per_second': '0.041', 'train_loss': '0.4634', 'epoch': '0.01266'}
+PEAK_MEM_GB 4.91
+probe done: 3 steps in 1.9 min
