@@ -481,7 +481,7 @@ To remove the prompt-mismatch confound between extra AI and human examples in gr
 
 \subsection{300-prompt evaluation (exploratory, in progress)}
 \label{ex:eval300}
-To increase statistical power, we evaluated models on 300 prompts at $k{=}0$. Connectivity-valid counts collected so far are: base 2, A seed 0 44, B seeds 0/1 66/80, and C seed 0 56. Runs for A seed 1 and C seed 1 are still executing on Kaggle, alongside local Gurobi re-checks. Because partial counts were inspected before finalizing the decision rule (Section S4o of the research log), all conclusions from this split are labeled exploratory.
+To increase statistical power, we evaluated models on 300 prompts at $k{=}0$. All runs are complete. Gurobi-valid counts: base 2; A seeds 0/1 42/64; B seeds 0/1 63/77; C seeds 0/1 53/61 (pooled /600: A 106, B 140, C 114; B vs.\ C $p=0.077$, B vs.\ A $p=0.018$). Because partial counts were inspected before finalizing the decision rule (Section S4o of the research log), all conclusions from this split are labeled exploratory.
 
 Engineering obstacles encountered during these experiments are summarized in the reproducibility checklist (Appendix~\ref{app:repro}).
 
