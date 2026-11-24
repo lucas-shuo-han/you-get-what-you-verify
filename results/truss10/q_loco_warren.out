@@ -1,0 +1,40 @@
+{"shift": "loco_warren", "train": 19064, "val": 2641, "cal": 5295, "pool": 1179, "test": 1821, "unsafe_train": 0.31226395300041965, "unsafe_test": 0.214168039538715}
+params=74401
+seed 0 ep 0 val_bce 0.2767 62s
+seed 0 ep 1 val_bce 0.1817 65s
+seed 0 ep 2 val_bce 0.1799 66s
+seed 0 ep 3 val_bce 0.1394 134s
+seed 0 ep 4 val_bce 0.1278 143s
+seed 0 ep 5 val_bce 0.1156 136s
+seed 0 ep 6 val_bce 0.1114 137s
+seed 0 ep 7 val_bce 0.1070 139s
+seed 0 ep 8 val_bce 0.1034 140s
+seed 0 ep 9 val_bce 0.0977 141s
+loco_warren seed 0 a=0.01 id_val miss 0.0109 | N0 miss 0.0077 saved 0.677 pass 0.859 auc 0.991
+loco_warren seed 0 a=0.05 id_val miss 0.0645 | N0 miss 0.0385 saved 0.746 pass 0.939 auc 0.991
+params=74401
+seed 1 ep 0 val_bce 0.2023 136s
+seed 1 ep 1 val_bce 0.1690 140s
+seed 1 ep 2 val_bce 0.1516 135s
+seed 1 ep 3 val_bce 0.1502 137s
+seed 1 ep 4 val_bce 0.1182 136s
+seed 1 ep 5 val_bce 0.1179 137s
+seed 1 ep 6 val_bce 0.0996 137s
+seed 1 ep 7 val_bce 0.0938 130s
+seed 1 ep 8 val_bce 0.0903 131s
+seed 1 ep 9 val_bce 0.0878 134s
+loco_warren seed 1 a=0.01 id_val miss 0.0109 | N0 miss 0.0103 saved 0.632 pass 0.801 auc 0.987
+loco_warren seed 1 a=0.05 id_val miss 0.0499 | N0 miss 0.0205 saved 0.686 pass 0.867 auc 0.987
+params=74401
+seed 2 ep 0 val_bce 0.2465 129s
+seed 2 ep 1 val_bce 0.2651 113s
+seed 2 ep 2 val_bce 0.1978 112s
+seed 2 ep 3 val_bce 0.1569 113s
+seed 2 ep 4 val_bce 0.1367 112s
+seed 2 ep 5 val_bce 0.1341 113s
+seed 2 ep 6 val_bce 0.1196 113s
+seed 2 ep 7 val_bce 0.1191 113s
+seed 2 ep 8 val_bce 0.0960 111s
+seed 2 ep 9 val_bce 0.0938 113s
+loco_warren seed 2 a=0.01 id_val miss 0.0122 | N0 miss 0.0051 saved 0.656 pass 0.833 auc 0.990
+loco_warren seed 2 a=0.05 id_val miss 0.0487 | N0 miss 0.0385 saved 0.727 pass 0.915 auc 0.990

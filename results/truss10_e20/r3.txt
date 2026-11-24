@@ -1,0 +1,20 @@
+{
+ "verdict": "DEPLOYABLE",
+ "median_N_star_alpha5": 100.0,
+ "N_star": {
+  "howe": 100,
+  "fink": 100,
+  "space": 50,
+  "random": 50,
+  "tower": null,
+  "size": 50
+ },
+ "N_star_alpha1": {
+  "howe": 300,
+  "fink": 300,
+  "space": 1000,
+  "random": null,
+  "tower": null,
+  "size": 300
+ }
+}

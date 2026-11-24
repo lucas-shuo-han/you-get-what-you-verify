@@ -1,0 +1,70 @@
+{"shift": "loco_bowstring", "train": 19087, "val": 2623, "cal": 5290, "pool": 1211, "test": 1789, "unsafe_train": 0.3150311730497197, "unsafe_test": 0.1995528228060369}
+params=74401
+seed 0 ep 0 val_bce 0.2531 110s
+seed 0 ep 1 val_bce 0.1831 110s
+seed 0 ep 2 val_bce 0.1741 110s
+seed 0 ep 3 val_bce 0.1438 108s
+seed 0 ep 4 val_bce 0.1788 110s
+seed 0 ep 5 val_bce 0.2126 110s
+seed 0 ep 6 val_bce 0.1239 111s
+seed 0 ep 7 val_bce 0.1226 109s
+seed 0 ep 8 val_bce 0.2057 109s
+seed 0 ep 9 val_bce 0.1234 109s
+seed 0 ep 10 val_bce 0.1126 110s
+seed 0 ep 11 val_bce 0.1203 108s
+seed 0 ep 12 val_bce 0.1167 113s
+seed 0 ep 13 val_bce 0.0978 97s
+seed 0 ep 14 val_bce 0.0898 98s
+seed 0 ep 15 val_bce 0.0977 98s
+seed 0 ep 16 val_bce 0.0892 100s
+seed 0 ep 17 val_bce 0.0896 99s
+seed 0 ep 18 val_bce 0.0879 98s
+seed 0 ep 19 val_bce 0.0879 97s
+loco_bowstring seed 0 a=0.01 id_val miss 0.0086 | N0 miss 0.0140 saved 0.629 pass 0.782 auc 0.977
+loco_bowstring seed 0 a=0.05 id_val miss 0.0526 | N0 miss 0.0420 saved 0.708 pass 0.874 auc 0.977
+params=74401
+seed 1 ep 0 val_bce 0.2132 97s
+seed 1 ep 1 val_bce 0.1728 97s
+seed 1 ep 2 val_bce 0.1512 102s
+seed 1 ep 3 val_bce 0.1319 97s
+seed 1 ep 4 val_bce 0.1346 100s
+seed 1 ep 5 val_bce 0.1300 98s
+seed 1 ep 6 val_bce 0.1422 98s
+seed 1 ep 7 val_bce 0.1030 99s
+seed 1 ep 8 val_bce 0.1104 98s
+seed 1 ep 9 val_bce 0.1101 98s
+seed 1 ep 10 val_bce 0.1046 97s
+seed 1 ep 11 val_bce 0.1145 98s
+seed 1 ep 12 val_bce 0.0993 78s
+seed 1 ep 13 val_bce 0.1020 62s
+seed 1 ep 14 val_bce 0.0975 63s
+seed 1 ep 15 val_bce 0.0967 62s
+seed 1 ep 16 val_bce 0.0920 62s
+seed 1 ep 17 val_bce 0.0886 62s
+seed 1 ep 18 val_bce 0.0902 62s
+seed 1 ep 19 val_bce 0.0900 62s
+loco_bowstring seed 1 a=0.01 id_val miss 0.0086 | N0 miss 0.0000 saved 0.610 pass 0.762 auc 0.988
+loco_bowstring seed 1 a=0.05 id_val miss 0.0502 | N0 miss 0.0196 saved 0.704 pass 0.874 auc 0.988
+params=74401
+seed 2 ep 0 val_bce 0.2143 62s
+seed 2 ep 1 val_bce 0.2088 62s
+seed 2 ep 2 val_bce 0.1849 62s
+seed 2 ep 3 val_bce 0.1467 61s
+seed 2 ep 4 val_bce 0.1749 62s
+seed 2 ep 5 val_bce 0.1288 62s
+seed 2 ep 6 val_bce 0.1211 62s
+seed 2 ep 7 val_bce 0.1183 62s
+seed 2 ep 8 val_bce 0.1071 63s
+seed 2 ep 9 val_bce 0.1447 62s
+seed 2 ep 10 val_bce 0.1218 62s
+seed 2 ep 11 val_bce 0.1015 62s
+seed 2 ep 12 val_bce 0.1015 55s
+seed 2 ep 13 val_bce 0.0975 48s
+seed 2 ep 14 val_bce 0.0898 44s
+seed 2 ep 15 val_bce 0.0974 45s
+seed 2 ep 16 val_bce 0.0938 45s
+seed 2 ep 17 val_bce 0.0861 44s
+seed 2 ep 18 val_bce 0.0867 44s
+seed 2 ep 19 val_bce 0.0864 44s
+loco_bowstring seed 2 a=0.01 id_val miss 0.0098 | N0 miss 0.0112 saved 0.658 pass 0.819 auc 0.987
+loco_bowstring seed 2 a=0.05 id_val miss 0.0551 | N0 miss 0.0448 saved 0.736 pass 0.909 auc 0.987

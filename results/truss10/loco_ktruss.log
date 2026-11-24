@@ -1,0 +1,40 @@
+{"shift": "loco_ktruss", "train": 19084, "val": 2655, "cal": 5261, "pool": 1127, "test": 1873, "unsafe_train": 0.31057430308111506, "unsafe_test": 0.23384943940202882}
+params=74401
+seed 0 ep 0 val_bce 0.2106 67s
+seed 0 ep 1 val_bce 0.1906 70s
+seed 0 ep 2 val_bce 0.1429 70s
+seed 0 ep 3 val_bce 0.1516 91s
+seed 0 ep 4 val_bce 0.1578 91s
+seed 0 ep 5 val_bce 0.1458 99s
+seed 0 ep 6 val_bce 0.1143 89s
+seed 0 ep 7 val_bce 0.1073 91s
+seed 0 ep 8 val_bce 0.1040 91s
+seed 0 ep 9 val_bce 0.1057 91s
+loco_ktruss seed 0 a=0.01 id_val miss 0.0087 | N0 miss 0.0023 saved 0.586 pass 0.764 auc 0.981
+loco_ktruss seed 0 a=0.05 id_val miss 0.0643 | N0 miss 0.0388 saved 0.699 pass 0.900 auc 0.981
+params=74401
+seed 1 ep 0 val_bce 0.1886 91s
+seed 1 ep 1 val_bce 0.2226 92s
+seed 1 ep 2 val_bce 0.1653 89s
+seed 1 ep 3 val_bce 0.1255 95s
+seed 1 ep 4 val_bce 0.1467 89s
+seed 1 ep 5 val_bce 0.1106 90s
+seed 1 ep 6 val_bce 0.1054 91s
+seed 1 ep 7 val_bce 0.0989 91s
+seed 1 ep 8 val_bce 0.0987 88s
+seed 1 ep 9 val_bce 0.0927 91s
+loco_ktruss seed 1 a=0.01 id_val miss 0.0049 | N0 miss 0.0091 saved 0.612 pass 0.796 auc 0.983
+loco_ktruss seed 1 a=0.05 id_val miss 0.0532 | N0 miss 0.0639 saved 0.730 pass 0.934 auc 0.983
+params=74401
+seed 2 ep 0 val_bce 0.2318 88s
+seed 2 ep 1 val_bce 0.1670 89s
+seed 2 ep 2 val_bce 0.1525 88s
+seed 2 ep 3 val_bce 0.1355 90s
+seed 2 ep 4 val_bce 0.1315 79s
+seed 2 ep 5 val_bce 0.1250 77s
+seed 2 ep 6 val_bce 0.1050 79s
+seed 2 ep 7 val_bce 0.1059 78s
+seed 2 ep 8 val_bce 0.0942 79s
+seed 2 ep 9 val_bce 0.0929 79s
+loco_ktruss seed 2 a=0.01 id_val miss 0.0074 | N0 miss 0.0068 saved 0.575 pass 0.748 auc 0.980
+loco_ktruss seed 2 a=0.05 id_val miss 0.0507 | N0 miss 0.0342 saved 0.670 pass 0.864 auc 0.980

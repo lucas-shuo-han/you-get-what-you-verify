@@ -1,0 +1,43 @@
+{"shift": "loco_bowstring", "train": 19087, "val": 2623, "cal": 5290, "pool": 1211, "test": 1789, "unsafe_train": 0.3150311730497197, "unsafe_test": 0.1995528228060369}
+params=77090
+seed 0 ep 0 val_bce 0.2035 128s
+seed 0 ep 1 val_bce 0.1816 117s
+seed 0 ep 2 val_bce 0.1523 120s
+seed 0 ep 3 val_bce 0.1426 120s
+seed 0 ep 4 val_bce 0.1313 127s
+seed 0 ep 5 val_bce 0.1403 137s
+seed 0 ep 6 val_bce 0.0993 135s
+seed 0 ep 7 val_bce 0.0982 131s
+seed 0 ep 8 val_bce 0.0953 130s
+seed 0 ep 9 val_bce 0.0901 130s
+{"primary": 0.14388356646652567, "web_comp_frac_target": 0.39370873222637925, "web_comp_frac_train": 0.5375922986929049, "ks_slender": 0.05417437350247667, "aux_acc_target": 0.8198656788017696}
+loco_bowstring seed 0 a=0.01 id_val miss 0.0171 | N0 miss 0.0028 saved 0.631 pass 0.788 auc 0.981
+loco_bowstring seed 0 a=0.05 id_val miss 0.0612 | N0 miss 0.0252 saved 0.701 pass 0.869 auc 0.981
+params=77090
+seed 1 ep 0 val_bce 0.2061 130s
+seed 1 ep 1 val_bce 0.1606 130s
+seed 1 ep 2 val_bce 0.1471 132s
+seed 1 ep 3 val_bce 0.1283 130s
+seed 1 ep 4 val_bce 0.1543 131s
+seed 1 ep 5 val_bce 0.1383 120s
+seed 1 ep 6 val_bce 0.1128 113s
+seed 1 ep 7 val_bce 0.1262 112s
+seed 1 ep 8 val_bce 0.0879 112s
+seed 1 ep 9 val_bce 0.0888 112s
+{"primary": 0.2601748432525684, "web_comp_frac_target": 0.2795378168672286, "web_comp_frac_train": 0.539712660119797, "ks_slender": 0.09188637160603302, "aux_acc_target": 0.8394541868770321}
+loco_bowstring seed 1 a=0.01 id_val miss 0.0110 | N0 miss 0.0028 saved 0.600 pass 0.749 auc 0.979
+loco_bowstring seed 1 a=0.05 id_val miss 0.0514 | N0 miss 0.0140 saved 0.675 pass 0.839 auc 0.979
+params=77090
+seed 2 ep 0 val_bce 0.1977 112s
+seed 2 ep 1 val_bce 0.1812 88s
+seed 2 ep 2 val_bce 0.1459 79s
+seed 2 ep 3 val_bce 0.1414 68s
+seed 2 ep 4 val_bce 0.1274 68s
+seed 2 ep 5 val_bce 0.1335 68s
+seed 2 ep 6 val_bce 0.1361 48s
+seed 2 ep 7 val_bce 0.1049 47s
+seed 2 ep 8 val_bce 0.0936 48s
+seed 2 ep 9 val_bce 0.0926 47s
+{"primary": 0.1255992867445157, "web_comp_frac_target": 0.40073137581372875, "web_comp_frac_train": 0.5263306625582445, "ks_slender": 0.040844002753503195, "aux_acc_target": 0.8003571238206919}
+loco_bowstring seed 2 a=0.01 id_val miss 0.0110 | N0 miss 0.0028 saved 0.691 pass 0.863 auc 0.989
+loco_bowstring seed 2 a=0.05 id_val miss 0.0539 | N0 miss 0.0392 saved 0.746 pass 0.922 auc 0.989

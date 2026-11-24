@@ -1,0 +1,6 @@
+{
+ "verdict": "SUPPORTS_SHORTCUT",
+ "howe_miss_flip": 0.019140989729225025,
+ "howe_miss_control": 0.32119514472455646,
+ "other_mean_miss_rise": -0.004359201028133211
+}

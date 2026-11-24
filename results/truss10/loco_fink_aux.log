@@ -1,0 +1,43 @@
+{"shift": "loco_fink", "train": 19074, "val": 2644, "cal": 5282, "pool": 1182, "test": 1818, "unsafe_train": 0.2968438712383349, "unsafe_test": 0.3542354235423542}
+params=77090
+seed 0 ep 0 val_bce 0.2189 79s
+seed 0 ep 1 val_bce 0.1596 77s
+seed 0 ep 2 val_bce 0.1317 80s
+seed 0 ep 3 val_bce 0.1556 79s
+seed 0 ep 4 val_bce 0.1081 78s
+seed 0 ep 5 val_bce 0.1137 76s
+seed 0 ep 6 val_bce 0.1299 78s
+seed 0 ep 7 val_bce 0.0938 78s
+seed 0 ep 8 val_bce 0.0857 77s
+seed 0 ep 9 val_bce 0.0835 78s
+{"primary": 0.047744759975481665, "web_comp_frac_target": 0.45349929373458786, "web_comp_frac_train": 0.5012440537100695, "ks_slender": 0.12549821334138783, "aux_acc_target": 0.5789184122585378}
+loco_fink seed 0 a=0.01 id_val miss 0.0077 | N0 miss 0.0543 saved 0.617 pass 0.925 auc 0.984
+loco_fink seed 0 a=0.05 id_val miss 0.0502 | N0 miss 0.2143 saved 0.710 pass 0.981 auc 0.984
+params=77090
+seed 1 ep 0 val_bce 0.2156 78s
+seed 1 ep 1 val_bce 0.1605 79s
+seed 1 ep 2 val_bce 0.1287 79s
+seed 1 ep 3 val_bce 0.1205 78s
+seed 1 ep 4 val_bce 0.1147 80s
+seed 1 ep 5 val_bce 0.1234 84s
+seed 1 ep 6 val_bce 0.1113 78s
+seed 1 ep 7 val_bce 0.0995 79s
+seed 1 ep 8 val_bce 0.0865 80s
+seed 1 ep 9 val_bce 0.0828 81s
+{"primary": 0.021623286973914635, "web_comp_frac_target": 0.47417996600349543, "web_comp_frac_train": 0.49580325297741007, "ks_slender": 0.16196486086119039, "aux_acc_target": 0.6019541119895672}
+loco_fink seed 1 a=0.01 id_val miss 0.0090 | N0 miss 0.0512 saved 0.605 pass 0.909 auc 0.983
+loco_fink seed 1 a=0.05 id_val miss 0.0528 | N0 miss 0.1661 saved 0.685 pass 0.970 auc 0.983
+params=77090
+seed 2 ep 0 val_bce 0.2022 78s
+seed 2 ep 1 val_bce 0.1442 81s
+seed 2 ep 2 val_bce 0.1604 80s
+seed 2 ep 3 val_bce 0.1078 78s
+seed 2 ep 4 val_bce 0.1054 79s
+seed 2 ep 5 val_bce 0.1168 80s
+seed 2 ep 6 val_bce 0.0946 80s
+seed 2 ep 7 val_bce 0.1081 79s
+seed 2 ep 8 val_bce 0.0880 79s
+seed 2 ep 9 val_bce 0.0841 81s
+{"primary": 0.009512576058724409, "web_comp_frac_target": 0.4952431947137829, "web_comp_frac_train": 0.5047557707725073, "ks_slender": 0.11008408114940788, "aux_acc_target": 0.5765649197163583}
+loco_fink seed 2 a=0.01 id_val miss 0.0064 | N0 miss 0.0481 saved 0.611 pass 0.920 auc 0.984
+loco_fink seed 2 a=0.05 id_val miss 0.0502 | N0 miss 0.1941 saved 0.701 pass 0.979 auc 0.984

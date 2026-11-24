@@ -1,0 +1,9 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<04:49,  1.16it/s]Loading weights:  54%|█████▍    | 184/338 [00:00<00:00, 258.20it/s]Loading weights:  83%|████████▎ | 282/338 [00:01<00:00, 251.03it/s]Loading weights: 100%|██████████| 338/338 [00:01<00:00, 216.76it/s]
+[W1123 21:50:22.882177960 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 1564475392 bytes (free: 1468858368, total: 15636037632).
+base 0.46491873765641095 55s
+A_s0 0.24638472792104046 96s
+B_s0 0.2527391999271077 96s
+B_s1 0.2524564321572856 97s
+C_s0 0.24668427239962437 97s

@@ -1,0 +1,300 @@
+[{"stream_name":"stderr","time":7.488140393,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.488181362,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":8.487054099,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.487086146,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.487091798,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.487096159,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.118173434,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.118204341,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.118209157,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.118214709,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.282946388,"data":"=== [   0.0 min] pip\n"}
+,{"stream_name":"stdout","time":290.341353044,"data":"0 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stdout","time":290.341390411,"data":"bigframes 2.51.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stdout","time":290.341397181,"data":"ydata-profiling 4.18.4 requires numba\u003c0.63,\u003e=0.60, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":290.34140275,"data":"litellm 1.109.1 requires huggingface-hub\u003c2.0,\u003e=0.34.0, but you have huggingface-hub 2.4.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":290.341407956,"data":"numba-cuda 0.28.2 requires cuda-core\u003c1.0.0,\u003e=0.5.1, but you have cuda-core 1.3.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":290.341412886,"data":"cuml-cu13 26.6.0 requires numba\u003c0.65.0,\u003e=0.60.0, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":290.341417742,"data":"cudf-cu13 26.6.0 requires numba\u003c0.65.0,\u003e=0.60.0, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":290.341422641,"data":"cudf-cu13 26.6.0 requires pyarrow\u003c24,\u003e=19.0.0, but you have pyarrow 26.0.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":290.341427564,"data":"gradio 6.30.0 requires pillow\u003c13.0,\u003e=8.0, but you have pillow 13.0.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":290.341432311,"data":"google-adk 2.7.1 requires opentelemetry-api\u003c=1.42.1,\u003e=1.39, but you have opentelemetry-api 1.45.2 which is incompatible.\n"}
+,{"stream_name":"stdout","time":290.341443611,"data":"google-adk 2.7.1 requires opentelemetry-sdk\u003c=1.42.1,\u003e=1.39, but you have opentelemetry-sdk 1.45.2 which is incompatible.\n"}
+,{"stream_name":"stdout","time":290.341448066,"data":"\n"}
+,{"stream_name":"stdout","time":293.368457797,"data":"peft                                     0.21.2\n"}
+,{"stream_name":"stdout","time":293.368522757,"data":"torch                                    2.14.0\n"}
+,{"stream_name":"stdout","time":293.368528878,"data":"transformers                             5.20.2\n"}
+,{"stream_name":"stdout","time":293.368532962,"data":"vllm                                     0.34.0\n"}
+,{"stream_name":"stdout","time":293.368553222,"data":"\n"}
+,{"stream_name":"stdout","time":313.466768569,"data":"{'A': 4000, 'B': 4852, 'C': 4852, 'human': 4000, 'ai': {'opus': 187, 'deepseek': 65, 'opus_newcat': 32}, 'upsample': 3, 'newcat_test': 28, 'seed_human': 2026}\n"}
+,{"stream_name":"stdout","time":313.466799172,"data":"A 4000 B 4852 optimizer steps per group: 304\n"}
+,{"stream_name":"stdout","time":321.951480828,"data":"=== [   5.2 min] val_loss_4adapters\n"}
+,{"stream_name":"stdout","time":818.555104774,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":818.555141694,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stdout","time":818.555148166,"data":"\n"}
+,{"stream_name":"stdout","time":818.555153226,"data":"Loading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":818.55515799,"data":"Loading weights:   0%|          | 1/338 [00:00\u003c04:49,  1.16it/s]\n"}
+,{"stream_name":"stdout","time":818.555162369,"data":"Loading weights:  54%|█████▍    | 184/338 [00:00\u003c00:00, 258.20it/s]\n"}
+,{"stream_name":"stdout","time":818.555167529,"data":"Loading weights:  83%|████████▎ | 282/338 [00:01\u003c00:00, 251.03it/s]\n"}
+,{"stream_name":"stdout","time":818.555171917,"data":"Loading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 216.76it/s]\n"}
+,{"stream_name":"stdout","time":818.555176478,"data":"[W1123 21:50:22.882177960 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 1564475392 bytes (free: 1468858368, total: 15636037632).\n"}
+,{"stream_name":"stdout","time":818.555181374,"data":"base 0.46491873765641095 55s\n"}
+,{"stream_name":"stdout","time":818.555185309,"data":"A_s0 0.24638472792104046 96s\n"}
+,{"stream_name":"stdout","time":818.555189286,"data":"B_s0 0.2527391999271077 96s\n"}
+,{"stream_name":"stdout","time":818.555193289,"data":"B_s1 0.2524564321572856 97s\n"}
+,{"stream_name":"stdout","time":818.555197423,"data":"C_s0 0.24668427239962437 97s\n"}
+,{"stream_name":"stdout","time":818.555203068,"data":"\n"}
+,{"stream_name":"stdout","time":818.564170159,"data":"=== [  13.5 min] train_A_s1_x1_probe\n"}
+,{"stream_name":"stdout","time":940.064224084,"data":"dropped 211/4000 examples longer than 3072 tok\n"}
+,{"stream_name":"stdout","time":940.064262488,"data":"3789 examples, mean len 1356 tok\n"}
+,{"stream_name":"stdout","time":940.064268149,"data":"\n"}
+,{"stream_name":"stdout","time":940.064273082,"data":"Loading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":940.064279028,"data":"Loading weights:   0%|          | 1/338 [00:00\u003c02:54,  1.93it/s]\n"}
+,{"stream_name":"stdout","time":940.06428435,"data":"Loading weights:  31%|███▏      | 106/338 [00:00\u003c00:01, 228.33it/s]\n"}
+,{"stream_name":"stdout","time":940.064290454,"data":"Loading weights:  50%|████▉     | 168/338 [00:00\u003c00:00, 267.82it/s]\n"}
+,{"stream_name":"stdout","time":940.064296303,"data":"Loading weights:  64%|██████▍   | 218/338 [00:00\u003c00:00, 292.52it/s]\n"}
+,{"stream_name":"stdout","time":940.064301685,"data":"Loading weights:  78%|███████▊  | 262/338 [00:01\u003c00:00, 298.00it/s]\n"}
+,{"stream_name":"stdout","time":940.064314965,"data":"Loading weights:  89%|████████▉ | 302/338 [00:01\u003c00:00, 308.21it/s]\n"}
+,{"stream_name":"stdout","time":940.064319662,"data":"Loading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 259.80it/s]\n"}
+,{"stream_name":"stdout","time":940.064323704,"data":"loaded Qwen2ForCausalLM\n"}
+,{"stream_name":"stdout","time":940.064327789,"data":"trainable params: 18,464,768 || all params: 1,562,179,072 || trainable%: 1.1820\n"}
+,{"stream_name":"stdout","time":940.064332088,"data":"TrainingArguments: dropping unsupported ['group_by_length']\n"}
+,{"stream_name":"stdout","time":940.064335938,"data":"\n"}
+,{"stream_name":"stdout","time":940.064339733,"data":"  0%|          | 0/3 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":940.064343867,"data":" 33%|███▎      | 1/3 [00:29\u003c00:59, 29.58s/it]\n"}
+,{"stream_name":"stdout","time":940.06434831,"data":" 67%|██████▋   | 2/3 [01:01\u003c00:31, 31.13s/it]\n"}
+,{"stream_name":"stdout","time":940.06435285,"data":"100%|██████████| 3/3 [01:31\u003c00:00, 30.35s/it]\n"}
+,{"stream_name":"stdout","time":940.064357166,"data":"                                             \n"}
+,{"stream_name":"stdout","time":940.064361362,"data":"\n"}
+,{"stream_name":"stdout","time":940.064365076,"data":"100%|██████████| 3/3 [01:31\u003c00:00, 30.35s/it]\n"}
+,{"stream_name":"stdout","time":940.064369448,"data":"100%|██████████| 3/3 [01:31\u003c00:00, 30.42s/it]\n"}
+,{"stream_name":"stdout","time":940.064373686,"data":"{'train_runtime': '91.27', 'train_samples_per_second': '0.526', 'train_steps_per_second': '0.033', 'train_loss': '0.4979', 'epoch': '0.01266'}\n"}
+,{"stream_name":"stdout","time":940.064378506,"data":"PEAK_MEM_GB 5.17\n"}
+,{"stream_name":"stdout","time":940.064382909,"data":"probe done: 3 steps in 1.8 min\n"}
+,{"stream_name":"stdout","time":940.064387102,"data":"\n"}
+,{"stream_name":"stdout","time":940.064391495,"data":"=== [  15.5 min] train_A_s1_x1\n"}
+,{"stream_name":"stdout","time":9161.046809745,"data":"04 [1:56:21\u003c18:12, 24.83s/it]\n"}
+,{"stream_name":"stdout","time":9161.046856799,"data":"                                                   \n"}
+,{"stream_name":"stdout","time":9161.046864045,"data":"\n"}
+,{"stream_name":"stdout","time":9161.046868969,"data":" 86%|████████▌ | 260/304 [1:56:21\u003c18:12, 24.83s/it]\n"}
+,{"stream_name":"stdout","time":9161.046875002,"data":" 86%|████████▌ | 261/304 [1:56:51\u003c18:43, 26.12s/it]\n"}
+,{"stream_name":"stdout","time":9161.046882811,"data":" 86%|████████▌ | 262/304 [1:57:20\u003c18:58, 27.11s/it]\n"}
+,{"stream_name":"stdout","time":9161.046888122,"data":" 87%|████████▋ | 263/304 [1:57:50\u003c19:12, 28.11s/it]\n"}
+,{"stream_name":"stdout","time":9161.046893273,"data":" 87%|████████▋ | 264/304 [1:58:21\u003c19:10, 28.75s/it]\n"}
+,{"stream_name":"stdout","time":9161.046898261,"data":" 87%|████████▋ | 265/304 [1:58:48\u003c18:19, 28.18s/it]\n"}
+,{"stream_name":"stdout","time":9161.046903313,"data":" 88%|████████▊ | 266/304 [1:59:21\u003c18:52, 29.79s/it]\n"}
+,{"stream_name":"stdout","time":9161.046909176,"data":" 88%|████████▊ | 267/304 [1:59:43\u003c16:54, 27.41s/it]\n"}
+,{"stream_name":"stdout","time":9161.046915316,"data":" 88%|████████▊ | 268/304 [2:00:08\u003c15:57, 26.61s/it]\n"}
+,{"stream_name":"stdout","time":9161.0469215,"data":" 88%|████████▊ | 269/304 [2:00:32\u003c15:09, 25.99s/it]\n"}
+,{"stream_name":"stdout","time":9161.046935786,"data":" 89%|████████▉ | 270/304 [2:01:01\u003c15:07, 26.70s/it]\n"}
+,{"stream_name":"stdout","time":9161.046940201,"data":"                                                   \n"}
+,{"stream_name":"stdout","time":9161.046944099,"data":"\n"}
+,{"stream_name":"stdout","time":9161.046947724,"data":" 89%|████████▉ | 270/304 [2:01:01\u003c15:07, 26.70s/it]\n"}
+,{"stream_name":"stdout","time":9161.046951928,"data":" 89%|████████▉ | 271/304 [2:01:28\u003c14:45, 26.83s/it]\n"}
+,{"stream_name":"stdout","time":9161.046957716,"data":" 89%|████████▉ | 272/304 [2:01:58\u003c14:47, 27.73s/it]\n"}
+,{"stream_name":"stdout","time":9161.046967033,"data":" 90%|████████▉ | 273/304 [2:02:24\u003c14:10, 27.43s/it]\n"}
+,{"stream_name":"stdout","time":9161.046971145,"data":" 90%|█████████ | 274/304 [2:02:51\u003c13:39, 27.33s/it]\n"}
+,{"stream_name":"stdout","time":9161.046973825,"data":" 90%|█████████ | 275/304 [2:03:17\u003c12:57, 26.80s/it]\n"}
+,{"stream_name":"stdout","time":9161.046976856,"data":" 91%|█████████ | 276/304 [2:03:48\u003c13:09, 28.19s/it]\n"}
+,{"stream_name":"stdout","time":9161.046979643,"data":" 91%|█████████ | 277/304 [2:04:10\u003c11:46, 26.16s/it]\n"}
+,{"stream_name":"stdout","time":9161.046982391,"data":" 91%|█████████▏| 278/304 [2:04:37\u003c11:27, 26.45s/it]\n"}
+,{"stream_name":"stdout","time":9161.046985094,"data":" 92%|█████████▏| 279/304 [2:05:03\u003c10:54, 26.19s/it]\n"}
+,{"stream_name":"stdout","time":9161.046987825,"data":" 92%|█████████▏| 280/304 [2:05:28\u003c10:21, 25.89s/it]\n"}
+,{"stream_name":"stdout","time":9161.046991375,"data":"                                                   \n"}
+,{"stream_name":"stdout","time":9161.047013054,"data":"\n"}
+,{"stream_name":"stdout","time":9161.04701723,"data":" 92%|█████████▏| 280/304 [2:05:28\u003c10:21, 25.89s/it]\n"}
+,{"stream_name":"stdout","time":9161.047022188,"data":" 92%|█████████▏| 281/304 [2:06:00\u003c10:37, 27.74s/it]\n"}
+,{"stream_name":"stdout","time":9161.047026386,"data":" 93%|█████████▎| 282/304 [2:06:25\u003c09:51, 26.87s/it]\n"}
+,{"stream_name":"stdout","time":9161.047031214,"data":" 93%|█████████▎| 283/304 [2:06:50\u003c09:15, 26.45s/it]\n"}
+,{"stream_name":"stdout","time":9161.047037225,"data":" 93%|█████████▎| 284/304 [2:07:13\u003c08:27, 25.37s/it]\n"}
+,{"stream_name":"stdout","time":9161.047041371,"data":" 94%|█████████▍| 285/304 [2:07:41\u003c08:18, 26.21s/it]\n"}
+,{"stream_name":"stdout","time":9161.047045391,"data":" 94%|█████████▍| 286/304 [2:08:04\u003c07:33, 25.17s/it]\n"}
+,{"stream_name":"stdout","time":9161.047049419,"data":" 94%|█████████▍| 287/304 [2:08:32\u003c07:21, 25.99s/it]\n"}
+,{"stream_name":"stdout","time":9161.047053541,"data":" 95%|█████████▍| 288/304 [2:09:04\u003c07:27, 27.98s/it]\n"}
+,{"stream_name":"stdout","time":9161.047057593,"data":" 95%|█████████▌| 289/304 [2:09:27\u003c06:34, 26.30s/it]\n"}
+,{"stream_name":"stdout","time":9161.047061594,"data":" 95%|█████████▌| 290/304 [2:09:55\u003c06:15, 26.81s/it]\n"}
+,{"stream_name":"stdout","time":9161.047065709,"data":"                                                   \n"}
+,{"stream_name":"stdout","time":9161.047069552,"data":"\n"}
+,{"stream_name":"stdout","time":9161.04707315,"data":" 95%|█████████▌| 290/304 [2:09:55\u003c06:15, 26.81s/it]\n"}
+,{"stream_name":"stdout","time":9161.047089191,"data":" 96%|█████████▌| 291/304 [2:10:21\u003c05:44, 26.53s/it]\n"}
+,{"stream_name":"stdout","time":9161.047092414,"data":" 96%|█████████▌| 292/304 [2:10:45\u003c05:11, 25.99s/it]\n"}
+,{"stream_name":"stdout","time":9161.047095121,"data":" 96%|█████████▋| 293/304 [2:11:13\u003c04:52, 26.61s/it]\n"}
+,{"stream_name":"stdout","time":9161.047098743,"data":" 97%|█████████▋| 294/304 [2:11:37\u003c04:17, 25.71s/it]\n"}
+,{"stream_name":"stdout","time":9161.047116952,"data":" 97%|█████████▋| 295/304 [2:12:17\u003c04:31, 30.12s/it]\n"}
+,{"stream_name":"stdout","time":9161.047121801,"data":" 97%|█████████▋| 296/304 [2:12:44\u003c03:52, 29.06s/it]\n"}
+,{"stream_name":"stdout","time":9161.047126498,"data":" 98%|█████████▊| 297/304 [2:13:14\u003c03:25, 29.31s/it]\n"}
+,{"stream_name":"stdout","time":9161.047131369,"data":" 98%|█████████▊| 298/304 [2:13:41\u003c02:51, 28.63s/it]\n"}
+,{"stream_name":"stdout","time":9161.04713596,"data":" 98%|█████████▊| 299/304 [2:14:07\u003c02:19, 27.97s/it]\n"}
+,{"stream_name":"stdout","time":9161.047140065,"data":" 99%|█████████▊| 300/304 [2:14:37\u003c01:53, 28.42s/it]\n"}
+,{"stream_name":"stdout","time":9161.047144045,"data":"                                                   \n"}
+,{"stream_name":"stdout","time":9161.047154734,"data":"\n"}
+,{"stream_name":"stdout","time":9161.047158319,"data":" 99%|█████████▊| 300/304 [2:14:37\u003c01:53, 28.42s/it]\n"}
+,{"stream_name":"stdout","time":9161.047162385,"data":" 99%|█████████▉| 301/304 [2:14:57\u003c01:17, 25.97s/it]\n"}
+,{"stream_name":"stdout","time":9161.047166351,"data":" 99%|█████████▉| 302/304 [2:15:18\u003c00:49, 24.55s/it]\n"}
+,{"stream_name":"stdout","time":9161.047170416,"data":"100%|█████████▉| 303/304 [2:15:50\u003c00:26, 26.55s/it]\n"}
+,{"stream_name":"stdout","time":9161.047174398,"data":"100%|██████████| 304/304 [2:16:17\u003c00:00, 26.69s/it]\n"}
+,{"stream_name":"stdout","time":9161.047178395,"data":"                                                   \n"}
+,{"stream_name":"stdout","time":9161.047182149,"data":"\n"}
+,{"stream_name":"stdout","time":9161.047185722,"data":"100%|██████████| 304/304 [2:16:17\u003c00:00, 26.69s/it]\n"}
+,{"stream_name":"stdout","time":9161.047189793,"data":"100%|██████████| 304/304 [2:16:17\u003c00:00, 26.90s/it]\n"}
+,{"stream_name":"stdout","time":9161.047199505,"data":"{'loss': '0.2671', 'grad_norm': '0.1853', 'learning_rate': '2.302e-05', 'epoch': '1.013'}\n"}
+,{"stream_name":"stdout","time":9161.047216468,"data":"{'loss': '0.2516', 'grad_norm': '0.2005', 'learning_rate': '1.667e-05', 'epoch': '1.055'}\n"}
+,{"stream_name":"stdout","time":9161.047221247,"data":"{'loss': '0.262', 'grad_norm': '0.1822', 'learning_rate': '1.126e-05', 'epoch': '1.097'}\n"}
+,{"stream_name":"stdout","time":9161.047226146,"data":"{'loss': '0.2421', 'grad_norm': '0.1865', 'learning_rate': '6.866e-06', 'epoch': '1.139'}\n"}
+,{"stream_name":"stdout","time":9161.047230858,"data":"{'loss': '0.2432', 'grad_norm': '0.2155', 'learning_rate': '3.523e-06', 'epoch': '1.182'}\n"}
+,{"stream_name":"stdout","time":9161.047236322,"data":"{'loss': '0.2471', 'grad_norm': '0.2117', 'learning_rate': '1.273e-06', 'epoch': '1.224'}\n"}
+,{"stream_name":"stdout","time":9161.047240925,"data":"{'loss': '0.2608', 'grad_norm': '0.1805', 'learning_rate': '1.417e-07', 'epoch': '1.266'}\n"}
+,{"stream_name":"stdout","time":9161.047245084,"data":"{'train_runtime': '8178', 'train_samples_per_second': '0.595', 'train_steps_per_second': '0.037', 'train_loss': '0.291', 'epoch': '1.283'}\n"}
+,{"stream_name":"stdout","time":9161.047253585,"data":"PEAK_MEM_GB 5.21\n"}
+,{"stream_name":"stdout","time":9161.047257473,"data":"\n"}
+,{"stream_name":"stdout","time":9161.047261057,"data":"Writing model shards:   0%|          | 0/1 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":9161.047264988,"data":"Writing model shards: 100%|██████████| 1/1 [00:04\u003c00:00,  4.35s/it]\n"}
+,{"stream_name":"stdout","time":9161.047269195,"data":"Writing model shards: 100%|██████████| 1/1 [00:04\u003c00:00,  4.35s/it]\n"}
+,{"stream_name":"stdout","time":9161.047273325,"data":"done in 136.7 min\n"}
+,{"stream_name":"stdout","time":9161.047277001,"data":"\n"}
+,{"stream_name":"stdout","time":9161.047280575,"data":"loss: [(210, 0.261), (220, 0.2629), (230, 0.2552), (240, 0.2671), (250, 0.2516), (260, 0.262), (270, 0.2421), (280, 0.2432), (290, 0.2471), (300, 0.2608)]\n"}
+,{"stream_name":"stdout","time":9161.047284886,"data":"=== [ 152.5 min] eval_A_s1_x1_90\n"}
+,{"stream_name":"stdout","time":9545.308177568,"data":" caps this instance at 11.65 GiB, keeping 1.76 GiB of free device memory out of the KV cache. The extensible KV cache is sized from the memory measured after warmup and CUDA graph capture, so vLLM's own use needs no headroom below 1.0. Leave gpu_memory_utilization unset unless it leaves room for memory vLLM does not measure: other processes sharing the GPU (including ones that allocate on it later), the CPU on a unified-memory device, weight transfer buffers for weight updates, or a KV connector's own device buffers.\n"}
+,{"stream_name":"stdout","time":9545.308215863,"data":"(EngineCore pid=298) INFO 11-24 00:18:48 [extensible_kv_cache.py:693] Memory after warmup: 10.72 GiB free, 0.05 GiB committed to the KV cache, 0.94 GiB kept for transient activations (0.48 GiB allocated at peak, 0.94 GiB of torch reservation growth); 4128 KV cache blocks (7.05 GiB) fit within the requested 11.65 GiB. Torch may reserve up to 6.51 GiB.\n"}
+,{"stream_name":"stdout","time":9545.308223385,"data":"(EngineCore pid=298) INFO 11-24 00:18:48 [kv_cache_utils.py:1168] GPU KV cache size: 264,192 tokens, Maximum concurrency for 16,384 tokens per request: 16.12x\n"}
+,{"stream_name":"stdout","time":9545.308228811,"data":"(EngineCore pid=298) INFO 11-24 00:18:48 [extensible_kv_cache.py:536] Extended KV cache to 4128 blocks (7.05 GiB).\n"}
+,{"stream_name":"stdout","time":9545.308234331,"data":"(EngineCore pid=298) INFO 11-24 00:18:48 [core.py:451] init engine (profile, create kv cache, warmup model) took 74.06 s (compilation: 19.76 s)\n"}
+,{"stream_name":"stdout","time":9545.308239747,"data":"(EngineCore pid=298) INFO 11-24 00:18:48 [kernel.py:517] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native'])\n"}
+,{"stream_name":"stdout","time":9545.308245369,"data":"(MainProcess pid=245) INFO 11-24 00:18:49 [hf.py:743] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n"}
+,{"stream_name":"stdout","time":9545.308250632,"data":"(EngineCore pid=298) WARNING 11-24 00:18:50 [jit_monitor.py:143] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9545.308256878,"data":"(EngineCore pid=298) WARNING 11-24 00:18:50 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_stats_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9545.308262115,"data":"(EngineCore pid=298) WARNING 11-24 00:18:51 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_step_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9545.308275935,"data":"(EngineCore pid=298) WARNING 11-24 00:18:53 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_mask_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9545.308280246,"data":"(EngineCore pid=298) WARNING 11-24 00:18:59 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topk_topp_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9545.308284218,"data":"[attempt 0] solved 18/90  round 255.6s mean_out_chars 2145  elapsed 255.6s\n"}
+,{"stream_name":"stdout","time":9545.308287896,"data":"{\n"}
+,{"stream_name":"stdout","time":9545.308291275,"data":" \"tag\": \"A_s1_x1_90\",\n"}
+,{"stream_name":"stdout","time":9545.30829532,"data":" \"model\": \"/kaggle/working/sft_A_s1_x1/merged\",\n"}
+,{"stream_name":"stdout","time":9545.308298965,"data":" \"adapter\": null,\n"}
+,{"stream_name":"stdout","time":9545.308302839,"data":" \"n\": 90,\n"}
+,{"stream_name":"stdout","time":9545.308306282,"data":" \"checker\": \"connectivity\",\n"}
+,{"stream_name":"stdout","time":9545.308310203,"data":" \"checker_methods_seen\": [\n"}
+,{"stream_name":"stdout","time":9545.308313863,"data":"  \"connectivity\"\n"}
+,{"stream_name":"stdout","time":9545.308317556,"data":" ],\n"}
+,{"stream_name":"stdout","time":9545.30832131,"data":" \"max_budget\": 0,\n"}
+,{"stream_name":"stdout","time":9545.308325578,"data":" \"max_budget_reached\": 0,\n"}
+,{"stream_name":"stdout","time":9545.308329356,"data":" \"solved_k0\": 18,\n"}
+,{"stream_name":"stdout","time":9545.308333253,"data":" \"solved_kmax\": 18,\n"}
+,{"stream_name":"stdout","time":9545.308337202,"data":" \"curve\": {\n"}
+,{"stream_name":"stdout","time":9545.308340861,"data":"  \"small\": {\n"}
+,{"stream_name":"stdout","time":9545.3083451,"data":"   \"0\": 0.16666666666666666\n"}
+,{"stream_name":"stdout","time":9545.308348942,"data":"  },\n"}
+,{"stream_name":"stdout","time":9545.308352956,"data":"  \"all\": {\n"}
+,{"stream_name":"stdout","time":9545.308356916,"data":"   \"0\": 0.2\n"}
+,{"stream_name":"stdout","time":9545.308360582,"data":"  },\n"}
+,{"stream_name":"stdout","time":9545.308364264,"data":"  \"medium\": {\n"}
+,{"stream_name":"stdout","time":9545.308367816,"data":"   \"0\": 0.16666666666666666\n"}
+,{"stream_name":"stdout","time":9545.308372224,"data":"  },\n"}
+,{"stream_name":"stdout","time":9545.308375957,"data":"  \"large\": {\n"}
+,{"stream_name":"stdout","time":9545.308379218,"data":"   \"0\": 0.26666666666666666\n"}
+,{"stream_name":"stdout","time":9545.308383307,"data":"  }\n"}
+,{"stream_name":"stdout","time":9545.308386784,"data":" },\n"}
+,{"stream_name":"stdout","time":9545.308390186,"data":" \"failures\": {\n"}
+,{"stream_name":"stdout","time":9545.308393377,"data":"  \"ok\": 18,\n"}
+,{"stream_name":"stdout","time":9545.308396477,"data":"  \"collision\": 62,\n"}
+,{"stream_name":"stdout","time":9545.308401279,"data":"  \"unstable\": 2,\n"}
+,{"stream_name":"stdout","time":9545.308408829,"data":"  \"floating\": 7,\n"}
+,{"stream_name":"stdout","time":9545.308413036,"data":"  \"format\": 1\n"}
+,{"stream_name":"stdout","time":9545.308415531,"data":" },\n"}
+,{"stream_name":"stdout","time":9545.308417582,"data":" \"seconds\": 255.6388053894043\n"}
+,{"stream_name":"stdout","time":9545.308419852,"data":"}\n"}
+,{"stream_name":"stdout","time":9545.308425753,"data":"(MainProcess pid=245) INFO 11-24 00:23:05 [utils.py:628] [shutdown] Process manager: send sigterm to process EngineCore\n"}
+,{"stream_name":"stdout","time":9545.308428345,"data":"(EngineCore pid=298) INFO 11-24 00:23:05 [core.py:1698] [shutdown] EngineCore: trigger received signal=SIGTERM\n"}
+,{"stream_name":"stdout","time":9545.308430702,"data":"(EngineCore pid=298) INFO 11-24 00:23:05 [core.py:1889] [shutdown] EngineCore: start mode=abort timeout=0s\n"}
+,{"stream_name":"stdout","time":9545.308433041,"data":"(EngineCore pid=298) INFO 11-24 00:23:05 [core.py:1920] [shutdown] EngineCore: request processing complete; starting resource teardown\n"}
+,{"stream_name":"stdout","time":9545.308435481,"data":"(EngineCore pid=298) INFO 11-24 00:23:05 [core.py:1746] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":9545.30843774,"data":"\n"}
+,{"stream_name":"stdout","time":9545.308439914,"data":"=== [ 158.9 min] eval_A_s1_x1_newcat\n"}
+,{"stream_name":"stdout","time":9753.170759701,"data":"eCore pid=465) INFO 11-24 00:24:28 [jit_monitor.py:87] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.\n"}
+,{"stream_name":"stdout","time":9753.170795974,"data":"(EngineCore pid=465) WARNING 11-24 00:24:29 [extensible_kv_cache.py:662] gpu_memory_utilization=0.8 caps this instance at 11.65 GiB, keeping 1.76 GiB of free device memory out of the KV cache. The extensible KV cache is sized from the memory measured after warmup and CUDA graph capture, so vLLM's own use needs no headroom below 1.0. Leave gpu_memory_utilization unset unless it leaves room for memory vLLM does not measure: other processes sharing the GPU (including ones that allocate on it later), the CPU on a unified-memory device, weight transfer buffers for weight updates, or a KV connector's own device buffers.\n"}
+,{"stream_name":"stdout","time":9753.170806054,"data":"(EngineCore pid=465) INFO 11-24 00:24:29 [extensible_kv_cache.py:693] Memory after warmup: 10.72 GiB free, 0.05 GiB committed to the KV cache, 0.94 GiB kept for transient activations (0.48 GiB allocated at peak, 0.94 GiB of torch reservation growth); 4128 KV cache blocks (7.05 GiB) fit within the requested 11.65 GiB. Torch may reserve up to 6.51 GiB.\n"}
+,{"stream_name":"stdout","time":9753.170813221,"data":"(EngineCore pid=465) INFO 11-24 00:24:29 [kv_cache_utils.py:1168] GPU KV cache size: 264,192 tokens, Maximum concurrency for 16,384 tokens per request: 16.12x\n"}
+,{"stream_name":"stdout","time":9753.170825382,"data":"(EngineCore pid=465) INFO 11-24 00:24:29 [extensible_kv_cache.py:536] Extended KV cache to 4128 blocks (7.05 GiB).\n"}
+,{"stream_name":"stdout","time":9753.170828461,"data":"(EngineCore pid=465) INFO 11-24 00:24:29 [core.py:451] init engine (profile, create kv cache, warmup model) took 51.57 s (compilation: 0.23 s)\n"}
+,{"stream_name":"stdout","time":9753.170831504,"data":"(EngineCore pid=465) INFO 11-24 00:24:29 [kernel.py:517] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native'])\n"}
+,{"stream_name":"stdout","time":9753.170834748,"data":"(MainProcess pid=434) INFO 11-24 00:24:30 [hf.py:743] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.\n"}
+,{"stream_name":"stdout","time":9753.170838709,"data":"(EngineCore pid=465) WARNING 11-24 00:24:31 [jit_monitor.py:143] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9753.170841846,"data":"(EngineCore pid=465) WARNING 11-24 00:24:31 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_stats_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9753.170853302,"data":"(EngineCore pid=465) WARNING 11-24 00:24:32 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_step_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9753.170856027,"data":"(EngineCore pid=465) WARNING 11-24 00:24:33 [jit_monitor.py:143] Triton kernel JIT compilation during inference: _topp_sb_mask_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.\n"}
+,{"stream_name":"stdout","time":9753.170858591,"data":"[attempt 0] solved 6/28  round 123.5s mean_out_chars 2273  elapsed 123.5s\n"}
+,{"stream_name":"stdout","time":9753.170860799,"data":"{\n"}
+,{"stream_name":"stdout","time":9753.170862863,"data":" \"tag\": \"A_s1_x1_newcat\",\n"}
+,{"stream_name":"stdout","time":9753.170865346,"data":" \"model\": \"/kaggle/working/sft_A_s1_x1/merged\",\n"}
+,{"stream_name":"stdout","time":9753.170867624,"data":" \"adapter\": null,\n"}
+,{"stream_name":"stdout","time":9753.170869788,"data":" \"n\": 28,\n"}
+,{"stream_name":"stdout","time":9753.170871911,"data":" \"checker\": \"connectivity\",\n"}
+,{"stream_name":"stdout","time":9753.170874187,"data":" \"checker_methods_seen\": [\n"}
+,{"stream_name":"stdout","time":9753.170876401,"data":"  \"connectivity\"\n"}
+,{"stream_name":"stdout","time":9753.170878569,"data":" ],\n"}
+,{"stream_name":"stdout","time":9753.170880641,"data":" \"max_budget\": 0,\n"}
+,{"stream_name":"stdout","time":9753.170882891,"data":" \"max_budget_reached\": 0,\n"}
+,{"stream_name":"stdout","time":9753.17088507,"data":" \"solved_k0\": 6,\n"}
+,{"stream_name":"stdout","time":9753.170887203,"data":" \"solved_kmax\": 6,\n"}
+,{"stream_name":"stdout","time":9753.170889334,"data":" \"curve\": {\n"}
+,{"stream_name":"stdout","time":9753.170891583,"data":"  \"large\": {\n"}
+,{"stream_name":"stdout","time":9753.170893675,"data":"   \"0\": 0.2\n"}
+,{"stream_name":"stdout","time":9753.170895853,"data":"  },\n"}
+,{"stream_name":"stdout","time":9753.17089792,"data":"  \"all\": {\n"}
+,{"stream_name":"stdout","time":9753.170900025,"data":"   \"0\": 0.21428571428571427\n"}
+,{"stream_name":"stdout","time":9753.170902228,"data":"  },\n"}
+,{"stream_name":"stdout","time":9753.170904263,"data":"  \"medium\": {\n"}
+,{"stream_name":"stdout","time":9753.170906381,"data":"   \"0\": 0.2857142857142857\n"}
+,{"stream_name":"stdout","time":9753.170908532,"data":"  },\n"}
+,{"stream_name":"stdout","time":9753.170910572,"data":"  \"small\": {\n"}
+,{"stream_name":"stdout","time":9753.170912673,"data":"   \"0\": 0.18181818181818182\n"}
+,{"stream_name":"stdout","time":9753.170914805,"data":"  }\n"}
+,{"stream_name":"stdout","time":9753.170916844,"data":" },\n"}
+,{"stream_name":"stdout","time":9753.170918893,"data":" \"failures\": {\n"}
+,{"stream_name":"stdout","time":9753.170921052,"data":"  \"collision\": 21,\n"}
+,{"stream_name":"stdout","time":9753.170923193,"data":"  \"ok\": 6,\n"}
+,{"stream_name":"stdout","time":9753.170925279,"data":"  \"floating\": 1\n"}
+,{"stream_name":"stdout","time":9753.170927399,"data":" },\n"}
+,{"stream_name":"stdout","time":9753.170929434,"data":" \"seconds\": 123.48713493347168\n"}
+,{"stream_name":"stdout","time":9753.170931623,"data":"}\n"}
+,{"stream_name":"stdout","time":9753.17093377,"data":"(MainProcess pid=434) INFO 11-24 00:26:33 [utils.py:628] [shutdown] Process manager: send sigterm to process EngineCore\n"}
+,{"stream_name":"stdout","time":9753.170936121,"data":"(EngineCore pid=465) INFO 11-24 00:26:33 [core.py:1698] [shutdown] EngineCore: trigger received signal=SIGTERM\n"}
+,{"stream_name":"stdout","time":9753.170940969,"data":"(EngineCore pid=465) INFO 11-24 00:26:33 [core.py:1889] [shutdown] EngineCore: start mode=abort timeout=0s\n"}
+,{"stream_name":"stdout","time":9753.170943394,"data":"(EngineCore pid=465) INFO 11-24 00:26:33 [core.py:1920] [shutdown] EngineCore: request processing complete; starting resource teardown\n"}
+,{"stream_name":"stdout","time":9753.17094573,"data":"(EngineCore pid=465) INFO 11-24 00:26:33 [core.py:1746] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":9753.170947996,"data":"\n"}
+,{"stream_name":"stdout","time":9753.180588768,"data":"=== [ 162.4 min] val_loss_A_s1\n"}
+,{"stream_name":"stdout","time":9929.579195348,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stdout","time":9929.579230414,"data":"\n"}
+,{"stream_name":"stdout","time":9929.579236253,"data":"Loading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":9929.579241255,"data":"Loading weights:   0%|          | 1/338 [00:00\u003c03:04,  1.83it/s]\n"}
+,{"stream_name":"stdout","time":9929.579245885,"data":"Loading weights:  41%|████      | 137/338 [00:00\u003c00:00, 282.53it/s]\n"}
+,{"stream_name":"stdout","time":9929.579252277,"data":"Loading weights:  64%|██████▍   | 216/338 [00:00\u003c00:00, 291.53it/s]\n"}
+,{"stream_name":"stdout","time":9929.579256873,"data":"Loading weights:  81%|████████  | 273/338 [00:01\u003c00:00, 278.68it/s]\n"}
+,{"stream_name":"stdout","time":9929.579261451,"data":"Loading weights:  94%|█████████▍| 318/338 [00:01\u003c00:00, 275.01it/s]\n"}
+,{"stream_name":"stdout","time":9929.579266303,"data":"Loading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 253.78it/s]\n"}
+,{"stream_name":"stdout","time":9929.579271005,"data":"[W1124 00:26:57.766892886 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 1564475392 bytes (free: 1468858368, total: 15636037632).\n"}
+,{"stream_name":"stdout","time":9929.57927561,"data":"base 0.46491873765641095 65s\n"}
+,{"stream_name":"stdout","time":9929.579279954,"data":"A_s1 0.24722785283394902 95s\n"}
+,{"stream_name":"stdout","time":9929.579284233,"data":"\n"}
+,{"stream_name":"stdout","time":9929.588999687,"data":"=== [ 165.3 min] table\n"}
+,{"stream_name":"stdout","time":9929.711201767,"data":"| model | one-shot k=0 | feedback \u003c= 0 rounds | checker |\n"}
+,{"stream_name":"stdout","time":9929.7112329,"data":"|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":9929.711238377,"data":"| A_s1_x1_90 (/kaggle/working/sft_A_s1_x1/merged) | 18/90 (20%) | 18/90 (20%) | connectivity |\n"}
+,{"stream_name":"stdout","time":9929.711242961,"data":"| A_s1_x1_newcat (/kaggle/working/sft_A_s1_x1/merged) | 6/28 (21%) | 6/28 (21%) | connectivity |\n"}
+,{"stream_name":"stdout","time":9929.71124766,"data":"\n"}
+,{"stream_name":"stdout","time":9929.711251617,"data":"| model | one-shot k=0 | feedback \u003c= 0 rounds | checker |\n"}
+,{"stream_name":"stdout","time":9929.711256008,"data":"|---|---|---|---|\n"}
+,{"stream_name":"stdout","time":9929.711260452,"data":"| A_s1_x1_90 (/kaggle/working/sft_A_s1_x1/merged) | 18/90 (20%) | 18/90 (20%) | connectivity |\n"}
+,{"stream_name":"stdout","time":9929.711264889,"data":"| A_s1_x1_newcat (/kaggle/working/sft_A_s1_x1/merged) | 6/28 (21%) | 6/28 (21%) | connectivity |\n"}
+,{"stream_name":"stdout","time":9929.711268976,"data":"\n"}
+,{"stream_name":"stdout","time":9929.711272859,"data":"=== [ 165.3 min] done\n"}
+,{"stream_name":"stderr","time":9932.633260857,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":9932.633302554,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":9932.79683054,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":9932.796855922,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":9933.754760676,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":9933.837814386,"data":"[NbConvertApp] Writing 33228 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":9936.690146853,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":9937.304047746,"data":"[NbConvertApp] Writing 328279 bytes to __results__.html\n"}
+]

@@ -1,0 +1,12 @@
+{"event": "start", "balance_cny": 5.58}
+{"event": "call", "idx": "8db513ba-67eb-40b3-8410-2c43b26a2013", "attempt": 0, "prompt_tokens": 297, "completion_tokens": 2093, "cache_hit": 0, "finish": "stop", "sec": 11.9}
+{"event": "call", "idx": "ba87bfbf-38a2-4365-a4f8-efde1352665a", "attempt": 0, "prompt_tokens": 296, "completion_tokens": 2106, "cache_hit": 0, "finish": "stop", "sec": 12.6}
+{"event": "call", "idx": "6e22ebab-79c7-4418-9568-4ec38c68a15a", "attempt": 0, "prompt_tokens": 297, "completion_tokens": 2898, "cache_hit": 0, "finish": "stop", "sec": 15.6}
+{"event": "call", "idx": "73f4bd73-6ffb-4fd9-aae6-b6f5342dfa7a", "attempt": 0, "prompt_tokens": 299, "completion_tokens": 2987, "cache_hit": 0, "finish": "stop", "sec": 17.7}
+{"event": "call", "idx": "d3b5bd34-d611-44cb-92f7-008a56ea9202", "attempt": 0, "prompt_tokens": 298, "completion_tokens": 3317, "cache_hit": 0, "finish": "stop", "sec": 18.0}
+{"event": "call", "idx": "de245e46-2586-4bfe-be5c-3864ef312036", "attempt": 0, "prompt_tokens": 296, "completion_tokens": 5049, "cache_hit": 0, "finish": "stop", "sec": 26.7}
+{"event": "call", "idx": "6e22ebab-79c7-4418-9568-4ec38c68a15a", "attempt": 1, "prompt_tokens": 579, "completion_tokens": 2895, "cache_hit": 256, "finish": "stop", "sec": 20.1}
+{"event": "call", "idx": "73f4bd73-6ffb-4fd9-aae6-b6f5342dfa7a", "attempt": 1, "prompt_tokens": 581, "completion_tokens": 4172, "cache_hit": 256, "finish": "stop", "sec": 25.4}
+{"event": "call", "idx": "8db513ba-67eb-40b3-8410-2c43b26a2013", "attempt": 1, "prompt_tokens": 589, "completion_tokens": 6480, "cache_hit": 256, "finish": "stop", "sec": 37.7}
+{"event": "end", "spent_cny": 0.0, "calls": 9, "prompt_tokens": 3532, "completion_tokens": 31997, "truncated": 0}
+{"event": "summary", "curve": {"small": {"0": 0.5, "1": 1.0, "2": 1.0, "3": 1.0}, "all": {"0": 0.5, "1": 1.0, "2": 1.0, "3": 1.0}, "medium": {"0": 0.5, "1": 1.0, "2": 1.0, "3": 1.0}, "large": {"0": 0.5, "1": 1.0, "2": 1.0, "3": 1.0}}, "failures": {"floating": 3, "ok": 6}}

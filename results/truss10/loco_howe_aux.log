@@ -1,0 +1,43 @@
+{"shift": "loco_howe", "train": 19102, "val": 2625, "cal": 5273, "pool": 1244, "test": 1756, "unsafe_train": 0.29164485394199563, "unsafe_test": 0.40660592255125283}
+params=77090
+seed 0 ep 0 val_bce 0.2234 78s
+seed 0 ep 1 val_bce 0.1448 77s
+seed 0 ep 2 val_bce 0.1916 80s
+seed 0 ep 3 val_bce 0.1429 78s
+seed 0 ep 4 val_bce 0.1322 79s
+seed 0 ep 5 val_bce 0.1367 77s
+seed 0 ep 6 val_bce 0.1066 78s
+seed 0 ep 7 val_bce 0.1053 78s
+seed 0 ep 8 val_bce 0.1022 77s
+seed 0 ep 9 val_bce 0.0937 79s
+{"primary": 0.13496723729456417, "web_comp_frac_target": 0.645729426977105, "web_comp_frac_train": 0.5107621896825408, "ks_slender": 0.15586361453151099, "aux_acc_target": 0.8151451800232288}
+loco_howe seed 0 a=0.01 id_val miss 0.0066 | N0 miss 0.2045 saved 0.659 pass 0.970 auc 0.970
+loco_howe seed 0 a=0.05 id_val miss 0.0630 | N0 miss 0.3501 saved 0.733 pass 0.995 auc 0.970
+params=77090
+seed 1 ep 0 val_bce 0.2697 78s
+seed 1 ep 1 val_bce 0.1662 78s
+seed 1 ep 2 val_bce 0.1346 80s
+seed 1 ep 3 val_bce 0.1210 78s
+seed 1 ep 4 val_bce 0.1505 79s
+seed 1 ep 5 val_bce 0.1321 84s
+seed 1 ep 6 val_bce 0.1013 78s
+seed 1 ep 7 val_bce 0.1000 79s
+seed 1 ep 8 val_bce 0.0939 80s
+seed 1 ep 9 val_bce 0.0875 80s
+{"primary": 0.07171165839871574, "web_comp_frac_target": 0.5788025090607133, "web_comp_frac_train": 0.5070908506619975, "ks_slender": 0.14055905379239297, "aux_acc_target": 0.7777700348432056}
+loco_howe seed 1 a=0.01 id_val miss 0.0079 | N0 miss 0.1569 saved 0.645 pass 0.979 auc 0.986
+loco_howe seed 1 a=0.05 id_val miss 0.0591 | N0 miss 0.3025 saved 0.714 pass 0.996 auc 0.986
+params=77090
+seed 2 ep 0 val_bce 0.2082 78s
+seed 2 ep 1 val_bce 0.1699 81s
+seed 2 ep 2 val_bce 0.2283 79s
+seed 2 ep 3 val_bce 0.1233 80s
+seed 2 ep 4 val_bce 0.1206 79s
+seed 2 ep 5 val_bce 0.1361 81s
+seed 2 ep 6 val_bce 0.1073 81s
+seed 2 ep 7 val_bce 0.1090 80s
+seed 2 ep 8 val_bce 0.0941 79s
+seed 2 ep 9 val_bce 0.0937 80s
+{"primary": 0.13540898948525482, "web_comp_frac_target": 0.6408494204339406, "web_comp_frac_train": 0.5054404309486857, "ks_slender": 0.15521867134779133, "aux_acc_target": 0.8145180023228804}
+loco_howe seed 2 a=0.01 id_val miss 0.0079 | N0 miss 0.1527 saved 0.644 pass 0.981 auc 0.985
+loco_howe seed 2 a=0.05 id_val miss 0.0630 | N0 miss 0.3165 saved 0.721 pass 0.998 auc 0.985

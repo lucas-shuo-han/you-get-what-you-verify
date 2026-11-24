@@ -1,0 +1,37 @@
+{
+ "tag": "C_s0_300",
+ "model": "/kaggle/temp/merged_C_s0",
+ "adapter": null,
+ "n": 300,
+ "checker": "connectivity",
+ "checker_methods_seen": [
+  "connectivity"
+ ],
+ "max_budget": 0,
+ "max_budget_reached": 0,
+ "solved_k0": 56,
+ "solved_kmax": 56,
+ "curve": {
+  "small": {
+   "0": 0.14
+  },
+  "all": {
+   "0": 0.18666666666666668
+  },
+  "medium": {
+   "0": 0.19
+  },
+  "large": {
+   "0": 0.23
+  }
+ },
+ "failures": {
+  "unstable": 9,
+  "floating": 15,
+  "collision": 217,
+  "ok": 56,
+  "out_of_bounds": 2,
+  "format": 1
+ },
+ "seconds": 812.7846376895905
+}

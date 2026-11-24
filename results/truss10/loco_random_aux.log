@@ -1,0 +1,43 @@
+{"shift": "loco_random", "train": 19090, "val": 2650, "cal": 5260, "pool": 1255, "test": 1745, "unsafe_train": 0.2717129387113672, "unsafe_test": 0.5696275071633238}
+params=77090
+seed 0 ep 0 val_bce 0.1914 137s
+seed 0 ep 1 val_bce 0.1565 138s
+seed 0 ep 2 val_bce 0.1693 139s
+seed 0 ep 3 val_bce 0.1453 115s
+seed 0 ep 4 val_bce 0.1307 115s
+seed 0 ep 5 val_bce 0.1313 118s
+seed 0 ep 6 val_bce 0.1156 119s
+seed 0 ep 7 val_bce 0.0905 128s
+seed 0 ep 8 val_bce 0.0890 118s
+seed 0 ep 9 val_bce 0.0832 115s
+{"primary": 0.08572101536420373, "web_comp_frac_target": 0.6058916532933069, "web_comp_frac_train": 0.5201706379291031, "ks_slender": 0.2151028593492147, "aux_acc_target": 0.6606495169008504}
+loco_random seed 0 a=0.01 id_val miss 0.0096 | N0 miss 0.2475 saved 0.516 pass 0.871 auc 0.918
+loco_random seed 0 a=0.05 id_val miss 0.0410 | N0 miss 0.3400 saved 0.595 pass 0.932 auc 0.918
+params=77090
+seed 1 ep 0 val_bce 0.1824 117s
+seed 1 ep 1 val_bce 0.1540 122s
+seed 1 ep 2 val_bce 0.1313 131s
+seed 1 ep 3 val_bce 0.1182 134s
+seed 1 ep 4 val_bce 0.1087 130s
+seed 1 ep 5 val_bce 0.1130 128s
+seed 1 ep 6 val_bce 0.1000 128s
+seed 1 ep 7 val_bce 0.1005 131s
+seed 1 ep 8 val_bce 0.0906 128s
+seed 1 ep 9 val_bce 0.0874 127s
+{"primary": 0.038441024879843355, "web_comp_frac_target": 0.5495452497094879, "web_comp_frac_train": 0.5111042248296446, "ks_slender": 0.21565689648670439, "aux_acc_target": 0.6737937760980219}
+loco_random seed 1 a=0.01 id_val miss 0.0068 | N0 miss 0.2093 saved 0.469 pass 0.814 auc 0.899
+loco_random seed 1 a=0.05 id_val miss 0.0505 | N0 miss 0.3048 saved 0.549 pass 0.872 auc 0.899
+params=77090
+seed 2 ep 0 val_bce 0.1911 130s
+seed 2 ep 1 val_bce 0.1945 130s
+seed 2 ep 2 val_bce 0.1313 125s
+seed 2 ep 3 val_bce 0.1366 118s
+seed 2 ep 4 val_bce 0.1116 111s
+seed 2 ep 5 val_bce 0.1021 112s
+seed 2 ep 6 val_bce 0.1357 111s
+seed 2 ep 7 val_bce 0.1198 113s
+seed 2 ep 8 val_bce 0.0934 108s
+seed 2 ep 9 val_bce 0.0891 85s
+{"primary": 0.0704844602594974, "web_comp_frac_target": 0.5920211316880398, "web_comp_frac_train": 0.5215366714285424, "ks_slender": 0.18113207497490144, "aux_acc_target": 0.6635526837148343}
+loco_random seed 2 a=0.01 id_val miss 0.0055 | N0 miss 0.2515 saved 0.512 pass 0.856 auc 0.907
+loco_random seed 2 a=0.05 id_val miss 0.0533 | N0 miss 0.3742 saved 0.614 pass 0.931 auc 0.907

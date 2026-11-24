@@ -1,0 +1,123 @@
+[{"stream_name":"stderr","time":7.073796056,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.073857996,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":8.077212586,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.077250228,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.077264048,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.077267407,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.719867553,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.719905181,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.719910966,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.719915061,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":428.608624036,"data":"0 \u003e=0.34.0, but you have huggingface-hub 2.4.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":428.60866899,"data":"numba-cuda 0.28.2 requires cuda-core\u003c1.0.0,\u003e=0.5.1, but you have cuda-core 1.3.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":428.608676401,"data":"cuml-cu13 26.6.0 requires numba\u003c0.65.0,\u003e=0.60.0, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":428.608682322,"data":"cudf-cu13 26.6.0 requires numba\u003c0.65.0,\u003e=0.60.0, but you have numba 0.65.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":428.608688016,"data":"cudf-cu13 26.6.0 requires pyarrow\u003c24,\u003e=19.0.0, but you have pyarrow 26.0.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":428.608693564,"data":"gradio 6.30.0 requires pillow\u003c13.0,\u003e=8.0, but you have pillow 13.0.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":428.608699305,"data":"google-adk 2.7.1 requires opentelemetry-api\u003c=1.42.1,\u003e=1.39, but you have opentelemetry-api 1.45.2 which is incompatible.\n"}
+,{"stream_name":"stdout","time":428.608705023,"data":"google-adk 2.7.1 requires opentelemetry-sdk\u003c=1.42.1,\u003e=1.39, but you have opentelemetry-sdk 1.45.2 which is incompatible.\n"}
+,{"stream_name":"stdout","time":428.608710693,"data":"\n"}
+,{"stream_name":"stdout","time":439.195330866,"data":"{'A_s1': '/kaggle/input/datasets/lucasshuohan/brickexp-adapters-as1', 'C_s1': '/kaggle/input/datasets/lucasshuohan/brickexp-adapter-cs1'}\n"}
+,{"stream_name":"stdout","time":523.031370231,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":523.031412878,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stdout","time":523.031418437,"data":"\n"}
+,{"stream_name":"stdout","time":523.03142281,"data":"Loading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":523.031427769,"data":"Loading weights:   0%|          | 1/338 [00:00\u003c03:24,  1.65it/s]\n"}
+,{"stream_name":"stdout","time":523.031441261,"data":"Loading weights:  37%|███▋      | 124/338 [00:00\u003c00:00, 233.68it/s]\n"}
+,{"stream_name":"stdout","time":523.031458828,"data":"Loading weights:  57%|█████▋    | 193/338 [00:00\u003c00:00, 250.51it/s]\n"}
+,{"stream_name":"stdout","time":523.031462737,"data":"Loading weights:  72%|███████▏  | 243/338 [00:01\u003c00:00, 244.83it/s]\n"}
+,{"stream_name":"stdout","time":523.03146662,"data":"Loading weights:  84%|████████▎ | 283/338 [00:01\u003c00:00, 237.21it/s]\n"}
+,{"stream_name":"stdout","time":523.031470474,"data":"Loading weights:  94%|█████████▍| 317/338 [00:01\u003c00:00, 237.99it/s]\n"}
+,{"stream_name":"stdout","time":523.031474465,"data":"Loading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 220.60it/s]\n"}
+,{"stream_name":"stdout","time":523.031478332,"data":"\n"}
+,{"stream_name":"stdout","time":523.031481766,"data":"Writing model shards:   0%|          | 0/1 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":523.031485507,"data":"Writing model shards: 100%|██████████| 1/1 [00:01\u003c00:00,  1.51s/it]\n"}
+,{"stream_name":"stdout","time":523.031518622,"data":"Writing model shards: 100%|██████████| 1/1 [00:01\u003c00:00,  1.51s/it]\n"}
+,{"stream_name":"stdout","time":523.031525222,"data":"\n"}
+,{"stream_name":"stdout","time":1356.833168207,"data":" \"solved_kmax\": 63,\n"}
+,{"stream_name":"stdout","time":1356.833215431,"data":" \"curve\": {\n"}
+,{"stream_name":"stdout","time":1356.833237153,"data":"  \"small\": {\n"}
+,{"stream_name":"stdout","time":1356.833243171,"data":"   \"0\": 0.18\n"}
+,{"stream_name":"stdout","time":1356.833249234,"data":"  },\n"}
+,{"stream_name":"stdout","time":1356.833254722,"data":"  \"all\": {\n"}
+,{"stream_name":"stdout","time":1356.833260255,"data":"   \"0\": 0.21\n"}
+,{"stream_name":"stdout","time":1356.83326533,"data":"  },\n"}
+,{"stream_name":"stdout","time":1356.833270016,"data":"  \"medium\": {\n"}
+,{"stream_name":"stdout","time":1356.833274881,"data":"   \"0\": 0.18\n"}
+,{"stream_name":"stdout","time":1356.833279688,"data":"  },\n"}
+,{"stream_name":"stdout","time":1356.833284368,"data":"  \"large\": {\n"}
+,{"stream_name":"stdout","time":1356.833289212,"data":"   \"0\": 0.27\n"}
+,{"stream_name":"stdout","time":1356.833293975,"data":"  }\n"}
+,{"stream_name":"stdout","time":1356.833298574,"data":" },\n"}
+,{"stream_name":"stdout","time":1356.833303248,"data":" \"failures\": {\n"}
+,{"stream_name":"stdout","time":1356.833308056,"data":"  \"floating\": 15,\n"}
+,{"stream_name":"stdout","time":1356.833312884,"data":"  \"out_of_bounds\": 5,\n"}
+,{"stream_name":"stdout","time":1356.833323954,"data":"  \"collision\": 211,\n"}
+,{"stream_name":"stdout","time":1356.833341894,"data":"  \"ok\": 63,\n"}
+,{"stream_name":"stdout","time":1356.833348373,"data":"  \"unstable\": 5,\n"}
+,{"stream_name":"stdout","time":1356.833354362,"data":"  \"format\": 1\n"}
+,{"stream_name":"stdout","time":1356.833360101,"data":" },\n"}
+,{"stream_name":"stdout","time":1356.83336526,"data":" \"seconds\": 699.8951869010925\n"}
+,{"stream_name":"stdout","time":1356.833370171,"data":"}\n"}
+,{"stream_name":"stdout","time":1356.833375097,"data":"(MainProcess pid=137) INFO 11-24 17:04:55 [utils.py:628] [shutdown] Process manager: send sigterm to process EngineCore\n"}
+,{"stream_name":"stdout","time":1356.833380247,"data":"(EngineCore pid=190) INFO 11-24 17:04:55 [core.py:1698] [shutdown] EngineCore: trigger received signal=SIGTERM\n"}
+,{"stream_name":"stdout","time":1356.833385406,"data":"(EngineCore pid=190) INFO 11-24 17:04:55 [core.py:1889] [shutdown] EngineCore: start mode=abort timeout=0s\n"}
+,{"stream_name":"stdout","time":1356.833399594,"data":"(EngineCore pid=190) INFO 11-24 17:04:55 [core.py:1920] [shutdown] EngineCore: request processing complete; starting resource teardown\n"}
+,{"stream_name":"stdout","time":1356.833404085,"data":"(EngineCore pid=190) INFO 11-24 17:04:55 [core.py:1746] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":1356.833408228,"data":"\n"}
+,{"stream_name":"stdout","time":1386.773647004,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stdout","time":1386.773684766,"data":"\n"}
+,{"stream_name":"stdout","time":1386.773689355,"data":"Loading weights:   0%|          | 0/338 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":1386.773693848,"data":"Loading weights:   0%|          | 1/338 [00:00\u003c02:59,  1.88it/s]\n"}
+,{"stream_name":"stdout","time":1386.77369799,"data":"Loading weights:  37%|███▋      | 124/338 [00:00\u003c00:00, 258.41it/s]\n"}
+,{"stream_name":"stdout","time":1386.773702707,"data":"Loading weights:  57%|█████▋    | 193/338 [00:00\u003c00:00, 261.36it/s]\n"}
+,{"stream_name":"stdout","time":1386.773706853,"data":"Loading weights:  72%|███████▏  | 243/338 [00:01\u003c00:00, 246.72it/s]\n"}
+,{"stream_name":"stdout","time":1386.77371098,"data":"Loading weights:  83%|████████▎ | 282/338 [00:01\u003c00:00, 249.77it/s]\n"}
+,{"stream_name":"stdout","time":1386.773715184,"data":"Loading weights:  93%|█████████▎| 316/338 [00:01\u003c00:00, 245.79it/s]\n"}
+,{"stream_name":"stdout","time":1386.773719346,"data":"Loading weights: 100%|██████████| 338/338 [00:01\u003c00:00, 229.14it/s]\n"}
+,{"stream_name":"stdout","time":1386.773723538,"data":"\n"}
+,{"stream_name":"stdout","time":1386.773727209,"data":"Writing model shards:   0%|          | 0/1 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":1386.773731215,"data":"Writing model shards: 100%|██████████| 1/1 [00:01\u003c00:00,  1.06s/it]\n"}
+,{"stream_name":"stdout","time":1386.773735426,"data":"Writing model shards: 100%|██████████| 1/1 [00:01\u003c00:00,  1.06s/it]\n"}
+,{"stream_name":"stdout","time":1386.773739638,"data":"\n"}
+,{"stream_name":"stdout","time":2189.971217159,"data":" \"solved_k0\": 70,\n"}
+,{"stream_name":"stdout","time":2189.971252486,"data":" \"solved_kmax\": 70,\n"}
+,{"stream_name":"stdout","time":2189.971257776,"data":" \"curve\": {\n"}
+,{"stream_name":"stdout","time":2189.971262159,"data":"  \"small\": {\n"}
+,{"stream_name":"stdout","time":2189.971266307,"data":"   \"0\": 0.19\n"}
+,{"stream_name":"stdout","time":2189.971270402,"data":"  },\n"}
+,{"stream_name":"stdout","time":2189.971274517,"data":"  \"all\": {\n"}
+,{"stream_name":"stdout","time":2189.971280462,"data":"   \"0\": 0.23333333333333334\n"}
+,{"stream_name":"stdout","time":2189.971287826,"data":"  },\n"}
+,{"stream_name":"stdout","time":2189.971290776,"data":"  \"medium\": {\n"}
+,{"stream_name":"stdout","time":2189.971293572,"data":"   \"0\": 0.24\n"}
+,{"stream_name":"stdout","time":2189.971296392,"data":"  },\n"}
+,{"stream_name":"stdout","time":2189.971299127,"data":"  \"large\": {\n"}
+,{"stream_name":"stdout","time":2189.971301897,"data":"   \"0\": 0.27\n"}
+,{"stream_name":"stdout","time":2189.97130457,"data":"  }\n"}
+,{"stream_name":"stdout","time":2189.971307261,"data":" },\n"}
+,{"stream_name":"stdout","time":2189.971309945,"data":" \"failures\": {\n"}
+,{"stream_name":"stdout","time":2189.971312664,"data":"  \"ok\": 70,\n"}
+,{"stream_name":"stdout","time":2189.971322495,"data":"  \"collision\": 200,\n"}
+,{"stream_name":"stdout","time":2189.971324959,"data":"  \"unstable\": 10,\n"}
+,{"stream_name":"stdout","time":2189.971327131,"data":"  \"floating\": 17,\n"}
+,{"stream_name":"stdout","time":2189.971329351,"data":"  \"out_of_bounds\": 3\n"}
+,{"stream_name":"stdout","time":2189.971331533,"data":" },\n"}
+,{"stream_name":"stdout","time":2189.971333609,"data":" \"seconds\": 692.2791349887848\n"}
+,{"stream_name":"stdout","time":2189.971335827,"data":"}\n"}
+,{"stream_name":"stdout","time":2189.971338063,"data":"(MainProcess pid=355) INFO 11-24 17:18:49 [utils.py:628] [shutdown] Process manager: send sigterm to process EngineCore\n"}
+,{"stream_name":"stdout","time":2189.971340434,"data":"(EngineCore pid=386) INFO 11-24 17:18:49 [core.py:1698] [shutdown] EngineCore: trigger received signal=SIGTERM\n"}
+,{"stream_name":"stdout","time":2189.971342749,"data":"(EngineCore pid=386) INFO 11-24 17:18:49 [core.py:1889] [shutdown] EngineCore: start mode=abort timeout=0s\n"}
+,{"stream_name":"stdout","time":2189.971345093,"data":"(EngineCore pid=386) INFO 11-24 17:18:49 [core.py:1920] [shutdown] EngineCore: request processing complete; starting resource teardown\n"}
+,{"stream_name":"stdout","time":2189.971347554,"data":"(EngineCore pid=386) INFO 11-24 17:18:49 [core.py:1746] [shutdown] EngineCore: exiting busy loop\n"}
+,{"stream_name":"stdout","time":2189.971349819,"data":"\n"}
+,{"stream_name":"stdout","time":2189.971351943,"data":"['eval_A_s1_300.jsonl', 'eval_C_s1_300.jsonl', 'summary_A_s1_300.json', 'summary_C_s1_300.json']\n"}
+,{"stream_name":"stderr","time":2193.015834579,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2193.015869381,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2193.172780684,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2193.172809782,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2194.139859046,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":2194.215323026,"data":"[NbConvertApp] Writing 10831 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":2197.347871232,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2197.979700911,"data":"[NbConvertApp] Writing 292636 bytes to __results__.html\n"}
+]

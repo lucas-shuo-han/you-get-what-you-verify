@@ -1,0 +1,54 @@
+{
+ "n_ok": 5,
+ "n": 10,
+ "verdict": "PARTIAL",
+ "ok": {
+  "pratt": true,
+  "howe": false,
+  "warren": true,
+  "ktruss": true,
+  "fink": false,
+  "bowstring": true,
+  "space": false,
+  "random": false,
+  "tower": false,
+  "box": true
+ },
+ "three_d": {
+  "space": {
+   "miss": 0.8633069828722002,
+   "pass": 1.0,
+   "auc": 0.9546834727062737
+  },
+  "tower": {
+   "miss": 0.9884559884559884,
+   "pass": 1.0,
+   "auc": 0.8367385316473462
+  },
+  "box": {
+   "miss": 0.0,
+   "pass": 0.54749050189962,
+   "auc": 0.9520321499609853
+  }
+ },
+ "size_ok": false,
+ "positives_miss_ge_10": [
+  "howe",
+  "fink",
+  "space",
+  "random",
+  "tower"
+ ],
+ "geo_signal_auroc": 0.68
+}
+pratt      miss 0.084 (0.055-0.123) pass 0.940 saved 0.787 auc 0.981 id_miss 0.054
+howe       miss 0.376 (0.326-0.437) pass 0.995 saved 0.743 auc 0.976 id_miss 0.051
+warren     miss 0.031 (0.018-0.041) pass 0.920 saved 0.730 auc 0.991 id_miss 0.049
+ktruss     miss 0.047 (0.043-0.053) pass 0.913 saved 0.711 auc 0.982 id_miss 0.056
+fink       miss 0.172 (0.163-0.183) pass 0.971 saved 0.688 auc 0.983 id_miss 0.055
+bowstring  miss 0.035 (0.020-0.045) pass 0.885 saved 0.716 auc 0.984 id_miss 0.053
+space      miss 0.863 (0.837-0.878) pass 1.000 saved 0.923 auc 0.955 id_miss 0.052
+random     miss 0.348 (0.304-0.414) pass 0.920 saved 0.594 auc 0.910 id_miss 0.046
+tower      miss 0.988 (0.974-1.000) pass 1.000 saved 0.997 auc 0.837 id_miss 0.047
+box        miss 0.000 (0.000-0.000) pass 0.547 saved 0.507 auc 0.952 id_miss 0.059
+size       miss 0.129 (0.115-0.142) pass 0.980 saved 0.649 auc 0.989 id_miss 0.052

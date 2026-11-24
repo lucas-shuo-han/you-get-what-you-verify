@@ -347,7 +347,19 @@ DESIGNS = {
     "lamp_10": arc_lamp, "lamp_13": torch_lamp, "lamp_08": pendant,
 }
 ROUNDS = {k: 2 for k in ("lamp_11", "tree_12", "lamp_04", "tree_13", "tree_04", "tree_03", "tree_11")}
-NOTES = {}  # free-text self-evaluation notes (originally in Chinese) removed in the public release; not used downstream
+NOTES = {
+    "tree_05": "细2x2树干+几簇小叶枝，像小树苗；砖数低于large档", "tree_04": "粗干上分出两条阶梯斜枝各托一团树冠，Y形清楚",
+    "tree_12": "矮盆+短干+扁平冠，像盆景（第1轮盆中空导致整体被剪掉，改实心盆沿）", "tree_13": "方盆+树干+圆冠，像盆栽树",
+    "tree_01": "分层锥形冠，像松树", "tree_10": "细高椭球冠，像柏树", "tree_07": "四层逐级变小的锥层，像圣诞树",
+    "tree_02": "粗短干+大圆冠，像灌木状矮树", "tree_08": "高干顶上方块空心冠，符合", "tree_11": "蘑菇状宽冠，冠下逐层外扩支撑",
+    "tree_03": "细干+顶部八向叶片下垂，像棕榈（第1轮倾斜树干判塌，改直）", "tree_00": "直干+圆冠，像普通树",
+    "tree_06": "粗短干+宽扁平冠，像橡树；砖数远超small档", "tree_14": "一根干穿过三层叶盘，符合", "tree_09": "圆顶+边缘下垂帘，像柳树，下垂感一般",
+    "lamp_12": "细杆+方块灯罩，符合", "lamp_14": "T形横臂两端各一个灯罩，像双头灯", "lamp_11": "四级阶梯底座+杆+灯罩（第1轮空心台阶悬空，改实心）",
+    "lamp_07": "厚方底座+直颈+罩，符合", "lamp_06": "圆柱灯体+小罩，像床头灯", "lamp_04": "短杆+上宽锥形罩（第1轮下垂罩被剪掉，改为向上外扩）",
+    "lamp_00": "圆底座+杆+灯罩，像台灯", "lamp_05": "高杆+顶端横臂挂灯头，像路灯", "lamp_03": "四柱方框+顶帽，像灯笼",
+    "lamp_09": "短杆+圆顶罩，像蘑菇灯", "lamp_01": "细高杆顶部灯罩，像落地灯", "lamp_02": "底座+斜臂折下接小灯头，像台灯（较抽象）",
+    "lamp_10": "立杆弯臂向前悬挂灯头，像弧形落地灯", "lamp_13": "细杆顶部外扩宽碗，像火炬灯", "lamp_08": "宽钟形罩+吊线（落地放置），基本可辨",
+}
 
 def prune(V):
     """tile, then drop bricks not connected (via vertical stud overlap) to the ground; retile until stable."""

@@ -1,0 +1,34 @@
+{
+ "tag": "base_300",
+ "model": "Qwen/Qwen2.5-1.5B-Instruct",
+ "adapter": null,
+ "n": 300,
+ "checker": "connectivity",
+ "checker_methods_seen": [
+  "connectivity"
+ ],
+ "max_budget": 0,
+ "max_budget_reached": 0,
+ "solved_k0": 2,
+ "solved_kmax": 2,
+ "curve": {
+  "small": {
+   "0": 0.02
+  },
+  "all": {
+   "0": 0.006666666666666667
+  },
+  "medium": {
+   "0": 0.0
+  },
+  "large": {
+   "0": 0.0
+  }
+ },
+ "failures": {
+  "out_of_bounds": 289,
+  "collision": 9,
+  "ok": 2
+ },
+ "seconds": 1180.171313047409
+}

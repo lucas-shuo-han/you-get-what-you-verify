@@ -1,0 +1,7 @@
+{
+ "n_pairs": 665,
+ "definition": "longest/shortest bbox extent",
+ "median_aspect_gemini": 1.56,
+ "median_aspect_human": 2.57,
+ "pairs_within_30pct": 239
+}
