@@ -497,4 +497,37 @@ To increase statistical power, we evaluated all models on 300 prompts at $k{=}0$
 
 
 
+
+\section{Self-review checklist (V1)}
+\label{app:selfreview}
+\begin{table}[h]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Course requirement & Status \\
+\midrule
+NeurIPS style; core paper 5--10 pages & Yes, main text ends on p.~10 \\
+All team members listed as authors & Yes, 4 authors \\
+Abstract, introduction, methods, results, discussion & Yes \\
+Related work $\ge$2 pages, $\ge$8 papers each summarized & Yes, \S\ref{sec:related} \\
+Self-contained math, labeled diagrams, pseudocode & Yes, Eqs.~1--2, Fig.~1, App.~\ref{app:algo} \\
+Out-of-course techniques explained & Yes: LoRA, Gurobi LP, Wilson intervals, Fisher test, conformal prediction \\
+Hyperparameter table with justification & Yes, App.~\ref{app:hparams} \\
+Training curves & Yes, Fig.~5 \\
+Validation loss & Partial: end-of-training held-out loss only \\
+Error bars, how generated and why & Yes, App.~\ref{app:stats} \\
+Axis scales explained & Yes, in each caption \\
+Controlled comparisons with commentary & Yes, size-matched control C; pre-registered rules \\
+Uncertain results marked & Yes, 300-prompt evaluation labeled exploratory \\
+GitHub repo; fetch code for public dataset & Yes, App.~\ref{app:repro} \\
+Trained checkpoints & Not yet (due 12/12); reproducible from App.~\ref{app:repro} \\
+Generative AI tools cited and described & Yes, App.~\ref{app:ai} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Main limitations.} (1) Small evaluation sets (90/28/14 prompts) and two seeds per group; the 300-prompt evaluation is exploratory. (2) A single VLM judge for blind recognition, no human raters yet. (3) Recognition was run only on physics-valid outputs, so selection bias is not yet separated from underfitting. (4) One low-compute regime (1.5B LoRA, single pass). (5) No validation curve or released checkpoints yet.
+
+\paragraph{Plan for V2.} Blind-judge collision-failed outputs; sweep epochs, full fine-tuning and data scale; log held-out loss every 40 steps; add a second judge and human spot checks; more seeds; release LoRA adapters.
+
 \end{document}
