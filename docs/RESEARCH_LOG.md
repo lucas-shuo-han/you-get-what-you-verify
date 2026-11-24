@@ -86,4 +86,4 @@ Rule adopted early: every failure gets *symptom / root cause / evidence / fix*; 
 | Distill | spend cap exceeded slightly | balance checked only at round start | check every N calls |
 | Renderer | all renders auto-zoomed | 3D axes autoscaled to filled voxels | fixed axes 0–20 (earlier `harness_vision` renders use the old renderer) |
 | Mix A/B (Kaggle) | bootstrap assertion; missing parent dir; "max 2 GPU sessions" | auto-extracted zip; `cp` without `makedirs`; quota | fallback to extracted dir; `makedirs`; queued retries |
-| Paper re-check | B_s0 25 vs 26 earlier | one `checker_error` (Gurobi timeout) under CPU saturation | retry `checker_error` up to 3× and regenerate all numbers |
+| Paper re-check | A_s0 14 vs 15 (`results/mix_gurobi_recheck.json` records 14 valid + 1 `checker_error`) | one `checker_error` (Gurobi timeout) under CPU saturation | retry `checker_error` up to 3× and regenerate all numbers |

@@ -25,6 +25,6 @@ Each row is one experiment, with where its code, inputs and outputs live. "Paper
 |---|---|---|
 | Content vs. format of retry feedback, from-scratch tiny model (§4–§4e) | `brickexp/tiny/`, `tools/build_tiny_notebook.py`, `tools/modal_tiny_v2.py` | `results/tiny_4arm/` (summaries; per-sample evals omitted, >5 MB) |
 | Conformal GNN physics screener, LEGO (§4g–§4i) | `brickexp/screen/`, `tools/kaggle_screen.py` | `results/screen_loco/`, `results/screen_diag/` |
-| Truss FEM replication (§4j–§4k) | `brickexp/truss/` | `results/truss/` (8-family run); 10-family runs omitted (>5 MB) |
+| Truss FEM replication (§4j–§4k) | `brickexp/truss/` | `results/truss/` (8-family run); `results/truss10/`, `results/truss10_e20/` (10-family runs, rounds 2–6; summaries in `r*_summary.json`) |
 | Early C0/C1 Qwen3.5-2B SFT + checker-budget curve | `brickexp/evaluate.py`, `brickexp/rebase_qwen35.py`, `tools/build_notebook.py`, `notebooks/kaggle_c0_budget_curve.ipynb` | omitted (superseded); described in RESEARCH_LOG |
 | Summary figures of the side studies | — | `results/figs/` |
