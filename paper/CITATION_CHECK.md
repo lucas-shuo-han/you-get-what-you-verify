@@ -50,3 +50,10 @@ arXiv entries were checked on the arXiv abstract page or arXiv API; DOI entries 
 
 Claims about 2026 brick papers (STABLE reward terms, PVPO "PhysHack", BrickBench validity collapse, BrickWright 100%) come from the sibling-session reading notes (`lit-review-deep.md`, full/partial text for STABLE and PVPO, abstract for BrickBench/BrickWright) and are stated only at that level of detail.
 No `TODO` remains in `refs.bib`; every `\cite` key resolves and no bib entry is unused.
+
+## Software citations (checked 2026-11-24)
+| key | URL | page title fetched | fields |
+|---|---|---|---|
+| claudecode | https://claude.com/claude-code | "Claude Code by Anthropic: AI coding agent and assistant" | author Anthropic; year = access year; note "Accessed 2026-11-24" |
+| deepseekapi | https://api-docs.deepseek.com | "Your First API Call: DeepSeek API Docs" | author DeepSeek; year = access year |
+| antigravity | https://antigravity.google | "Google Antigravity" | author Google; year = access year |
