@@ -8,11 +8,12 @@
 
 The main text reports one clean comparison. It is the last of about a dozen experimental lines. This appendix records all of them, including negative and abandoned results. Each line follows the same pattern: we wrote the decision rule before looking at results, ran the experiment, and either moved on or rewrote the question. Table~\ref{tab:explore} gives the overview.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering\small
 \caption{Overview of the explorations, in chronological order. ``Pre-reg.'' means the decision rule was written before the results were seen.}
 \label{tab:explore}
-\begin{tabular}{p{2.9cm}p{4.0cm}p{3.3cm}p{2.6cm}}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}
 \toprule
 Exploration & Question & Outcome & Where it led \\
 \midrule
@@ -27,7 +28,7 @@ Exploration & Question & Outcome & Where it led \\
 \ref{ex:gemini} Gemini paired data & Same as above with a paired design & built, not trained (time) & future work \\
 \ref{ex:eval300} 300-prompt evaluation & Does a larger test set separate B and C? & in progress (exploratory) & V2 \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 \subsection{Tiny models trained from scratch on trial-and-error data}
@@ -102,12 +103,4 @@ To remove a remaining confound (the AI and human answers in B and C come from di
 \label{ex:eval300}
 To gain power we evaluated on 300 prompts at $k{=}0$. Connectivity-valid counts so far: base 2, A seed 0 44, B seeds 0/1 66/80, C seed 0 56. A seed 1 and C seed 1 are still running on Kaggle, and the authoritative Gurobi re-check is running locally. Because we saw some numbers before writing the rule (S4o of the research log), any conclusion from this evaluation will be labelled exploratory.
 
-\subsection{Engineering problems we hit}
-\label{ex:eng}
-\begin{itemize}\itemsep0pt
-\item Kaggle extracts uploaded zips, so a bootstrap that globbed \texttt{*.zip} found nothing. Fixed with \texttt{makedirs} + \texttt{copytree}.
-\item Kaggle allows 2 concurrent GPU sessions, so jobs had to be queued and retried.
-\item The A seed-1 adapter was not found by the evaluation kernel because of the dataset folder name.
-\item Two processes wrote the same recognition folder. That run was voided and re-run (v2).
-\item Local \texttt{tectonic} fails across drives on Windows, so the paper is compiled through a remote \LaTeX{} service.
-\end{itemize}
+Engineering problems we hit are listed with the reproducibility pitfalls in Appendix~\ref{app:repro}.

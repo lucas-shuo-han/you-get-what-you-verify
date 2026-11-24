@@ -2,9 +2,12 @@
 \usepackage[preprint]{neurips_2025}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{hyperref,url,booktabs,amsfonts,amsmath,amssymb,nicefrac,microtype,xcolor,graphicx,enumitem}
+\usepackage{url,booktabs,tabularx,array,amsfonts,amsmath,amssymb,nicefrac,microtype,xcolor,graphicx,enumitem}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
+\usepackage{hyperref}
+\urlstyle{same}
+\newcommand{\wherewestand}{\textbf{\textit{Where we stand.}}}
 \newcommand{\inprog}{\textcolor{orange!85!black}{[in progress]}}
 \newcommand{\tbd}[1]{\textcolor{red!75!black}{[TBD: #1]}}
 
@@ -45,27 +48,27 @@ The physics we check is old. If a masonry structure is treated as rigid blocks i
 
 BrickGPT \cite{pun2025brickgpt} turned the problem into language modelling. Each brick is a line of text on a $20^3$ grid; a Llama-3.2-1B model is fine-tuned on StableText2Brick (47k+ stable layouts voxelised from 21 ShapeNet categories \cite{chang2015shapenet} and captioned by GPT-4o), and at inference the checker rejects colliding or floating bricks and rolls back to a stable prefix (98.8\% stable with rollback, 24\% without). LLaMA-Mesh \cite{wang2024llamamesh} showed more broadly that LLMs can emit 3D geometry as plain text. Since then the checker has moved from inference into training. STABLE \cite{stable2026} fine-tunes a 2B Qwen model and then applies GRPO with deterministic construction-aware rewards (collision, connectivity, interlocking and IoU to a target), which removes the need for rollback. BrickAnything \cite{ni2026brickanything} conditions on point clouds and uses preference optimisation with a per-brick stability score as the reward. Closest to us, Yuan et al.\ \cite{pvpo2026} mix a physics reward with a voxel-similarity reward and name the failure we also see: with the physics reward alone, outputs become valid but stop matching the target (``PhysHack'').
 
-\emph{Where we stand.} These works ask how to make a generator valid, and each keeps a \emph{shape anchor} (a reference mesh, point cloud or voxel target) next to physics. We remove the anchor from the teaching signal and ask what a physics checker alone transfers to a 1.5B student whose only input is a caption. PVPO observes PhysHack inside RL with a geometric reference. We show that the same collapse appears under plain supervised distillation from verified, recognisable teacher outputs; that swapping AI data for human-made dataset data does not fix it; and that the IoU-style anchor these works use cannot tell a solid block from a good design (\S\ref{sec:testbed}).
+\wherewestand{} These works ask how to make a generator valid, and each keeps a \emph{shape anchor} (a reference mesh, point cloud or voxel target) next to physics. We remove the anchor from the teaching signal and ask what a physics checker alone transfers to a 1.5B student whose only input is a caption. PVPO observes PhysHack inside RL with a geometric reference. We show that the same collapse appears under plain supervised distillation from verified, recognisable teacher outputs; that swapping AI data for human-made dataset data does not fix it; and that the IoU-style anchor these works use cannot tell a solid block from a good design (\S\ref{sec:testbed}).
 
 \paragraph{Verifiers as teachers, and what they leave unchecked.}
 A second line trains models on outcomes that can be checked. STaR \cite{zelikman2022star} fine-tunes on self-generated rationales that reach the right answer; rejection-sampling fine-tuning \cite{yuan2023rft} does the same with many sampled solutions per problem; Self-Instruct \cite{wang2023selfinstruct} filters self-generated data with heuristics. T\"ulu~3 named the RL version ``reinforcement learning with verifiable rewards'' \cite{lambert2024tulu3}, and DeepSeek-R1 \cite{deepseekr1} showed that it can elicit long reasoning at scale. Work on process versus outcome supervision \cite{uesato2022process,lightman2023verify} asks \emph{which part} of a solution the signal should check, since outcome checks can reward correct answers reached by flawed steps. In all of these settings the verifier checks the thing the user actually wants, a correct final answer, so the open question is efficiency rather than coverage. The reward-hacking literature describes what happens when coverage is incomplete. Optimising a policy against a proxy can raise the proxy while the true objective stalls or falls \cite{gao2023overoptimization}, and Skalse et al.\ \cite{skalse2022hacking} define hacking formally as optimising a proxy that is not aligned with the true reward.
 
-\emph{Where we stand.} Design breaks the premise that makes verifiable rewards work: a physics checker certifies a \emph{necessary} property of a good design, not the design itself. Our solid blocks resemble an outcome-supervised model that reaches the right answer by the wrong route, except that here the answer the verifier accepts is itself the wrong object. Unlike the overoptimisation studies, our proxy is exact rather than learned. The gap comes from what the checker covers, not from noise in it, and it appears without any RL, from filtered supervised data alone.
+\wherewestand{} Design breaks the premise that makes verifiable rewards work: a physics checker certifies a \emph{necessary} property of a good design, not the design itself. Our solid blocks resemble an outcome-supervised model that reaches the right answer by the wrong route, except that here the answer the verifier accepts is itself the wrong object. Unlike the overoptimisation studies, our proxy is exact rather than learned. The gap comes from what the checker covers, not from noise in it, and it appears without any RL, from filtered supervised data alone.
 
 \paragraph{Distillation: style, capability, and what the signal contains.}
 Knowledge distillation trains a student to match a teacher's outputs \cite{hinton2015distilling}. With black-box teachers the practical form is sequence-level distillation, fine-tuning on the teacher's generated sequences \cite{kim2016sequence}; Kim and Rush found this can beat training on gold data because teacher outputs are more regular and easier to fit. Imitation of strong LLMs followed. Orca \cite{mukherjee2023orca} argued that rich explanation traces teach a student more than final answers, and DeepSeek-R1 distilled reasoning into 1.5B--70B students by SFT alone \cite{deepseekr1}. Gudibande et al.\ \cite{gudibande2023false} gave the sceptical counterpoint: models fine-tuned on ChatGPT outputs adopt its style and are rated highly by human evaluators, yet close little of the capability gap on targeted benchmarks.
 
-\emph{Where we stand.} Our results are a structural version of this ``false promise''. The student imitates the property that is easiest to reproduce, and in our pipeline that property is set by the verifier rather than by an evaluator's taste. Two of our controls speak directly to this line. The sequence-level hypothesis that teacher data are easier to learn finds no support at our scale: verified AI data and size-matched dataset data give indistinguishable students (\S\ref{sec:distill}). And where imitation studies assume the teacher's capability, we measure it: our teacher's outputs are recognisable (\S\ref{sec:teacher}), so the meaning is present in the data and still does not transfer. The bottleneck is neither teacher quality nor data source but what the selection signal certifies.
+\wherewestand{} Our results are a structural version of this ``false promise''. The student imitates the property that is easiest to reproduce, and in our pipeline that property is set by the verifier rather than by an evaluator's taste. Two of our controls speak directly to this line. The sequence-level hypothesis that teacher data are easier to learn finds no support at our scale: verified AI data and size-matched dataset data give indistinguishable students (\S\ref{sec:distill}). And where imitation studies assume the teacher's capability, we measure it: our teacher's outputs are recognisable (\S\ref{sec:teacher}), so the meaning is present in the data and still does not transfer. The bottleneck is neither teacher quality nor data source but what the selection signal certifies.
 
 \paragraph{Shortcut learning and the validity of metrics.}
 Geirhos et al.\ \cite{geirhos2020shortcut} describe shortcut learning: networks adopt decision rules that work on the training and standard test distribution but do not capture the intended task, and benchmarks that share the shortcut hide it. In-context learning shows a related pattern. Min et al.\ \cite{min2022rethinking} found that demonstrations help mainly through their format and input distribution, and that whether their labels are correct matters surprisingly little. On the measurement side, volumetric recognition work found that categories stay largely identifiable at $30^3$--$32^3$ while some become confusable \cite{wu2015shapenets,maturana2015voxnet,riegler2017octnet}. Our $20^3$ grid is coarser, so recognisability has to be measured rather than assumed.
 
-\emph{Where we stand.} The solid block is a shortcut in Geirhos et al.'s sense, and the shape metric used in the brick-generation literature, aligned voxel IoU, does not detect it: random dataset pairs score as high as real outputs (\S\ref{sec:testbed}). Our ICL result (\S\ref{sec:icl}) is a generative counterpart of Min et al.: small models take the format \emph{and} the content of the demonstration, but not the skill. We therefore replace IoU with blind category recognition. Like reference-free metrics such as CLIPScore \cite{hessel2021clipscore}, it does not compare against a single reference, so it cannot be satisfied by matching one reference's proportions.
+\wherewestand{} The solid block is a shortcut in Geirhos et al.'s sense, and the shape metric used in the brick-generation literature, aligned voxel IoU, does not detect it: random dataset pairs score as high as real outputs (\S\ref{sec:testbed}). Our ICL result (\S\ref{sec:icl}) is a generative counterpart of Min et al.: small models take the format \emph{and} the content of the demonstration, but not the skill. We therefore replace IoU with blind category recognition. Like reference-free metrics such as CLIPScore \cite{hessel2021clipscore}, it does not compare against a single reference, so it cannot be satisfied by matching one reference's proportions.
 
 \paragraph{LLM agents that build.}
 In Minecraft, Voyager \cite{wang2023voyager} acquires skills from environment feedback, and Hu et al.\ \cite{hu2024minecraft} generate complete buildings from text. Iterative self-correction with verbal feedback improves large models when the feedback is informative \cite{madaan2023selfrefine,shinn2023reflexion}. For bricks, BrickBench \cite{kulits2026brickbench} evaluates frontier agents that write build programs inside an environment (BrickAgent) whose validator reports faulty parts, and finds that validity collapses without that environment. BrickWright \cite{pun2026brickwright} gives a coding agent a plan--execute--validate loop through a brick SDK and raises validity to 100\%. Our teacher harness (\S\ref{sec:teacher}) belongs to this family and reproduces its main lesson: with verifier feedback, large models build well.
 
-\emph{Where we stand.} These works establish what large agents can do with a verifier in the loop. None asks what survives when the large model is replaced by a small one. Our ICL and process-distillation results suggest that, for small models, little survives beyond what the verifier checked and verbatim copies of what was shown.
+\wherewestand{} These works establish what large agents can do with a verifier in the loop. None asks what survives when the large model is replaced by a small one. Our ICL and process-distillation results suggest that, for small models, little survives beyond what the verifier checked and verbatim copies of what was shown.
 
 \paragraph{LLM judges.}
 We measure meaning with an LLM judge \cite{zheng2023judging}. Such judges can recognise and favour outputs of their own model family \cite{panickssery2024selfpref}. We therefore show renders blind and shuffled, and treat the teacher's recognition rate as an upper bound likely inflated by self-preference. The decisive comparisons (student outputs against dataset structures) involve no output from the judge's family. Turning such a judge into a training signal (\S\ref{sec:future}) inherits the reward-hacking risks discussed above, which is why we pre-specify a different judge for evaluation.
@@ -86,10 +89,10 @@ with $\mathbf p_c$ the contact point, $\mathbf o_i$ the centre of mass and $\mat
 \paragraph{Why not IoU.} The obvious semantic metric is aligned voxel IoU with the caption's reference structure \cite{stable2026}. It cannot do the job: physics-valid DeepSeek outputs score 0.134--0.155, randomly paired dataset structures score \textbf{0.151}, degenerate outputs score 0.167, and IoU separates degenerate from good structures with AUROC 0.43--0.63. A caption admits many correct proportions, so IoU mostly measures whether the generator guessed the reference's proportions.
 
 \paragraph{Blind recognition.} Each structure is rendered from two fixed views with axes fixed to $[0,20]^3$; renders are shuffled under a hidden mapping and a judge $J$ (Claude) names its top-2 categories among the 21 before the mapping is read. With labels $y_i$,
-\begin{equation}
-\mathrm{Acc@}k=\frac1N\sum_{i}\mathbf 1\!\left[y_i\in \mathrm{top}\text{-}k\,J(r_i)\right],\qquad
-\mathrm{VR}=\frac1{N}\sum_{i}\mathbf 1\!\left[\mathrm{valid}_i \wedge y_i=\mathrm{top}\text{-}1\,J(r_i)\right],
-\end{equation}
+\begin{align}
+\mathrm{Acc@}k&=\frac1N\sum_{i}\mathbf 1\!\left[y_i\in \mathrm{top}\text{-}k\,J(r_i)\right],\label{eq:acc}\\
+\mathrm{VR}&=\frac1{N}\sum_{i}\mathbf 1\!\left[\mathrm{valid}_i \wedge y_i=\mathrm{top}\text{-}1\,J(r_i)\right],\label{eq:vr}
+\end{align}
 where ``valid and recognized'' (VR) keeps a fixed denominator (pseudocode: Algorithm~\ref{alg:blind}). Chance top-1 is $1/21\approx4.8\%$.
 
 \section{The teacher can build}
@@ -136,27 +139,14 @@ If examples are copied, the next channel is to train on them. We fine-tune Qwen2
 \label{fig:valid}
 \end{figure}
 
-\paragraph{Results.} Figure~\ref{fig:valid} shows Gurobi-checked counts for two seeds per group, with 95\% Wilson intervals. Every trained student is far above the untrained base (0/90 [0\%, 4\%]; A seed 0 vs.\ base $p=3\times10^{-5}$). Per seed, A reaches 15 and 17/90 (mean $16\pm1$), B 26 and 20 (mean $23\pm3$), C 21 and 18 (mean $19.5\pm1.5$); pooled over seeds ($n=180$), A 32, B 46, C 39. No data comparison is significant: pooled B vs.\ C, two-sided Fisher exact test (exact $p$ for $2\times2$ count tables, suitable for small $n$; Appendix~\ref{app:stats}) $p=0.46$; B vs.\ A, $p=0.096$; C vs.\ A, $p=0.43$. Per seed, the largest single gap (B seed 0 vs.\ A seed 0) has one-sided $p=0.037$ and two-sided $p=0.075$, and B's own two seeds differ by 6 ($p=0.39$). Adding data gives a small, unstable gain, and there is no detectable difference between AI and dataset sources: verified AI-built data behaves as a substitute for dataset data, and the sequence-level-distillation hypothesis that teacher outputs are easier to fit \cite{kim2016sequence} finds no support at this scale. Most failures are collisions (70 of A seed 0's 75 failures; 53 and 55 of B's; 55 of C seed 0's 69). All groups fit equally well (Figure~\ref{fig:curve}, Table~\ref{tab:val}): on 197 held-out dataset structures, loss falls from 0.465 (base) to 0.246--0.247 for A and C and 0.252--0.253 for B; B's slightly higher held-out loss is consistent with its AI-built examples coming from a different distribution than the dataset. Only end-of-training held-out loss exists: intermediate checkpoints were not kept, so no validation curve can be drawn, a limitation of this draft; the final version will log held-out loss every 40 steps.
+\paragraph{Results.} Figure~\ref{fig:valid} shows Gurobi-checked counts for two seeds per group, with 95\% Wilson intervals. Every trained student is far above the untrained base (0/90 [0\%, 4\%]; A seed 0 vs.\ base $p=3\times10^{-5}$). Per seed, A reaches 15 and 17/90 (mean $16\pm1$), B 26 and 20 (mean $23\pm3$), C 21 and 18 (mean $19.5\pm1.5$); pooled over seeds ($n=180$), A 32, B 46, C 39. No data comparison is significant: pooled B vs.\ C, two-sided Fisher exact test (exact $p$ for $2\times2$ count tables, suitable for small $n$; Appendix~\ref{app:stats}) $p=0.46$; B vs.\ A, $p=0.096$; C vs.\ A, $p=0.43$. Per seed, the largest single gap (B seed 0 vs.\ A seed 0) has one-sided $p=0.037$ and two-sided $p=0.075$, and B's own two seeds differ by 6 ($p=0.39$). Adding data gives a small, unstable gain, and there is no detectable difference between AI and dataset sources: verified AI-built data behaves as a substitute for dataset data, and the sequence-level-distillation hypothesis that teacher outputs are easier to fit \cite{kim2016sequence} finds no support at this scale. Most failures are collisions (70 of A seed 0's 75 failures; 53 and 55 of B's; 55 of C seed 0's 69). All groups fit equally well (Figure~\ref{fig:curve}): on 197 held-out dataset structures, loss falls from 0.465 (base) to 0.246--0.247 for A and C and 0.252--0.253 for B; B's slightly higher held-out loss is consistent with its AI-built examples coming from a different distribution than the dataset. Only end-of-training held-out loss exists: intermediate checkpoints were not kept, so no validation curve can be drawn, a limitation of this draft; the final version will log held-out loss every 40 steps.
 
 \paragraph{Exploratory: 300 prompts.} Because 90 prompts give wide intervals, after the main analysis we re-evaluated all five models on 300 dataset prompts (two seeds per group, Gurobi-checked; decision rule fixed before download, Appendix~\ref{app:prereg}). Base 2/300; A 42 and 64; B 63 and 77; C 53 and 61. Pooled over seeds ($n=600$): A 106, B 140, C 114. Adding AI-built data now helps significantly (B vs.\ A, $+5.7$ points, two-sided Fisher $p=0.018$), while adding the same amount of dataset data does not (C vs.\ A, $+1.3$ points, $p=0.60$). B vs.\ C differs by $+4.3$ points but $p=0.077$, so our rule (two-sided $p<0.05$ and $\ge3$ points) does not declare an AI-source advantage. The larger evaluation therefore hints that verified AI-built data is at least as useful as human data, possibly more, but this remains exploratory and is not a confirmed finding.
-
-\begin{table}[h]
-\centering\small
-\caption{Held-out validation loss (token cross-entropy) on 197 dataset structures disjoint from all training sets and evaluation prompts.}
-\label{tab:val}
-\begin{tabular}{@{}lcccccc@{}}
-\toprule
- & base & A s0 & A s1 & B s0 & B s1 & C s0 \\
-\midrule
-val.\ loss & 0.465 & 0.246 & 0.247 & 0.253 & 0.252 & 0.247 \\
-\bottomrule
-\end{tabular}
-\end{table}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figs/train_curves.pdf}
-\caption{Training loss (token cross-entropy) of A, B (two seeds) and C over 304 steps; effective batch 16, cosine schedule. All runs fall from about 0.45--0.47 to about 0.25, so the groups fit their data equally well; diamonds mark the held-out validation loss at the end of training (Table~\ref{tab:val}); thin traces are raw logged loss, thick lines a 5-point moving average. Linear axes in steps and loss: runs are short (304 steps) and loss changes by less than a factor of two, so a log scale adds nothing. Token loss is a weak proxy here: the 96-sample student reached 0.227 yet produced unrecognizable structures.}
+\caption{Training loss (token cross-entropy) of A, B (two seeds) and C over 304 steps; effective batch 16, cosine schedule. All runs fall from about 0.45--0.47 to about 0.25, so the groups fit their data equally well; diamonds mark the held-out validation loss at the end of training on 197 dataset structures disjoint from all training sets and evaluation prompts (base 0.465; A s0/s1 0.246/0.247; B s0/s1 0.253/0.252; C s0 0.247); thin traces are raw logged loss, thick lines a 5-point moving average. Linear axes in steps and loss: runs are short (304 steps) and loss changes by less than a factor of two, so a log scale adds nothing. Token loss is a weak proxy here: the 96-sample student reached 0.227 yet produced unrecognizable structures.}
 \label{fig:curve}
 \end{figure}
 
@@ -219,7 +209,7 @@ The distilled student's 12/90 valid outputs first read as a success; looking at 
 \begin{algorithm}[h]
 \caption{Teacher harness: generate, verify, repair (budget $k$)}
 \label{alg:harness}
-\begin{algorithmic}[1]
+\small\begin{algorithmic}[1]
 \Require caption $q$, teacher model $M$, verifier $V$, repair budget $k$ (we use $k=3$)
 \State $y \gets M(\textsc{Prompt}(q))$
 \For{$t = 0, 1, \dots, k$}
@@ -236,7 +226,7 @@ The distilled student's 12/90 valid outputs first read as a success; looking at 
 \begin{algorithm}[h]
 \caption{Blind recognition protocol}
 \label{alg:blind}
-\begin{algorithmic}[1]
+\small\begin{algorithmic}[1]
 \Require structures $\{s_i\}$ with labels $\{y_i\}$, judge $J$, candidate classes $\mathcal Y$ (21, plus new categories when relevant)
 \For{each $i$} \State $r_i \gets \textsc{Render}(s_i)$, two fixed views, axes fixed to $[0,20]^3$
 \EndFor
@@ -255,7 +245,9 @@ A/B (fixed before download): primary metric VR on the 28 new-category prompts; `
 \label{app:hparams}
 \begin{table}[h]
 \centering\small
-\begin{tabular}{@{}lll@{}}
+\caption{Training and evaluation hyperparameters.}
+\label{tab:hparams}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}X@{}}
 \toprule
 Setting & Value & Rationale \\
 \midrule
@@ -271,17 +263,20 @@ Grid / bricks & $20^3$, BrickGPT library & comparability with \cite{pun2025brick
 Teacher repair rounds & $\le 3$ & cost control; most repairs happen in round 1 \\
 Student decoding & one-shot, $k{=}0$ & isolates what is in the weights \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 \section{Error bars and tests}
 \label{app:stats}
 All rates are binomial proportions over small sets, so we report 95\% Wilson score intervals \cite{wilson1927}: for $k$ successes in $n$ trials, $\hat p=k/n$, the interval is
-$\bigl(\hat p+\tfrac{z^2}{2n}\pm z\sqrt{\hat p(1-\hat p)/n+z^2/4n^2}\bigr)/(1+z^2/n)$ with $z=1.96$; unlike the normal approximation it stays in $[0,1]$ and is reliable at $k=0$, which occurs often here. Group comparisons use Fisher's exact test on $2\times2$ tables (group $\times$ valid/invalid): conditioning on the row and column totals, it computes the exact probability of a table at least as extreme under the null of equal rates, so unlike a $\chi^2$ test it needs no large-sample approximation and suits counts as small as ours. These intervals capture sampling noise over prompts, not seed variance; where two seeds exist we report both seeds per group, and the 6-structure difference between B's seeds ($p=0.39$) shows seed variance is of the same order as the effects we test.
+\begin{equation*}
+\frac{1}{1+z^2/n}\left(\hat p+\frac{z^2}{2n}\pm z\sqrt{\frac{\hat p(1-\hat p)}{n}+\frac{z^2}{4n^2}}\right)
+\end{equation*}
+with $z=1.96$; unlike the normal approximation it stays in $[0,1]$ and is reliable at $k=0$, which occurs often here. Group comparisons use Fisher's exact test on $2\times2$ tables (group $\times$ valid/invalid): conditioning on the row and column totals, it computes the exact probability of a table at least as extreme under the null of equal rates, so unlike a $\chi^2$ test it needs no large-sample approximation and suits counts as small as ours. These intervals capture sampling noise over prompts, not seed variance; where two seeds exist we report both seeds per group, and the 6-structure difference between B's seeds ($p=0.39$) shows seed variance is of the same order as the effects we test.
 
-\section{Use of generative AI tools}
+\section[Use of generative AI tools]{Use of generative AI tools\protect\footnote{This appendix does not count toward the page limit.}}
 \label{app:ai}
-This appendix does not count toward the page limit. \textbf{Coding and experiment agent:} Claude Code \cite{claudecode} running Claude Opus wrote and debugged training and evaluation code, launched Kaggle and Colab jobs, ran local Gurobi re-checks, and produced the figures; it also drafted and edited this paper. All of this was directed and reviewed by the team. \textbf{Judge:} Claude served as the blind-recognition judge (\S\ref{sec:testbed}, Algorithm~\ref{alg:blind}); a single judge from the same family as one teacher was used, so self-preference bias is possible \cite{panickssery2024selfpref}. \textbf{Teachers for training data:} DeepSeek (deepseek-chat and deepseek-v4-flash via the DeepSeek API \cite{deepseekapi}); Claude Opus sub-agents writing parametric designs; Gemini 3.8 Flash via the Antigravity CLI \cite{antigravity} (665 structures, described in Appendix~\ref{app:log} but never trained on). The teammates' BrickWright experiments used deepseek-v4-flash. Every number and claim in this paper was checked by the team against the result files in the repository.
+\textbf{Coding and experiment agent:} Claude Code \cite{claudecode} running Claude Opus wrote and debugged training and evaluation code, launched Kaggle and Colab jobs, ran local Gurobi re-checks, and produced the figures; it also drafted and edited this paper. All of this was directed and reviewed by the team. \textbf{Judge:} Claude served as the blind-recognition judge (\S\ref{sec:testbed}, Algorithm~\ref{alg:blind}); a single judge from the same family as one teacher was used, so self-preference bias is possible \cite{panickssery2024selfpref}. \textbf{Teachers for training data:} DeepSeek (deepseek-chat and deepseek-v4-flash via the DeepSeek API \cite{deepseekapi}); Claude Opus sub-agents writing parametric designs; Gemini 3.8 Flash via the Antigravity CLI \cite{antigravity} (665 structures, described in Appendix~\ref{app:log} but never trained on). The teammates' BrickWright experiments used deepseek-v4-flash. Every number and claim in this paper was checked by the team against the result files in the repository.
 
 \input{appendix_repro}
 \input{appendix_explorations}

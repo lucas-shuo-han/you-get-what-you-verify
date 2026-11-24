@@ -11,8 +11,11 @@ All code, notebooks, cached results and figure scripts are at \url{https://githu
 \paragraph{Hardware.} Figures and tables: any CPU, since every number they use is cached in \texttt{results/}. Training and evaluation of students: one 16\,GB NVIDIA T4 (free Kaggle/Colab tier). Gurobi re-checks, the screener and truss studies: a laptop CPU. Tiny-model runs (Appendix~\ref{ex:tiny}): Modal GPUs. BrickWright SFT (team members): one A800.
 
 \paragraph{Figure and table $\to$ command.}
-\begin{center}\small
-\begin{tabular}{p{3.6cm}p{6.4cm}l}
+\begin{table}[h]
+\centering\small
+\caption{Mapping from each figure and table in the paper to the command that regenerates it.}
+\label{tab:repro}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.7cm}>{\raggedright\arraybackslash}X l@{}}
 \toprule
 Paper item & Command & Needs \\
 \midrule
@@ -25,42 +28,61 @@ Blind recognition (0/82) & \texttt{python results/paper/recog/build.py} & CPU \\
 Distillation 0$\to$12/90 & \texttt{results/distill\_sft/REPORT.md} & T4 \\
 Hyperparameters & static, from \texttt{notebooks/kaggle\_mix\_*.ipynb} & -- \\
 \bottomrule
-\end{tabular}
-\end{center}
+\end{tabularx}
+\end{table}
 
-\paragraph{Step 1: data.} \texttt{python tools/fetch\_stabletext2brick.py} downloads StableText2Brick from Hugging Face ($\sim$3\,GB) into \texttt{data/hf\_cache}.
+\paragraph{Step 1: data.}
+{\small
+\begin{verbatim}
+python tools/fetch_stabletext2brick.py
+\end{verbatim}}
+\noindent This downloads StableText2Brick from Hugging Face ($\sim$3\,GB) into \texttt{data/hf\_cache}.
 
-\paragraph{Step 2: A/B/C mixes.} \texttt{python tools/build\_mix\_data.py} writes \texttt{data/mix/\{A,B,C\}.jsonl}, the new-category test file and a manifest. A has 4000 human examples. B adds 284 verified AI structures, each repeated 3 times (4852 total). C adds 284 extra human structures repeated 3 times, sampled with \texttt{Random(2027)} so they do not overlap A or the test set. The teacher structures are committed under \texttt{data/}, so no API key is needed. \texttt{tools/build\_final\_data.py} builds the unused Gemini paired mixes (Appendix~\ref{ex:gemini}).
+\paragraph{Step 2: A/B/C mixes.}
+{\small
+\begin{verbatim}
+python tools/build_mix_data.py
+\end{verbatim}}
+\noindent This writes \texttt{data/mix/\{A,B,C\}.jsonl}, the new-category test file and a manifest. A has 4000 human examples. B adds 284 verified AI structures, each repeated 3 times (4852 total). C adds 284 extra human structures repeated 3 times, sampled with \texttt{Random(2027)} so they do not overlap A or the test set. The teacher structures are committed under \texttt{data/}, so no API key is needed. \texttt{tools/build\_final\_data.py} builds the unused Gemini paired mixes (Appendix~\ref{ex:gemini}).
 
 \paragraph{Step 3: training.}
+{\small
 \begin{verbatim}
 python -m brickexp.train_sft --model Qwen/Qwen2.5-1.5B-Instruct \
   --data_jsonl data/mix/A.jsonl --out out/sft_A --bs 2 --grad_accum 8 \
   --max_len 3072 --rank 16 --lr 2e-4 --max_steps 304 --seed 0
-\end{verbatim}
-Repeat with \texttt{B.jsonl} / \texttt{C.jsonl} and \texttt{--seed 1}. The exact Kaggle notebooks are in \texttt{notebooks/}.
+\end{verbatim}}
+\noindent Repeat with \texttt{B.jsonl} / \texttt{C.jsonl} and \texttt{-{}-seed 1}. The exact Kaggle notebooks are in \texttt{notebooks/}.
 
 \paragraph{Step 4: evaluation.} The base set has 90 prompts (21 categories), the new-category set 28, and the exploratory set 300 (\texttt{data/splits/test\_eval\_100\_s0.jsonl}). All use $k{=}0$ (one generation, no feedback):
+{\small
 \begin{verbatim}
 python -m brickexp.eval_2x2 run --backend vllm --max_budget 0 \
   --checker connectivity --limit 0 --model out/sft_A/merged \
   --tag A_90 --out_dir out/runs
-\end{verbatim}
+\end{verbatim}}
 
-\paragraph{Step 5: Gurobi re-check.} The authoritative valid counts come from re-judging every output with the force/torque-balance LP (\texttt{brickexp/stability\_patched.py}, \texttt{NumericFocus=3}): \texttt{python results/paper/gurobi\_all.py}. Locally a free academic licence works. On Kaggle we used a Gurobi WLS licence passed as Kaggle Secrets (\texttt{WLSACCESSID}, \texttt{WLSSECRET}, \texttt{LICENSEID}). Without a licence the checker falls back to connectivity only, which is looser. Kaggle numbers are connectivity numbers; where they differ from Gurobi, the paper reports Gurobi.
+\paragraph{Step 5: Gurobi re-check.} The authoritative valid counts come from re-judging every output with the force/torque-balance LP (\texttt{brickexp/stability\_patched.py}, \texttt{NumericFocus=3}):
+{\small
+\begin{verbatim}
+python results/paper/gurobi_all.py
+\end{verbatim}}
+\noindent Locally a free academic licence works. On Kaggle we used a Gurobi WLS licence passed as Kaggle Secrets (\texttt{WLSACCESSID}, \texttt{WLSSECRET}, \texttt{LICENSEID}). Without a licence the checker falls back to connectivity only, which is looser. Kaggle numbers are connectivity numbers; where they differ from Gurobi, the paper reports Gurobi.
 
 \paragraph{Step 6: blind recognition.} \texttt{results/paper/recog/build.py} renders every valid structure with axes fixed to 0--20, shuffles the images across groups, and writes sheets for the judge. The judge (Claude) sees one image and the 21 category names and returns its top-2 guesses; it is never told the group. Judgments are stored in \texttt{results/paper/recog/*/judgments.jsonl}, and the scoring script recomputes Acc@1/Acc@2 from them.
 
 \paragraph{Compute.} One student training run of 304 steps takes about 2.5\,h on a T4. Evaluation with vLLM is short compared with training, and the Gurobi re-check runs on a laptop CPU. The main study trained 3 groups and 2 seeds each, about 15 T4-hours in total. The 50k-parameter screener trains on CPU; the 1.93M-parameter variant took 347\,s on a Kaggle GPU.
 
-\paragraph{Seeds and determinism.} Training seeds are 0 and 1 (\texttt{--seed}); data subsampling uses fixed \texttt{Random} seeds recorded in \texttt{data/mix/manifest.json}. vLLM sampling on GPU is not bit-exact across hardware, so re-running evaluation can move individual counts by a few prompts. The cached outputs in \texttt{results/} are the ones the paper uses.
+\paragraph{Seeds and determinism.} Training seeds are 0 and 1 (\texttt{-{}-seed}); data subsampling uses fixed \texttt{Random} seeds recorded in \texttt{data/mix/manifest.json}. vLLM sampling on GPU is not bit-exact across hardware, so re-running evaluation can move individual counts by a few prompts. The cached outputs in \texttt{results/} are the ones the paper uses.
 
-\paragraph{Pitfalls we hit.}
+\paragraph{Pitfalls and engineering problems we hit.}
 \begin{itemize}\itemsep0pt
-\item Kaggle auto-extracts uploaded zips; the notebooks copy directories rather than globbing \texttt{*.zip}.
-\item Kaggle allows 2 concurrent GPU sessions; queue jobs.
+\item Kaggle auto-extracts uploaded zips; the notebooks copy directories rather than globbing \texttt{*.zip}. (A bootstrap that globbed \texttt{*.zip} found nothing; fixed with \texttt{makedirs} + \texttt{copytree}.)
+\item Kaggle allows 2 concurrent GPU sessions; queue jobs. (Jobs had to be queued and retried.)
+\item The A seed-1 adapter was not found by the evaluation kernel because of the dataset folder name.
 \item Gurobi can return a checker error under heavy CPU load; \texttt{gurobi\_all.py} retries up to 3 times. Do not count an error as invalid.
 \item If renders are made with auto-scaled axes, every structure looks large and recognition is distorted; keep the axes fixed at 0--20.
-\item Do not let two processes write the same recognition folder.
+\item Do not let two processes write the same recognition folder. (That run was voided and re-run, v2.)
+\item Local \texttt{tectonic} fails across drives on Windows, so the paper is compiled through a remote \LaTeX{} service.
 \item Model weights are not in the repository (each adapter is $\sim$74\,MB); retrain with Step 3. Credentials (Kaggle token, Gurobi licence, API keys) are read from your own environment and are never committed.
 \end{itemize}
