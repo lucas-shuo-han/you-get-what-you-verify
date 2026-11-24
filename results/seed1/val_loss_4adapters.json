@@ -1,0 +1,29 @@
+{
+ "n_examples": 197,
+ "base": {
+  "loss": 0.46491873765641095,
+  "tokens": 221332
+ },
+ "adapters": {
+  "A_s0": {
+   "loss": 0.24638472792104046,
+   "tokens": 221332,
+   "dir": "/kaggle/input/datasets/lucasshuohan/brickexp-adapters/A_s0"
+  },
+  "B_s0": {
+   "loss": 0.2527391999271077,
+   "tokens": 221332,
+   "dir": "/kaggle/input/datasets/lucasshuohan/brickexp-adapters/B_s0"
+  },
+  "B_s1": {
+   "loss": 0.2524564321572856,
+   "tokens": 221332,
+   "dir": "/kaggle/input/datasets/lucasshuohan/brickexp-adapters/B_s1"
+  },
+  "C_s0": {
+   "loss": 0.24668427239962437,
+   "tokens": 221332,
+   "dir": "/kaggle/input/datasets/lucasshuohan/brickexp-adapters/C_s0"
+  }
+ }
+}

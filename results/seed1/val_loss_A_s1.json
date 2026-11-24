@@ -1,0 +1,14 @@
+{
+ "n_examples": 197,
+ "base": {
+  "loss": 0.46491873765641095,
+  "tokens": 221332
+ },
+ "adapters": {
+  "A_s1": {
+   "loss": 0.24722785283394902,
+   "tokens": 221332,
+   "dir": "/kaggle/working/sft_A_s1_x1/adapter"
+  }
+ }
+}
