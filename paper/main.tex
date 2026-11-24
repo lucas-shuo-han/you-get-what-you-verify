@@ -398,7 +398,7 @@ The main paper presents one controlled comparison, but it is the end point of a 
 \item \textbf{Does distilling verified outputs transfer the skill, and does it matter whether the data come from an AI or from humans?} (\ref{ex:distill}--\ref{ex:eval300}) Stability transfers, meaning does not, and the data source makes no reliable difference. This became the main paper.
 \item \textbf{What would we need to measure to see the failure at all?} Voxel IoU and pass rates could not; blind recognition could. This turned a negative result into a diagnostic one.
 \end{itemize}
-Throughout, we fixed decision rules before viewing results and let each outcome decide the next question (Table~\ref{tab:explore}). Section~\ref{ex:notrun} lists further directions we designed but did not have time to run.
+Throughout, we fixed decision rules before viewing results and let each outcome decide the next question (Table~\ref{tab:explore}).
 
 \begin{table}[t]
 \centering\small
@@ -496,16 +496,5 @@ To remove the prompt-mismatch confound between extra AI and human examples in gr
 To increase statistical power, we evaluated all models on 300 prompts at $k{=}0$. Gurobi-valid counts: base 2; A seeds 0/1 42/64; B seeds 0/1 63/77; C seeds 0/1 53/61 (pooled /600: A 106, B 140, C 114; B vs.\ C $p=0.077$, B vs.\ A $p=0.018$). Because partial counts were inspected before finalizing the decision rule (Appendix~\ref{app:prereg}), all conclusions from this split are labeled exploratory.
 
 
-\subsection{Directions designed but not run}
-\label{ex:notrun}
-Several further directions were designed in detail and set aside for time or compute:
-\begin{itemize}\itemsep0pt
-\item \textbf{Verifier-budget curves (``can a model grow up?'').} Measure success as a function of how many verifier calls a model may use (0, 1, 10, 50), before and after training, to ask whether experience with a verifier is internalized as intuition so the model needs it less.
-\item \textbf{Self-play and error-repair training.} Fine-tune on a model's own successful harness trajectories, or on (mistake, correction) pairs extracted from the checker's rejection logs, and compare against learning from others' final answers.
-\item \textbf{RL with a cost on verifier calls.} GRPO rewarding success and penalizing each verifier query.
-\item \textbf{Scaling and transfer.} Larger grids ($32^3$) for size extrapolation, and a new $4{\times}4$ brick to test whether a model can reuse what it knows about $1{\times}4$ bricks.
-\item \textbf{Bridges and load-bearing tasks.} Engineering-style prompts where stability is the whole goal rather than a constraint on an object.
-\item \textbf{Paired Gemini data and dual verifiers.} The FA/FB/FC paired study (\ref{ex:gemini}) and the physics~$\times$~semantics verifier of Section~\ref{sec:future}.
-\end{itemize}
 
 \end{document}
