@@ -1,0 +1,113 @@
+% ---------------------------------------------------------------
+% Appendix: every exploration the team ran, in chronological order.
+% All numbers come from results/DIRECTION.md, results/*/summary.json,
+% results/paper/*, and the team members' handoff notes.
+% ---------------------------------------------------------------
+\section{All explorations, including the ones that did not work}
+\label{app:explorations}
+
+The main text reports one clean comparison. It is the last of about a dozen experimental lines. This appendix records all of them, including negative and abandoned results. Each line follows the same pattern: we wrote the decision rule before looking at results, ran the experiment, and either moved on or rewrote the question. Table~\ref{tab:explore} gives the overview.
+
+\begin{table}[h]
+\centering\small
+\caption{Overview of the explorations, in chronological order. ``Pre-reg.'' means the decision rule was written before the results were seen.}
+\label{tab:explore}
+\begin{tabular}{p{2.9cm}p{4.0cm}p{3.3cm}p{2.6cm}}
+\toprule
+Exploration & Question & Outcome & Where it led \\
+\midrule
+\ref{ex:tiny} Tiny-model 4-arm (v1, v2) & Does the \emph{content} of checker feedback in trial-and-error data matter? & v1 confounded; v2 null (pre-reg.\ ``downgrade'') & dropped; lesson: design for informative nulls \\
+\ref{ex:screen} Conformal GNN screener & Do one-sided guarantees survive category shift? & mostly yes; 2/21 held-out categories fail & truss replication \\
+\ref{ex:truss} Truss FEM replication (rounds 1--6) & Does the LEGO result transfer to real structures? & partial / no transfer; repaired by $N^\ast\!\approx\!75$--100 labels & shape-shortcut finding; parked \\
+\ref{ex:icl} In-context imitation and combination & Can a small model learn from 2 shown examples? & copies only, 0 real combinations & distillation \\
+\ref{ex:brickwright} BrickWright agent (team members) & Do examples help a tool-using agent; can SFT copy its trajectories? & modest efficiency gain; SFT student loops & supports main story \\
+\ref{ex:distill} 96-sample distillation & Does SFT on teacher outputs transfer building? & 0$\to$12/90 valid, 0/14 recognized & mixed-data study \\
+\ref{ex:teachers} Teachers in the harness & Can large models build at all? & yes (Opus 187/200) & teacher data source \\
+\ref{ex:mix} A/B/C mixed data (main) & Does verified AI data beat human data? & no reliable difference; 0/82 recognized & main paper \\
+\ref{ex:gemini} Gemini paired data & Same as above with a paired design & built, not trained (time) & future work \\
+\ref{ex:eval300} 300-prompt evaluation & Does a larger test set separate B and C? & in progress (exploratory) & V2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Tiny models trained from scratch on trial-and-error data}
+\label{ex:tiny}
+\paragraph{Motivation.} Harness transcripts are sequences of attempts, failures and repairs. Prior work disagrees about whether a model trained on such traces learns from the \emph{content} of the error messages or only from their \emph{format}. We wanted a cheap and fully controlled test.
+
+\paragraph{Setup.} We trained transformers of roughly 10--50M parameters from scratch, conditioned on the category label, in four arms. \textbf{S} saw successful structures only. \textbf{RF} saw trial-and-error sequences with correct feedback: corrupted bricks were injected with probability 0.1 per brick (at most 8 per structure, about 6.7 on average), each followed by \texttt{FB FAIL\_type id}, \texttt{BACK}, and the correct brick. \textbf{RF\~{}} was identical except that the feedback was shuffled. \textbf{R} had the same corruptions and no feedback. A Qwen3.5-2B SFT model (C1) served as a reference. The pre-registered rule was: ``content matters'' if RF beats both RF\~{} and R with non-overlapping CIs; otherwise ``format suffices'' or ``downgrade''.
+
+\paragraph{Revisions before the final run.}
+\begin{itemize}\itemsep0pt
+\item \emph{Floor effect.} The first seed-0 runs almost never succeeded: RF 1/420 and S 4/420. Failures were collisions (275), out-of-bounds (137), floating (4) and unstable (3).
+\item \emph{Geometry mask.} Masking illegal positions raised success to RF 10/420 (2.38\%) at $k{=}0$ and 8.81\% at $k{=}10$, against RF\~{} 1.19\% and 7.86\%. But about 97\% of failures were now floating bricks, and masking roughly doubled the per-brick floating fraction (RF 0.284 masked vs 0.129 unmasked). We therefore switched to unmasked generation with per-brick metrics. Unmasked seed 0, $k{=}0$: floating fraction RF 0.129, S 0.117, RF\~{} 0.127, R 0.106; first error at brick 23--27; about 122--127 bricks per structure.
+\item \emph{A confound in v1.} The loss covered all tokens, including the 26{,}629 injected bad bricks (51\% of them floating). An RF seed spontaneously produced ``bad brick + FB + BACK'' on 97\% of prompts (about 5.5 per prompt). R also had 7\% fewer training tokens (1.76M vs 1.90M). v2 masked the loss on bad bricks and padded R to the same token count.
+\end{itemize}
+
+\paragraph{Result (v2, 3 seeds per arm, 12/12 runs on Modal).} Success at $k{=}0$: S 1.35\% [0.45, 2.25], RF 0.40\%, RF\~{} 0.48\%, R 0.87\%. Floating fraction: 0.170 / 0.188 / 0.191 / 0.176. All paired differences against RF had CIs that included 0 (RF\~{} $+0.003$ [$-0.017$, 0.024]; R $-0.011$; S $-0.018$). By the pre-registered rule the verdict was \textbf{downgrade}.
+
+\paragraph{Lessons.} (i) The experiment was informative only if the result came out positive. Since then, every pre-registration states in advance what a null result would mean. (ii) Loss-masking and token-matching confounds are easy to miss; we found ours only by reading model outputs. (iii) At such low success rates the test has little power. We decided not to add seeds or swap metrics to chase significance.
+
+\subsection{A conservative physics screener with conformal guarantees}
+\label{ex:screen}
+\paragraph{Motivation.} Exact physics checks (the Gurobi LP) are the slow part of the harness. A learned screener could pass obviously safe structures and send only uncertain ones to the solver. To be usable, its miss rate (``unsafe'' structures judged ``safe'') must stay below $\alpha$, including on new kinds of objects. A second literature check found prior work on surrogates and on one-sided guarantees, but no systematic study of how much the guarantee degrades under shift or how many labels are needed to recover it.
+
+\paragraph{Setup.} A 50k-parameter GNN over bricks was trained on solver labels and calibrated with one-sided split conformal prediction, $\alpha\in\{1\%,5\%\}$, 3 seeds, on CPU. For shifted targets we added $N\in\{0,\dots,1000\}$ target labels to the calibration set.
+
+\paragraph{Results.} In distribution the guarantee held: miss rate 0.77\% at $\alpha{=}1\%$ (67\% of solver calls saved) and 5.69\% at $\alpha{=}5\%$ (72\% saved), with AUC 0.998. Bottle and vase held out: miss rate 0--4\%, 72--95\% saved. Guitar at $\alpha{=}5\%$: miss rate 19.6\%, falling to 5.47\% with $N{=}1000$. A 1.93M-parameter model (Kaggle GPU, 347\,s) was no better and generalized worse to guitar (AUC 0.977 vs 0.996). Leave-one-category-out over the other 20 categories found only one with miss rate $\geq 10\%$ (02942699, 12.4\%). The pre-registered verdict was therefore \textbf{failure is rare}. The guitar misses were confident errors on tall structures with half-overhanging bricks at height, not borderline cases. None of the three label-free warning signals correlated significantly with the excess miss rate (Spearman $\rho$ = 0.23, $-0.09$, $-0.15$).
+
+\paragraph{Why we moved on.} On LEGO the motivating problem barely exists. We moved to a domain where it might.
+
+\subsection{Replication on 2D/3D truss finite-element models}
+\label{ex:truss}
+\paragraph{Setup.} We generated steel trusses and solved them with a direct-stiffness solver (validated against 3 analytic solutions to $10^{-9}$; mechanisms rejected). A truss was labelled unsafe if stress exceeded 165\,MPa, a compressed member exceeded its Euler buckling load, or the deflection exceeded span/250. The screener was a 74{,}401-parameter GNN. Round 1 used 8 families with 3000 trusses per family at training size and 1000 at a larger size; rounds 2--6 used 10 families.
+
+\paragraph{Results.}
+\begin{itemize}\itemsep0pt
+\item \emph{Round 1:} \textbf{partial transfer}. Four of 8 held-out families passed (Pratt, Warren, K, Bowstring; miss rate 3--6\%). Howe missed 38\%, Fink 18\%, space frame 100\%, random topology 34\%, and the size shift 14\%. With $N{=}1000$ every family dropped to $\leq 5.7\%$. The geometric warning signal had AUROC 0.78 (below the pre-registered 0.8).
+\item \emph{Diagnosis:} 97\% of Howe misses were buckling diagonals. That mechanism is common in the training data, so it was not new. The likelier cause was a \emph{shape shortcut}: the Pratt silhouette is almost always safe, and Howe is its mirror image.
+\item \emph{Round 2} (10 families, 10 epochs): \textbf{no transfer}, 4/10 families passing. Space frame missed 91\% and tower 97.5\% even with other 3D families in training.
+\item \emph{Round 3:} \textbf{deployable}. The median number of target labels needed to restore the guarantee was $N^\ast{=}75$. Tower had no $N^\ast$ because its ranking was poor (AUC 0.84).
+\item \emph{Round 4:} a tension/compression auxiliary head as a label-free warning was \textbf{ineffective} (AUROC 0.50). Adding the head did, however, cut space-frame misses from 91\% to 68\%.
+\item \emph{Round 5:} flipping diagonals in Pratt and Bowstring training data cut Howe misses from 31.8\% to 1.5\% (3 seeds), which \textbf{supports the shortcut hypothesis}. This was a mechanism test, not a deployment method.
+\item \emph{Round 6} (20 epochs): the round-2 verdict flipped to partial (5/10 families) because Pratt fell from 10.2\% to 8.4\%. Rounds 3 and 5 replicated ($N^\ast$ median 100; Howe 1.9\% vs 32.1\%).
+\end{itemize}
+
+\paragraph{Why we moved on.} The result is interesting: the guarantee is broken by shortcuts rather than by geometric novelty, and it is cheap to repair. But it is far from the course's focus on language models. We returned to LLMs and kept the lesson that a verifier only constrains what it checks.
+
+\subsection{In-context imitation and combination (team members)}
+\label{ex:icl}
+Qwen-scale small models were shown 0 or 2 human structures in the prompt. \emph{Imitation}: 0-shot gave 0/20 valid; 2-shot with checker feedback gave 6--7/20 valid, every one a copy of a shown example. \emph{Combination} (``build X using parts of A and B''): 0-shot gave 0/20 (refusals); 2-shot gave 3/20, all byte-identical copies, with 0 real combinations. Conclusion: in-context examples do not transfer building ability to small models. This motivated training on teacher data.
+
+\subsection{BrickWright: examples and SFT for a tool-using agent (team members)}
+\label{ex:brickwright}
+\emph{Experiment 1} (DeepSeek-v4-flash, 20 paired tasks). Two examples raised completion from 85\% to 100\% and lowered the mean number of turns from 80.75 to 62.05 (77.35 vs 60.53 on the 17 matched pairs). Quality was unchanged: matched VQA 0.980 vs 0.975; all requirements met in 11/20 vs 13/20; win rates 47.1\% (alignment) and 44.1\% (design). \emph{Experiment 2.} We collected 275 teacher trajectories (5{,}593 decisions, 1{,}255 renders; split train 247 / val 17 / test 11) and LoRA-fine-tuned Qwen3.5-2B (r16, $\alpha$ 32, one epoch on an A800, final loss 0.342). The student completed 0/10 tasks and looped in 9/10; base and SFT were both 0/9 on the matched set. Like the main result, imitation copied the surface form of the trajectories without the competence behind them.
+
+\subsection{Distillation from 96 teacher samples}
+\label{ex:distill}
+Qwen2.5-1.5B was fine-tuned on 96 DeepSeek samples (12 optimizer steps). The share of physics-valid outputs rose from 0/90 to 12/90 (14/90 with checker feedback). Every valid output was a solid block or pillar: 0/14 were recognized in the blind test, against 12/14 matched dataset structures. This was the first sign of the main finding (Fig.~\ref{fig:solid} in the main text).
+
+\subsection{Teachers inside the harness}
+\label{ex:teachers}
+deepseek-chat produced 6/23 valid structures without feedback and 12/23 with feedback; deepseek-v4-flash 14/20 $\to$ 20/20. Claude Opus sub-agents writing parametric designs passed the checker on 187/200, and on 59/60 in new categories. A deliberately broken renderer (auto-scaled axes) briefly made vision feedback look useless; once the axes were pinned to 0--20 this artefact disappeared. DeepSeek spending was capped at CNY~5; one run overshot to CNY~5.04 before we added in-loop balance checks.
+
+\subsection{A/B/C mixed-data study}
+\label{ex:mix}
+This is the main experiment (\S\ref{sec:distill}). Additional numbers not in the main text: held-out validation loss on 197 examples was 0.465 for the base model, 0.246/0.247 for A, 0.253/0.252 for B and 0.247 for C (seeds 0/1). Valid counts over the 180 pooled prompts were A 32, B 46, C 39 (Fisher B vs C $p{=}0.46$, B vs A $p{=}0.096$, C vs A $p{=}0.43$). On the 28 new-category prompts: A 3 (seed 0) and 5 (seed 1), B 1 and 4, C 4. Across all valid outputs, 0/82 were recognized top-1. One Gurobi run under heavy CPU load returned a checker error, briefly reading A as 14/90 instead of 15/90. We added up to 3 retries and re-ran.
+
+\subsection{Gemini paired data (built, not trained)}
+\label{ex:gemini}
+To remove a remaining confound (the AI and human answers in B and C come from different prompts), we built a paired design. Gemini answered the same 665 prompts that had human answers, and every answer passed the physics check and the diversity filter. Gemini structures were stouter: median aspect ratio 1.6 vs 2.6 for the human answers, and only 254/665 pairs were within 30\% of each other. Probe runs covered 12 and then 20 categories. The pre-registered FA/FB/FC training (S4n of the research log) was not run before the V1 deadline.
+
+\subsection{300-prompt evaluation (exploratory, in progress)}
+\label{ex:eval300}
+To gain power we evaluated on 300 prompts at $k{=}0$. Connectivity-valid counts so far: base 2, A seed 0 44, B seeds 0/1 66/80, C seed 0 56. A seed 1 and C seed 1 are still running on Kaggle, and the authoritative Gurobi re-check is running locally. Because we saw some numbers before writing the rule (S4o of the research log), any conclusion from this evaluation will be labelled exploratory.
+
+\subsection{Engineering problems we hit}
+\label{ex:eng}
+\begin{itemize}\itemsep0pt
+\item Kaggle extracts uploaded zips, so a bootstrap that globbed \texttt{*.zip} found nothing. Fixed with \texttt{makedirs} + \texttt{copytree}.
+\item Kaggle allows 2 concurrent GPU sessions, so jobs had to be queued and retried.
+\item The A seed-1 adapter was not found by the evaluation kernel because of the dataset folder name.
+\item Two processes wrote the same recognition folder. That run was voided and re-run (v2).
+\item Local \texttt{tectonic} fails across drives on Windows, so the paper is compiled through a remote \LaTeX{} service.
+\end{itemize}

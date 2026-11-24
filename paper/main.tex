@@ -105,13 +105,9 @@ We first establish the ceiling: can large models, under the verifier, build both
 
 \begin{figure}[t]
 \centering
-\begin{minipage}[t]{0.52\linewidth}\vspace{0pt}
-\includegraphics[width=\linewidth]{figs/recognition.pdf}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}
+\includegraphics[width=0.72\linewidth]{figs/recognition.pdf}
 \caption{Blind top-1 recognition among 21 classes with 95\% Wilson intervals (Appendix~\ref{app:stats}); dotted line: chance. Teacher outputs are about as recognizable as dataset structures; the \emph{physics-valid} outputs of the distilled student are never recognized. Linear axis: accuracy is a proportion in $[0,1]$ and the contrast of interest (0 vs.\ 0.86) is large.}
 \label{fig:recog}
-\end{minipage}
 \end{figure}
 
 \begin{figure}[t]
@@ -148,22 +144,18 @@ If examples are copied, the next channel is to train on them. We fine-tune Qwen2
 \label{tab:val}
 \begin{tabular}{@{}lcccccc@{}}
 \toprule
- & base & A s0 & A s1 & B s0 & B s1 & C s0 \
+ & base & A s0 & A s1 & B s0 & B s1 & C s0 \\
 \midrule
-val.\ loss & 0.465 & 0.246 & 0.247 & 0.253 & 0.252 & 0.247 \
+val.\ loss & 0.465 & 0.246 & 0.247 & 0.253 & 0.252 & 0.247 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{figure}[t]
 \centering
-\begin{minipage}[t]{0.42\linewidth}\vspace{0pt}
-\includegraphics[width=\linewidth]{figs/train_curves.png}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.55\linewidth}\vspace{0pt}
-\caption{Training loss (token cross-entropy) of A, B (two seeds) and C over 304 steps; effective batch 16, cosine schedule. All runs fall from about 0.45--0.47 to about 0.25, so the groups fit their data equally well; held-out validation losses are in Table~\ref{tab:val}. Linear axes in steps and loss: runs are short (304 steps) and loss changes by less than a factor of two, so a log scale adds nothing. Token loss is a weak proxy here: the 96-sample student reached 0.227 yet produced unrecognizable structures.}
+\includegraphics[width=\linewidth]{figs/train_curves.pdf}
+\caption{Training loss (token cross-entropy) of A, B (two seeds) and C over 304 steps; effective batch 16, cosine schedule. All runs fall from about 0.45--0.47 to about 0.25, so the groups fit their data equally well; diamonds mark the held-out validation loss at the end of training (Table~\ref{tab:val}); thin traces are raw logged loss, thick lines a 5-point moving average. Linear axes in steps and loss: runs are short (304 steps) and loss changes by less than a factor of two, so a log scale adds nothing. Token loss is a weak proxy here: the 96-sample student reached 0.227 yet produced unrecognizable structures.}
 \label{fig:curve}
-\end{minipage}
 \end{figure}
 
 \section{What does not transfer: meaning}
@@ -289,7 +281,7 @@ $\bigl(\hat p+\tfrac{z^2}{2n}\pm z\sqrt{\hat p(1-\hat p)/n+z^2/4n^2}\bigr)/(1+z^
 \label{app:ai}
 This appendix does not count toward the page limit. \textbf{Coding and experiment agent:} Claude Code \cite{claudecode} running Claude Opus wrote and debugged training and evaluation code, launched Kaggle and Colab jobs, ran local Gurobi re-checks, and produced the figures; it also drafted and edited this paper. All of this was directed and reviewed by the team. \textbf{Judge:} Claude served as the blind-recognition judge (\S\ref{sec:testbed}, Algorithm~\ref{alg:blind}); a single judge from the same family as one teacher was used, so self-preference bias is possible \cite{panickssery2024selfpref}. \textbf{Teachers for training data:} DeepSeek (deepseek-chat and deepseek-v4-flash via the DeepSeek API \cite{deepseekapi}); Claude Opus sub-agents writing parametric designs; Gemini 3.8 Flash via the Antigravity CLI \cite{antigravity} (665 structures, described in Appendix~\ref{app:log} but never trained on). The teammates' BrickWright experiments used deepseek-v4-flash. Every number and claim in this paper was checked by the team against the result files in the repository.
 
-\section{Reproducibility}
-Code, data-generation scripts, evaluation and \texttt{paper/make\_figs.py} (regenerating every figure from result files) are in the team repository, branch \texttt{lego-distill}, directory \texttt{distill/}; the public release is \url{https://github.com/lucas-shuo-han/you-get-what-you-verify}. StableText2Brick is public and fetched by script; AI-generated structures are included as JSONL; the Kaggle code bundle is public as \texttt{brickexp-code-public}.
+\input{appendix_repro}
+\input{appendix_explorations}
 
 \end{document}
