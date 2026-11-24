@@ -374,15 +374,11 @@ python results/paper/gurobi_all.py
 
 \paragraph{Seeds and determinism.} Training uses \texttt{-{}-seed} 0 and 1, and data subsampling uses fixed \texttt{Random} seeds logged in \texttt{data/mix/manifest.json}. Because vLLM GPU sampling is not bit-exact across hardware, fresh evaluation runs may shift counts by a few prompts; the paper reports numbers computed from the cached outputs in \texttt{results/}.
 
-\paragraph{Engineering issues encountered.}
+\paragraph{Issues that affected validity.}
 \begin{itemize}\itemsep0pt
-\item Kaggle auto-extracts uploaded zip archives, breaking an initial bootstrap script that globbed \texttt{*.zip}; notebooks now copy directories directly using \texttt{makedirs} and \texttt{copytree}.
-\item Kaggle caps concurrent GPU sessions at 2, requiring manual job queuing and retries.
-\item An evaluation kernel initially failed to locate the group A seed-1 adapter due to a mismatched dataset directory name.
 \item Under heavy CPU load, Gurobi occasionally raises a solver error; \texttt{gurobi\_all.py} retries up to 3 times so transient errors are not miscounted as invalid structures.
 \item Auto-scaled rendering axes distort object proportions and bias visual recognition; axes must remain locked to $[0,20]^3$.
 \item Concurrent writes to the same blind-recognition directory corrupted an early batch, which was voided and re-run as v2.
-\item Local \texttt{tectonic} failed across Windows drives, so the manuscript was compiled via a remote \LaTeX{} service.
 \item LoRA adapters ($\sim$74\,MB each) are excluded from the repository and can be reproduced via Step 3. Credentials (Kaggle tokens, Gurobi licenses, and API keys) are loaded from local environment variables and never committed.
 \end{itemize}
 
@@ -414,7 +410,7 @@ Exploration & Question & Outcome & Next step \\
 \ref{ex:teachers} Teachers in the harness & Can large models build reliably? & Yes (Opus 187/200) & Teacher data source \\
 \ref{ex:mix} A/B/C mixed data (main) & Does verified AI data beat human data? & No reliable difference; 0/82 recognized & Main paper \\
 \ref{ex:gemini} Gemini paired data & Same comparison under a paired-prompt design & Built, not trained (time) & Future work \\
-\ref{ex:eval300} 300-prompt evaluation & Does a larger test set separate B and C? & In progress (exploratory) & V2 \\
+\ref{ex:eval300} 300-prompt evaluation & Does a larger test set separate B and C? & B$>$A ($p=0.018$); B vs.\ C $p=0.077$ (exploratory) & V2: pre-registered replication \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -487,10 +483,9 @@ This forms our main experiment (\S\ref{sec:distill}). Supplementary metrics omit
 \label{ex:gemini}
 To remove the prompt-mismatch confound between extra AI and human examples in groups B and C, we built a paired dataset in which Gemini generated answers for the exact same 665 prompts as human dataset entries, with every structure passing physics and diversity filters. Gemini outputs were systematically stouter (median aspect ratio 1.6 vs.\ 2.6 for human structures), with only 254/665 pairs within 30\% of each other. Probe runs spanned 12 and 20 categories; the pre-registered FA/FB/FC training runs (Section S4n of the research log) were not executed before the V1 deadline.
 
-\subsection{300-prompt evaluation (exploratory, in progress)}
+\subsection{300-prompt evaluation (exploratory)}
 \label{ex:eval300}
-To increase statistical power, we evaluated models on 300 prompts at $k{=}0$. All runs are complete. Gurobi-valid counts: base 2; A seeds 0/1 42/64; B seeds 0/1 63/77; C seeds 0/1 53/61 (pooled /600: A 106, B 140, C 114; B vs.\ C $p=0.077$, B vs.\ A $p=0.018$). Because partial counts were inspected before finalizing the decision rule (Section S4o of the research log), all conclusions from this split are labeled exploratory.
+To increase statistical power, we evaluated all models on 300 prompts at $k{=}0$. Gurobi-valid counts: base 2; A seeds 0/1 42/64; B seeds 0/1 63/77; C seeds 0/1 53/61 (pooled /600: A 106, B 140, C 114; B vs.\ C $p=0.077$, B vs.\ A $p=0.018$). Because partial counts were inspected before finalizing the decision rule (Appendix~\ref{app:prereg}), all conclusions from this split are labeled exploratory.
 
-Engineering obstacles encountered during these experiments are summarized in the reproducibility checklist (Appendix~\ref{app:repro}).
 
 \end{document}
