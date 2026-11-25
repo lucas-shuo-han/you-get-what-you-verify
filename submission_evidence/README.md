@@ -10,8 +10,8 @@ V1 deadline per Ed #384: Tue 2026-11-24 11:59 PM PT — "replace the proposal PD
 - Screenshot of Author Console: `cmt_author_console.jpg`.
 - Exact submitted file: `V1_submitted_main.pdf`, SHA-256 `db6e52c28752307af3b4721018f8973b93bc0977fabd073459f1bd369224719d`.
 
-## 2. Gradescope — no V1 assignment exists
-Checked CS 182/282 (course 1370577) at 13:05 PST on 2026-11-24. Assignment list contains only Homework 0–12, Homework 9 Hardware Check CSV, "Project Proposals - 1 submission per group" (closed; late due Nov 19), and Quiz 1/2 sections. **There is no V1 report assignment to submit to.** The closed proposal assignment was deliberately not overwritten.
+## 2. Gradescope — submitted
+No V1 assignment existed when checked at 13:05 PST. The "final report V1" assignment appeared later; the same `main.pdf` was submitted there at **2026-11-24 8:28 PM PST** (submission 451655477), before the 11:59 PM deadline.
 
 ## 3. Self-review form — not released
 - Ed #287 says each submission comes with a peer-review form, but gives no form or location.
