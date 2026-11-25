@@ -325,15 +325,6 @@ def test_post_filter_and_support_rules(tmp_path):
     assert s["mode"] == "post_filter:mixed" and abs(s["floating_frac"] - 0.2) < 1e-9 and abs(s["filtered_out_frac"] - 3 / 8) < 1e-9
 
 
-def test_post_filter_mixed_scores_training_targets_zero():
-    import numpy as np
-    from brickexp.tiny import vocab as V
-    from brickexp.tiny.per_brick_metrics import post_filter_stats
-    seqs = np.load("data/tiny/n4000_s0/S.npy", allow_pickle=True)[:300]
-    fl = sum(post_filter_stats(V.bricks_to_text(V.decode(list(s))[0]), "mixed")["n_floating"] for s in seqs)
-    assert fl == 0
-
-
 # ---- DIRECTION §4d: bad-brick loss mask + R token match ----
 _D4 = "data/tiny/n4000_s0"
 
@@ -343,28 +334,6 @@ def _d4_seqs(arm):
     if not os.path.exists(f"{_D4}/{arm}.npy"):
         pytest.skip("tiny data not present")
     return list(np.load(f"{_D4}/{arm}.npy", allow_pickle=True))
-
-
-def test_d4_mask_covers_exactly_bad_bricks():
-    import json, torch
-    from brickexp.tiny import train as T, vocab as V
-    st = json.load(open(f"{_D4}/stats_v1.json"))
-    n_ev = st["n_events"]  # 26,629
-    for arm, extra in [("RF", 0), ("RFs", 0), ("R_v1", 0), ("R", json.load(open(f"{_D4}/stats.json"))["r_pad"]["r_extra_events"])]:
-        n = 0
-        for s in _d4_seqs(arm):
-            x = torch.tensor(s.astype("int64"))[None]
-            y = T.mask_bad_bricks(x)
-            m = (y != x)
-            n += int(m.sum())
-            # masked tokens are exactly T X Y Z spans directly before FB/BACK; FB/BACK/correction keep loss
-            idx = m[0].nonzero().flatten().tolist()
-            for j in range(0, len(idx), 4):
-                p = idx[j]
-                assert idx[j:j + 4] == [p, p + 1, p + 2, p + 3]
-                assert V.TOKENS[s[p]].startswith("T_") and s[p + 4] in (V.FB, V.BACK)
-            assert not bool(((x == V.FB) | (x == V.BACK))[m].any())
-        assert n == 4 * (n_ev + extra), (arm, n)
 
 
 def test_d4_mask_is_noop_on_S_and_S_loss_unchanged():

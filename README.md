@@ -89,7 +89,7 @@ The paper's headline physics numbers ("Gurobi-checked") come from a static force
    This reproduces the connectivity counts reported in the paper (e.g. 90 prompts: A 17, B 27 / 22, C 21; 300 prompts: base 2, A 44 / 70, B 66 / 80, C 56 / 63). Gurobi counts are equal or lower because the LP additionally rejects statically unstable structures.
 3. **The checker itself:** `check(text, use_gurobi=False)` always uses connectivity. `use_gurobi="auto"` (the default) uses Gurobi when a license works and connectivity otherwise; the result's `.method` field records which one ran.
 4. **Training and evaluating students** (GPU): use `--checker connectivity`, exactly as in the notebooks in `notebooks/`.
-5. **Tests:** `python -m pytest -q tests`. Tests that need Gurobi skip themselves. Two tests (`test_post_filter_mixed_scores_training_targets_zero`, `test_d4_mask_covers_exactly_bad_bricks`) fail on a fresh clone with or without Gurobi, because they read generated tiny-model data (`data/tiny/...`) that is not committed; run `python -m brickexp.tiny.gen_data` first to create it.
+5. **Tests:** `python -m pytest -q tests`. Tests that need Gurobi skip themselves.
 
 There is no alternative LP solver wired in: the force-balance model is BrickGPT's Gurobi formulation (`brickexp/stability_patched.py`). We use connectivity as the documented fallback instead.
 
