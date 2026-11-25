@@ -56,8 +56,61 @@ bash tools/fetch_vendor.sh                              # BrickGPT (MIT) at the 
 ```
 
 - **Figures and tables need only** `numpy scipy matplotlib pillow` — every number they use is cached in `results/`.
-- **Gurobi** (`gurobipy`) is needed only to *re-run* the physics re-check. A free academic license works. Without one, `brickexp.checker` falls back to the connectivity check.
+- **Gurobi** (`gurobipy` + a license) is needed only to *re-run* the Gurobi physics re-check. See [Gurobi: what needs it, how to get it, and what runs without it](#gurobi-what-needs-it-how-to-get-it-and-what-runs-without-it).
 - **GPU** (one 16 GB T4 is enough) is needed only to retrain or re-evaluate students.
+
+## Gurobi: what needs it, how to get it, and what runs without it
+
+The paper's headline physics numbers ("Gurobi-checked") come from a static force-balance linear program solved with [Gurobi](https://www.gurobi.com/). Everything else, including every figure and table, runs without it.
+
+### What needs a working Gurobi license
+
+| Script / mode | Used for in the paper | Without a license |
+|---|---|---|
+| `python results/paper/gurobi_all.py` | the Gurobi-checked counts behind Fig. 4 and the results tables (`results/paper/gurobi_all.json`) | fails on purpose (it refuses to fall back) |
+| `python results/mix_gurobi_recheck.py` | first Gurobi re-check of runs A/B/base | fails |
+| `python -m brickexp.rejudge` | re-judges online-accepted attempts with Gurobi | exits with a message |
+| `brickexp.checker.check(..., use_gurobi=True)` | strict mode used by the scripts above | raises `GurobiUnavailable` |
+| `python -m brickexp.evaluate` / `python -m brickexp.eval_2x2 run` | student evaluation | default is `--checker gurobi`; pass **`--checker connectivity`** (this is what the Kaggle/Colab notebooks used) |
+| `python -m brickexp.screen.labels`, `python -m brickexp.screen.diag rerun` | stability labels for the conformal screener (appendix) | not runnable; labels are cached in `results/screen*/` |
+| `python -m brickexp.tiny.gen_data --unstable` | mining "unstable" bad bricks for the tiny models (appendix) | drop `--unstable` (cheap failure types need no solver) |
+| `data/opus_gen/*/gen.py`, `tools/harness_vision.py`, `tools/distill_pilot.py` | teacher harness that produced the AI-built data | not runnable; outputs are cached in `data/opus_gen/` and `results/` |
+
+### What runs without Gurobi (and how)
+
+1. **All figures and tables** read cached Gurobi results from `results/`:
+   ```bash
+   python tools/reproduce_all.py        # ~20 s on CPU, no GPU, no license
+   ```
+2. **Independent re-check of the cached student outputs** with the solver-free connectivity checker (format, bounds, collision, floating, connectivity; no force balance):
+   ```bash
+   python tools/recheck_connectivity.py # ~10 s on CPU
+   ```
+   This reproduces the connectivity counts reported in the paper (e.g. 90 prompts: A 17, B 27 / 22, C 21; 300 prompts: base 2, A 44 / 70, B 66 / 80, C 56 / 63). Gurobi counts are equal or lower because the LP additionally rejects statically unstable structures.
+3. **The checker itself:** `check(text, use_gurobi=False)` always uses connectivity. `use_gurobi="auto"` (the default) uses Gurobi when a license works and connectivity otherwise; the result's `.method` field records which one ran.
+4. **Training and evaluating students** (GPU): use `--checker connectivity`, exactly as in the notebooks in `notebooks/`.
+5. **Tests:** `python -m pytest -q tests`. Tests that need Gurobi skip themselves. Two tests (`test_post_filter_mixed_scores_training_targets_zero`, `test_d4_mask_covers_exactly_bad_bricks`) fail on a fresh clone with or without Gurobi, because they read generated tiny-model data (`data/tiny/...`) that is not committed; run `python -m brickexp.tiny.gen_data` first to create it.
+
+There is no alternative LP solver wired in: the force-balance model is BrickGPT's Gurobi formulation (`brickexp/stability_patched.py`). We use connectivity as the documented fallback instead.
+
+### Getting a free academic license
+
+Gurobi is free for academic use. Either license works:
+
+- **Named-user academic license** (your own machine): register with your university email at <https://www.gurobi.com/academia/academic-program-and-licenses/>, request an *Academic Named-User License*, then run the `grbgetkey <key>` command it shows **while on the campus network or VPN**. This writes `gurobi.lic` to your home directory.
+- **Academic Web License Service (WLS)** (works in containers, Colab and Kaggle; this is what we used): request a *WLS Academic* license on the same page, then download `gurobi.lic` from the [Gurobi Web License Manager](https://license.gurobi.com/). It contains `WLSACCESSID`, `WLSSECRET` and `LICENSEID`.
+
+Then:
+
+```bash
+pip install gurobipy                         # already listed (optional) in requirements.txt
+export GRB_LICENSE_FILE=/path/to/gurobi.lic  # only if the file is not in your home directory
+python -c "from brickexp.checker import gurobi_available; print(gurobi_available())"   # should print True
+```
+
+Note that the size-limited license bundled with `pip install gurobipy` is **not** enough: `gurobi_available()` deliberately solves a 2,500-variable model, which the bundled license rejects, so the checker falls back to connectivity. Never commit `gurobi.lic` (it is in `.gitignore`).
+
+On a heavily loaded CPU Gurobi occasionally times out on single structures. `gurobi_all.py` retries up to 3 times, so the counts are stable across reruns.
 
 ## Reproducing every figure and table
 
@@ -74,6 +127,7 @@ All commands run from the repository root.
 | Fig. 6 `solid_vs_human.pdf` | valid distilled outputs vs dataset | `python paper/make_figs.py` | `results/recognition_eval_sft_v2/renders/` |
 | Results table + Appendix stats | rates, Wilson CIs, Fisher tests | `python results/paper/curves_stats.py` → `results/paper/stats_table.md`, `stats.json` | `results/paper/gurobi_all.json` |
 | Gurobi re-check (source of all valid counts) | k=0 re-check of every student run | `python results/paper/gurobi_all.py` *(needs Gurobi)* | `results/{mix_A,mix_B,final_small}/runs/*.jsonl` |
+| Connectivity re-check (no Gurobi) | k=0 validity of every cached run, solver-free | `python tools/recheck_connectivity.py` | eval jsonl in `results/` |
 | Recognition (0/82) | blind sheets + scoring | `python results/paper/recog/build.py` | eval jsonl + `results/paper/recog/*/judgments.jsonl` |
 | 96-sample distillation 2×2 | 0→12/90 | see `results/distill_sft/REPORT.md` | `results/distill_sft/runs/` |
 | Hyperparameter table (App.) | — | static, from `notebooks/kaggle_mix_*.ipynb` | — |
