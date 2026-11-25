@@ -107,6 +107,11 @@ def main():
     ap.add_argument("--stop_at", type=int, default=0,
                     help=">0: keep the LR schedule of --max_steps but stop (and checkpoint) at this step; "
                          "rerun with a larger value to continue (needs --save_steps)")
+    ap.add_argument("--eval_jsonl", default=None,
+                    help="held-out {messages} rows: validation loss every --eval_steps (same tokenisation/length cap)")
+    ap.add_argument("--eval_steps", type=int, default=40)
+    ap.add_argument("--snap_steps", type=int, default=0,
+                    help=">0: keep a copy of the LoRA adapter every N steps in <out>/traj/step_N (needs --save_steps dividing N)")
     a = ap.parse_args()
 
     import torch
@@ -130,6 +135,11 @@ def main():
     n_dropped = len(rows_all) - len(rows)
     print(f"dropped {n_dropped}/{len(rows_all)} examples longer than {a.max_len} tok", flush=True)
     print(f"{len(rows)} examples, mean len {sum(len(r['input_ids']) for r in rows) / len(rows):.0f} tok", flush=True)
+    eval_rows = None
+    if a.eval_jsonl:
+        em = [json.loads(l)["messages"] for l in open(a.eval_jsonl, encoding="utf-8") if l.strip()]
+        eval_rows = [r for r in (tokenize(tok, m, 10 ** 9) for m in em) if len(r["input_ids"]) <= a.max_len]
+        print(f"{len(eval_rows)} held-out examples for validation loss every {a.eval_steps} steps", flush=True)
 
     try:
         model = AutoModelForCausalLM.from_pretrained(a.model, dtype=torch.float32 if a.cpu else torch.float16, device_map=None if a.cpu else {"": 0})
@@ -154,6 +164,9 @@ def main():
                  logging_steps=a.logging_steps,
                  save_strategy="steps" if a.save_steps and not a.probe_steps else "no", save_steps=a.save_steps or 500, save_total_limit=1, fp16=not a.cpu, use_cpu=a.cpu,
                  group_by_length=True, report_to=[], seed=a.seed, dataloader_num_workers=2)
+    if eval_rows and not a.probe_steps:
+        targs.update(eval_strategy="steps", evaluation_strategy="steps", eval_steps=a.eval_steps,
+                     per_device_eval_batch_size=a.bs, prediction_loss_only=True)
     n_steps = a.max_steps if a.max_steps > 0 else int(len(rows) * a.epochs / (a.bs * a.grad_accum))
     targs["warmup_steps"] = max(1, int(0.03 * n_steps))  # warmup_ratio was removed in transformers 5
     try:
@@ -169,11 +182,30 @@ def main():
         print("TrainingArguments: dropping unsupported", dropped, flush=True)
     args = TrainingArguments(**{k: v for k, v in targs.items() if k in ok})
     tr = ChunkedCETrainer(ce_chunk=a.ce_chunk, model=model, args=args, train_dataset=rows,
+                 eval_dataset=eval_rows if (eval_rows and not a.probe_steps) else None,
                  data_collator=DataCollatorForSeq2Seq(tok, padding=True, label_pad_token_id=-100))
+    from transformers import TrainerCallback
+
+    class _Trajectory(TrainerCallback):
+        """Append every train/eval log line to <out>/trajectory.jsonl as it happens (survives crashes and
+        disconnects; resumed runs keep appending). Optionally snapshot the adapter every --snap_steps."""
+        def on_log(self, args, state, control, logs=None, **kw):
+            if logs and not a.probe_steps:
+                with open(out / "trajectory.jsonl", "a", encoding="utf-8") as f:
+                    f.write(json.dumps({"step": state.global_step, "epoch": state.epoch, "time": time.time(), **logs}) + "\n")
+
+        def on_save(self, args, state, control, **kw):
+            if a.snap_steps and state.global_step % a.snap_steps == 0:
+                import shutil
+                ck = out / "ckpt" / f"checkpoint-{state.global_step}"
+                dst = out / "traj" / f"step_{state.global_step}"
+                dst.mkdir(parents=True, exist_ok=True)
+                for fn in ("adapter_model.safetensors", "adapter_config.json"):
+                    if (ck / fn).exists():
+                        shutil.copy(ck / fn, dst / fn)
+    tr.add_callback(_Trajectory())
     if a.stop_at:
         assert a.save_steps and a.max_steps > 0 and a.stop_at <= a.max_steps, "--stop_at needs --save_steps and --max_steps"
-        from transformers import TrainerCallback
-
         class _StopAt(TrainerCallback):
             def on_step_end(self, args, state, control, **kw):
                 if state.global_step >= a.stop_at:

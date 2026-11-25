@@ -89,7 +89,8 @@ code(f"""def done(p): return os.path.exists(f"{{OUTD}}/{{p}}")
 TRAIN = ("export CUDA_VISIBLE_DEVICES=0 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True; "
          "python -m brickexp.train_sft --model Qwen/Qwen2.5-1.5B-Instruct --data_jsonl data/mix/A.jsonl "
          f"--out {{OUTD}}/sft_A_long --seed 0 --bs 2 --grad_accum 8 --max_len 3072 --rank 16 --lr 2e-4 "
-         f"--max_steps {{TOTAL}} --save_steps {A.save_steps} --no_merge")
+         f"--max_steps {{TOTAL}} --save_steps {A.save_steps} --no_merge "
+         "--eval_jsonl data/mix/heldout200.jsonl --eval_steps 40 --snap_steps 80")
 if not done("probe_ok"):
     pr = run_logged(TRAIN.replace(f"--out {{OUTD}}/sft_A_long", "--out " + WORK + "/probe") + " --probe_steps 3", "probe")
     import re; m = re.search(r"PEAK_MEM_GB ([0-9.]+)", pr.stdout); peak = float(m.group(1)) if m else None
