@@ -19,8 +19,12 @@ ap.add_argument("--epochs", type=int, default=5)
 ap.add_argument("--save_steps", type=int, default=40)
 ap.add_argument("--limit", type=int, default=0, help="smoke: first N prompts per bucket")
 ap.add_argument("--repo", default="https://github.com/lucas-shuo-han/you-get-what-you-verify.git")
-ap.add_argument("--out", default=str(ROOT / "notebooks/colab_long_A.ipynb"))
+ap.add_argument("--out", default=None)
+ap.add_argument("--kaggle", action="store_true", help="headless Kaggle kernel: state restored from dataset <user>/brickexp-long-state")
+ap.add_argument("--hours", type=float, default=11.3, help="kaggle: stop cleanly before this many hours")
 A = ap.parse_args()
+if A.out is None:
+    A.out = str(ROOT / ("notebooks/kaggle_long_A.ipynb" if A.kaggle else "notebooks/colab_long_A.ipynb"))
 
 cells = []
 md = lambda s: cells.append({"cell_type": "markdown", "metadata": {}, "source": s})
@@ -30,10 +34,15 @@ md(f"""# Long training of group A ({A.epochs} epochs) — Colab T4
 Runtime → T4 GPU → Run all. After a disconnect, just Run all again: finished milestones are skipped and training
 resumes from the last checkpoint on Drive (`MyDrive/brickexp_long/`).""")
 
-code("""import os, sys, glob, json, math, time, zipfile, subprocess, shutil
-from google.colab import drive
+SETUP = ("""OUTD = "/kaggle/working"; T0 = time.time()
+st = [os.path.dirname(p) for p in glob.glob("/kaggle/input/**/progress.log", recursive=True)]
+if st and not os.path.exists(OUTD + "/progress.log"):   # resume: previous session's state (read-only input)
+    shutil.copytree(st[0], OUTD, dirs_exist_ok=True); print("restored state from", st[0])""" if A.kaggle else
+"""from google.colab import drive
 drive.mount("/content/drive")
-OUTD = "/content/drive/MyDrive/brickexp_long"; os.makedirs(OUTD, exist_ok=True); T0 = time.time()
+OUTD = "/content/drive/MyDrive/brickexp_long"; os.makedirs(OUTD, exist_ok=True); T0 = time.time()""")
+code("""import os, sys, glob, json, math, time, zipfile, subprocess, shutil
+""" + SETUP + """
 def stage(n):
     print(f"=== [{(time.time()-T0)/60:6.1f} min] {n}", flush=True)
     open(f"{OUTD}/progress.log", "a").write(f"{time.ctime()} {n}\\n")
@@ -52,11 +61,15 @@ print(r.returncode, r.stderr[-1500:])
 subprocess.run("pip uninstall -y -q torchao", shell=True)
 print(subprocess.run("pip list 2>/dev/null | grep -iE '^(vllm|torch|transformers|peft) '", shell=True, capture_output=True, text=True).stdout)""")
 
-code(f"""WORK = "/content/RLtheLEGO"
+WK = "/kaggle/temp/RLtheLEGO" if A.kaggle else "/content/RLtheLEGO"
+code(f"""WORK = "{WK}"
 if not os.path.exists(WORK + "/brickexp"):
     subprocess.run("git clone -q {A.repo} " + WORK, shell=True, check=True)
     subprocess.run("bash tools/fetch_vendor.sh", shell=True, check=True, cwd=WORK)
 os.chdir(WORK); sys.path.insert(0, WORK)
+ka = glob.glob("/kaggle/input/**/data/mix/A.jsonl", recursive=True)
+if ka and not os.path.exists("data/mix/A.jsonl"):
+    shutil.copy(ka[0], "data/mix/A.jsonl"); print("A.jsonl from", ka[0])
 if not os.path.exists("data/mix/A.jsonl"):
     zs = sorted(glob.glob("/content/drive/MyDrive/**/brickexp_code.zip", recursive=True), key=os.path.getmtime, reverse=True)
     for z in zs:
@@ -78,7 +91,7 @@ TRAIN = ("export CUDA_VISIBLE_DEVICES=0 PYTORCH_CUDA_ALLOC_CONF=expandable_segme
          f"--out {{OUTD}}/sft_A_long --seed 0 --bs 2 --grad_accum 8 --max_len 3072 --rank 16 --lr 2e-4 "
          f"--max_steps {{TOTAL}} --save_steps {A.save_steps} --no_merge")
 if not done("probe_ok"):
-    pr = run_logged(TRAIN.replace(f"--out {{OUTD}}/sft_A_long", "--out /content/probe") + " --probe_steps 3", "probe")
+    pr = run_logged(TRAIN.replace(f"--out {{OUTD}}/sft_A_long", "--out " + WORK + "/probe") + " --probe_steps 3", "probe")
     import re; m = re.search(r"PEAK_MEM_GB ([0-9.]+)", pr.stdout); peak = float(m.group(1)) if m else None
     assert peak is None or peak < 13.5, f"would OOM on T4: {{peak}}"
     open(f"{{OUTD}}/probe_ok", "w").write(str(peak))
@@ -94,9 +107,12 @@ def merge(snap, dst):
     del m, base; torch.cuda.empty_cache()
 
 EV = "python -m brickexp.eval_2x2 run --backend vllm --max_budget 0 --checker connectivity --limit {A.limit}"
+STOPPED = False
 for step in MILESTONES:
     tag = f"A_long_e{{step // STEP_EPOCH}}"
     snap = f"{{OUTD}}/snap_{{step}}"
+    if not done(f"val_loss_{{step}}.json") and (time.time() - T0) / 3600 + 2.7 > {A.hours}:
+        stage(f"TIME GUARD: not starting milestone {{step}}; resume in next session"); STOPPED = True; break
     if not done(f"snap_{{step}}/adapter_model.safetensors"):
         run_logged(TRAIN + f" --stop_at {{step}}", f"train_to_{{step}}")
         ck = f"{{OUTD}}/sft_A_long/ckpt/checkpoint-{{step}}"
@@ -106,7 +122,7 @@ for step in MILESTONES:
             shutil.copy(f"{{ck}}/{{f}}", snap)
         shutil.copy(f"{{OUTD}}/sft_A_long/train_log.json", f"{{snap}}/train_log.json")
     if not done(f"runs/summary_{{tag}}_newcat.json"):
-        merged = "/content/merged_tmp"; shutil.rmtree(merged, ignore_errors=True); merge(snap, merged)
+        merged = WORK + "/merged_tmp"; shutil.rmtree(merged, ignore_errors=True); merge(snap, merged)
         for suite, extra, tb in (("90", "", 1.5), ("newcat", " --eval_jsonl data/mix/newcat_test_eval.jsonl", 0.5)):
             if not done(f"runs/summary_{{tag}}_{{suite}}.json"):
                 run_logged(EV + f" --out_dir {{OUTD}}/runs --time_budget_h {{tb}} --model {{merged}} --tag {{tag}}_{{suite}}{{extra}}",
@@ -118,9 +134,10 @@ for step in MILESTONES:
     s = json.load(open(f"{{OUTD}}/runs/summary_{{tag}}_90.json"))
     stage(f"milestone {{step}} done: " + f"k0 valid {{s['solved_k0']}}/{{s['n']}}")""")
 
-code("""S = " ".join(sorted(glob.glob(f"{OUTD}/runs/summary_*.json")))
-print(run_logged(f"python -m brickexp.eval_2x2 table {S} --out {OUTD}/TABLE_long.md", "table").stdout)
-stage("ALL DONE")""")
+code("""if not STOPPED:
+    S = " ".join(sorted(glob.glob(f"{OUTD}/runs/summary_*.json")))
+    print(run_logged(f"python -m brickexp.eval_2x2 table {S} --out {OUTD}/TABLE_long.md", "table").stdout)
+    stage("ALL DONE")""")
 
 nb = {"cells": cells, "metadata": {"kernelspec": {"name": "python3", "display_name": "Python 3", "language": "python"},
                                    "language_info": {"name": "python"}, "accelerator": "GPU"}, "nbformat": 4, "nbformat_minor": 5}
