@@ -104,6 +104,9 @@ def main():
     ap.add_argument("--no_merge", action="store_true")
     ap.add_argument("--save_steps", type=int, default=0, help=">0: checkpoint every N steps into <out>/ckpt and resume from the latest")
     ap.add_argument("--cpu", action="store_true", help="local dry run: fp32 on CPU")
+    ap.add_argument("--stop_at", type=int, default=0,
+                    help=">0: keep the LR schedule of --max_steps but stop (and checkpoint) at this step; "
+                         "rerun with a larger value to continue (needs --save_steps)")
     a = ap.parse_args()
 
     import torch
@@ -167,6 +170,17 @@ def main():
     args = TrainingArguments(**{k: v for k, v in targs.items() if k in ok})
     tr = ChunkedCETrainer(ce_chunk=a.ce_chunk, model=model, args=args, train_dataset=rows,
                  data_collator=DataCollatorForSeq2Seq(tok, padding=True, label_pad_token_id=-100))
+    if a.stop_at:
+        assert a.save_steps and a.max_steps > 0 and a.stop_at <= a.max_steps, "--stop_at needs --save_steps and --max_steps"
+        from transformers import TrainerCallback
+
+        class _StopAt(TrainerCallback):
+            def on_step_end(self, args, state, control, **kw):
+                if state.global_step >= a.stop_at:
+                    control.should_save = True
+                    control.should_training_stop = True
+                return control
+        tr.add_callback(_StopAt())
     if torch.cuda.is_available() and not a.cpu:
         torch.cuda.reset_peak_memory_stats()
     ck = sorted((out / "ckpt").glob("checkpoint-*"), key=lambda p: int(p.name.split("-")[1])) if a.save_steps and not a.probe_steps else []  # probes never save/resume
