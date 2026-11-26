@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import random
 import time
 from pathlib import Path
@@ -131,6 +132,7 @@ def main():
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
     rows_all = [tokenize(tok, m, 10 ** 9) for m in msgs]
+    dropped_idx = [i for i, r in enumerate(rows_all) if len(r["input_ids"]) > a.max_len]
     rows = [r for r in rows_all if len(r["input_ids"]) <= a.max_len]
     n_dropped = len(rows_all) - len(rows)
     print(f"dropped {n_dropped}/{len(rows_all)} examples longer than {a.max_len} tok", flush=True)
@@ -185,17 +187,39 @@ def main():
                  eval_dataset=eval_rows if (eval_rows and not a.probe_steps) else None,
                  data_collator=DataCollatorForSeq2Seq(tok, padding=True, label_pad_token_id=-100))
     from transformers import TrainerCallback
+    import uuid
+    session_id = time.strftime("%Y%m%d-%H%M%S") + "-" + uuid.uuid4().hex[:6]
+    run_id = out.name
+
+    def event(kind, step, **kw):
+        """One line of <out>/trajectory.jsonl, flushed + fsynced immediately. Written to the local disk only:
+        on Kaggle it reaches persistent storage when the session ends normally (time guard), not on a hard kill."""
+        if a.probe_steps:
+            return
+        with open(out / "trajectory.jsonl", "a", encoding="utf-8") as f:
+            f.write(json.dumps({"event": kind, "run_id": run_id, "session_id": session_id, "step": step,
+                                "time": time.time(), **kw}) + "\n")
+            f.flush()
+            os.fsync(f.fileno())
+
+    # stop_at milestones and the final step get a validation loss and a kept snapshot at the same step
+    aligned = {s for s in (a.stop_at, a.max_steps) if s and s > 0}
 
     class _Trajectory(TrainerCallback):
-        """Append every train/eval log line to <out>/trajectory.jsonl as it happens (survives crashes and
-        disconnects; resumed runs keep appending). Optionally snapshot the adapter every --snap_steps."""
+        """Live trajectory (train / validation / snapshot / resume / end events); resumed runs append, and the
+        resume event's resume_from_step tells the plotter which earlier lines belong to a rolled-back branch."""
         def on_log(self, args, state, control, logs=None, **kw):
-            if logs and not a.probe_steps:
-                with open(out / "trajectory.jsonl", "a", encoding="utf-8") as f:
-                    f.write(json.dumps({"step": state.global_step, "epoch": state.epoch, "time": time.time(), **logs}) + "\n")
+            if logs:
+                kind = "validation" if "eval_loss" in logs else ("train" if "loss" in logs else "summary")
+                event(kind, state.global_step, **{"epoch": state.epoch, **logs})
+
+        def on_step_end(self, args, state, control, **kw):
+            if state.global_step in aligned and eval_rows:
+                control.should_evaluate = True
+            return control
 
         def on_save(self, args, state, control, **kw):
-            if a.snap_steps and state.global_step % a.snap_steps == 0:
+            if a.snap_steps and (state.global_step % a.snap_steps == 0 or state.global_step in aligned):
                 import shutil
                 ck = out / "ckpt" / f"checkpoint-{state.global_step}"
                 dst = out / "traj" / f"step_{state.global_step}"
@@ -203,6 +227,8 @@ def main():
                 for fn in ("adapter_model.safetensors", "adapter_config.json"):
                     if (ck / fn).exists():
                         shutil.copy(ck / fn, dst / fn)
+                event("snapshot", state.global_step, epoch=state.epoch, checkpoint_id=f"{run_id}/step_{state.global_step}",
+                      path=str(dst.relative_to(out)))
     tr.add_callback(_Trajectory())
     if a.stop_at:
         assert a.save_steps and a.max_steps > 0 and a.stop_at <= a.max_steps, "--stop_at needs --save_steps and --max_steps"
@@ -218,7 +244,43 @@ def main():
     ck = sorted((out / "ckpt").glob("checkpoint-*"), key=lambda p: int(p.name.split("-")[1])) if a.save_steps and not a.probe_steps else []  # probes never save/resume
     if ck:
         print("resuming from", ck[-1], flush=True)
-    tr.train(resume_from_checkpoint=str(ck[-1]) if ck else None)
+    resume_step = int(ck[-1].name.split("-")[1]) if ck else 0
+    if not a.probe_steps:
+        import hashlib, platform, subprocess
+        try:
+            commit = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True,
+                                    cwd=Path(__file__).resolve().parent).stdout.strip()
+        except Exception:
+            commit = ""
+        data_path = a.data_jsonl
+        man = {"run_id": run_id, "args": vars(a), "git_commit": commit, "base_model": a.model,
+               "data_sha256": hashlib.sha256(open(data_path, "rb").read()).hexdigest() if data_path else None,
+               "eval_sha256": hashlib.sha256(open(a.eval_jsonl, "rb").read()).hexdigest() if a.eval_jsonl else None,
+               "n_examples": len(rows), "n_dropped_too_long": n_dropped, "dropped_row_indices": dropped_idx,
+               "n_eval_examples": len(eval_rows) if eval_rows else 0,
+               "effective_batch": a.bs * a.grad_accum, "planned_steps": n_steps,
+               "loss": "mean NLL over assistant tokens per micro-batch (prompt/padding masked, long rows dropped "
+                       "not truncated); micro-batches weighted equally across gradient accumulation; eval_loss = "
+                       "mean of per-batch losses over the held-out set",
+               "lora": {"r": a.rank, "alpha": 2 * a.rank, "dropout": 0.05, "target_modules": "all-linear"},
+               "training_args": {k: str(v) for k, v in args.to_dict().items()},
+               "versions": {m: __import__(m).__version__ for m in ("torch", "transformers", "peft")},
+               "hardware": torch.cuda.get_device_name(0) if torch.cuda.is_available() and not a.cpu else platform.processor(),
+               "python": platform.python_version()}
+        mp = out / "manifest.json"
+        old = json.loads(mp.read_text()) if mp.exists() else {}
+        man["sessions"] = old.get("sessions", []) + [{"session_id": session_id, "resume_from_step": resume_step,
+                                                      "git_commit": commit, "start": time.time()}]
+        mp.write_text(json.dumps(man, indent=1))
+        event("resume", resume_step, resume_from_step=resume_step, git_commit=commit)
+        if eval_rows and resume_step == 0:  # step-0 baseline validation loss (the untouched base model + zero LoRA)
+            tr.evaluate()
+    try:
+        tr.train(resume_from_checkpoint=str(ck[-1]) if ck else None)
+    except BaseException as e:
+        event("end", tr.state.global_step, status="failed", reason=repr(e)[:300])
+        raise
+    event("end", tr.state.global_step, status="stopped_at_milestone" if a.stop_at and tr.state.global_step < (a.max_steps or 0) else "completed")
     peak = torch.cuda.max_memory_allocated() / 2 ** 30 if torch.cuda.is_available() and not a.cpu else 0.0
     print(f"PEAK_MEM_GB {peak:.2f}", flush=True)
     if a.probe_steps:
